@@ -1,0 +1,8 @@
+E:\projects\privat\Kopie von Water3D\Water3D\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\projects\privat\Water3D 4.0\Water3D\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projekte\Water3D 4.0\Water3D\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\Content\obj\x86\Debug\Water3DContent.contentprojResolveAssemblyReference.cache
+C:\Users\a.zimmer\Downloads\test\privat\Water3D 4.0\Water3D\Content\obj\x86\Debug\Water3DContent.contentprojResolveAssemblyReference.cache
+D:\Downloads\test\privat\Water3D 4.0\Water3D\Content\obj\x86\Debug\Water3DContent.contentprojResolveAssemblyReference.cache
+D:\Downloads\test\privat\Projekte\Water3D 4.0\Water3D\Content\obj\x86\Debug\Water3DContent.contentprojResolveAssemblyReference.cache
+G:\Downloads\test\privat\Projekte\Water3D 4.0\Water3D\Content\obj\x86\Debug\Water3DContent.contentprojResolveAssemblyReference.cache

@@ -1,0 +1,113 @@
+[21.03.2019 17:01:45] Logging started.
+Loading file Content\q3\maps\q3dm1.bsp
+Entities loaded: True
+Texture entries found: 94
+	textures/gothic_block/killblock
+	textures/gothic_block/blocks15
+	textures/gothic_block/killblock_i
+	textures/gothic_trim/pitted_rust3
+	noshader
+	textures/gothic_trim/pitted_rust2
+	textures/gothic_wall/slateroofc
+	textures/gothic_trim/baseboard09_o3
+	textures/gothic_trim/pitted_rust2_trans
+	textures/gothic_floor/blocks17floor2
+	textures/gothic_trim/baseboard09_e
+	textures/gothic_ceiling/woodceiling1b_dark
+	textures/common/caulk
+	textures/gothic_trim/baseboard09_c3
+	textures/gothic_door/km_arena1archfinald_bot
+	textures/gothic_door/km_arena1archfinalc_mid
+	textures/gothic_door/km_arena1archfinald_mid
+	textures/gothic_door/km_arena1archfinalc_top
+	textures/gothic_trim/skullsvertgray02b
+	textures/gothic_door/skull_door_b
+	textures/gothic_door/skull_door_f
+	textures/gothic_door/skull_door_d
+	textures/gothic_door/skull_door_e
+	textures/gothic_door/skull_door_c
+	textures/gothic_door/skull_door_a
+	textures/gothic_floor/largerblock3b
+	textures/gothic_trim/metaldemonkillblock
+	textures/skies/tim_hell
+	textures/common/clip
+	textures/sfx/flame1_hell
+	textures/gothic_floor/metalbridge06
+	textures/gothic_floor/metalbridge06broke
+	textures/gothic_trim/metalsupport4b
+	textures/gothic_door/xian_tourneyarch_inside2
+	textures/gothic_door/skullarch_c
+	textures/gothic_door/skullarch_b
+	textures/gothic_door/skullarch_a
+	textures/gothic_wall/supportborder_blue_c
+	textures/gothic_wall/supportborder_blue_b
+	textures/gothic_trim/metalsupsolid
+	textures/gothic_block/blocks18b
+	textures/gothic_floor/xstepborder3
+	textures/gothic_floor/xstairtop4
+	textures/gothic_wall/iron01_e
+	textures/gothic_wall/iron01_ntech3
+	textures/gothic_block/blocks18c_3
+	textures/organics/dirt2
+	textures/liquids/lavahell_750
+	textures/skin/skin6
+	textures/common/weapclip
+	textures/gothic_trim/km_arena1tower4
+	textures/gothic_trim/km_arena1tower4_a
+	textures/gothic_wall/skull4
+	textures/gothic_trim/baseboard09_e2
+	textures/gothic_block/killblock_i4
+	textures/gothic_trim/baseboard04
+	textures/gothic_trim/pitted_rust
+	textures/gothic_light/pentagram_light1_1K
+	textures/gothic_block/demon_block15fx
+	textures/gothic_trim/baseboard09_l2
+	textures/gothic_ceiling/woodceiling1a
+	textures/skin/chapthroat
+	textures/gothic_block/blocks11b
+	textures/common/hint
+	textures/common/donotenter
+	textures/sfx/computer_blocks17
+	textures/gothic_block/blocks17
+	textures/gothic_floor/xstepborder3brn
+	textures/gothic_floor/xstairtop4bbrn
+	textures/gothic_block/blocks18c
+	textures/gothic_floor/largerblock3b_ow
+	textures/gothic_block/killblockgeomtrn
+	textures/gothic_floor/center2trn
+	textures/common/nodraw
+	textures/base_wall/protobanner
+	textures/liquids/lavahellflat_400
+	textures/gothic_block/largerblock3blood
+	textures/skin/tongue_trans
+	textures/gothic_door/km_arena1columna2R
+	textures/skin/surface8_trans
+	textures/skin/chapthroatooz
+	textures/skin/chapthroat2
+	textures/gothic_trim/km_arena1tower_short
+	models/mapobjects/visor_st
+	models/mapobjects/major_st
+	models/mapobjects/major_h_st
+	textures/sfx/flame2
+	models/mapobjects/gratelamp/gratetorch2
+	models/mapobjects/gratelamp/gratetorch2b
+	models/mapobjects/wallhead/wallhead02
+	models/mapobjects/storch/storch_tall
+	textures/sfx/flame1side
+	models/mapobjects/wallhead/lion
+	models/mapobjects/wallhead/lion_m
+No of planes: 2276
+No of nodes: 2107
+No of leafs: 2109
+No of leaffaces: 4569
+No of leaffaces: 6687
+No of models: 1
+No of brushes: 987
+No of brushsides: 6443
+No of vertices: 13978
+No of mesh vertices: 26517
+No of effects: 0
+No of faces: 2097
+No of lightmaps: 9
+No of light volumes: 8514
+Level initialized: True

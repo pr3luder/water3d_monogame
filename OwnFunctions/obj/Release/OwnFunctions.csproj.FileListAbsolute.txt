@@ -1,0 +1,8 @@
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\OwnFunctions\bin\Release\Properties\AssemblyInfo.cs
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\OwnFunctions\bin\Release\OwnFunctions.dll.config
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\OwnFunctions\bin\Release\OwnFunctions.dll
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\OwnFunctions\obj\Release\OwnFunctions.csprojAssemblyReference.cache
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\OwnFunctions\obj\Release\OwnFunctions.Properties.Resources.resources
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\OwnFunctions\obj\Release\OwnFunctions.csproj.GenerateResource.cache
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\OwnFunctions\obj\Release\OwnFunctions.csproj.CoreCompileInputs.cache
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\OwnFunctions\obj\Release\OwnFunctions.dll

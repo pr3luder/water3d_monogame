@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Fonts\SpriteFont1.spritefont</Source>
+      <Name>Fonts\SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Fonts\SpriteFont1.xnb</Output>
+      <Time>2013-02-26T21:30:44.8198103+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\dude.fbx</Source>
+      <Name>Models\dude</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>SkinnedModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\dude.xnb</Output>
+      <Time>2013-02-26T21:30:21.8654969+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Release\Models\dude_0.xml</Key>
+        <Value>2013-03-04T22:19:59.8897112+01:00</Value>
+      </Dependency>
+      <Request>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\head_0.xnb</Request>
+      <Request>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\SkinnedModel_0.xnb</Request>
+      <Request>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\jacket_0.xnb</Request>
+      <Request>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\pants_0.xnb</Request>
+      <Request>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\upBodyC_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\sphere.fbx</Source>
+      <Name>Models\sphere</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>CustomModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\sphere.xnb</Output>
+      <Time>2013-02-26T21:30:22.1155099+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Release\Models\sphere_0.xml</Key>
+        <Value>2013-03-04T22:20:12.5622521+01:00</Value>
+      </Dependency>
+      <Request>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\pawball_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\Yager.FBX</Source>
+      <Name>Models\Yager</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\Yager.xnb</Output>
+      <Time>2013-02-26T21:30:21.7248649+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Release\Models\Yager_0.xml</Key>
+        <Value>2013-03-04T22:20:14.7342373+01:00</Value>
+      </Dependency>
+      <Request>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\Texture_Yager_Green_0.xnb</Request>
+      <Request>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\Yager_New_Add_1_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Models\test.FBX</Source>
+      <Name>Models\test1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\test1.xnb</Output>
+      <Time>2013-02-26T21:30:21.7873676+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Release\Models\test_0.xml</Key>
+        <Value>2013-03-04T22:20:19.5938678+01:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Textures\heightmap_cm.bmp</Source>
+      <Name>Textures\heightmap_cm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\heightmap_cm.xnb</Output>
+      <Time>2013-02-26T21:30:27.7564305+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\terrain_detail_texture.jpg</Source>
+      <Name>Textures\terrain_detail_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\terrain_detail_texture.xnb</Output>
+      <Time>2013-02-26T21:30:27.2251493+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\cursor.png</Source>
+      <Name>Textures\cursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\cursor.xnb</Output>
+      <Time>2013-02-26T21:30:27.6157937+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\smoke.png</Source>
+      <Name>Textures\smoke</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\smoke.xnb</Output>
+      <Time>2013-02-26T21:30:27.7095491+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\explosion.png</Source>
+      <Name>Textures\explosion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\explosion.xnb</Output>
+      <Time>2013-02-26T21:30:27.9751925+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\fire.png</Source>
+      <Name>Textures\fire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\fire.xnb</Output>
+      <Time>2013-02-26T21:30:28.0689473+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\skybox.dds</Source>
+      <Name>Textures\skybox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\skybox.xnb</Output>
+      <Time>2013-02-26T21:30:27.3032817+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\test2_cm.bmp</Source>
+      <Name>Textures\test2_cm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\test2_cm.xnb</Output>
+      <Time>2013-02-26T21:30:27.3657849+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\test2_lm.bmp</Source>
+      <Name>Textures\test2_lm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\test2_lm.xnb</Output>
+      <Time>2013-02-26T21:30:28.0064392+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\bumpmap.bmp</Source>
+      <Name>Textures\bumpmap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\bumpmap.xnb</Output>
+      <Time>2013-02-26T21:30:28.1001953+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\test2_hm.bmp</Source>
+      <Name>Textures\test2_hm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\test2_hm.xnb</Output>
+      <Time>2013-02-26T21:30:27.9595663+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\skybox0001.bmp</Source>
+      <Name>Textures\skybox0001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\skybox0001.xnb</Output>
+      <Time>2013-02-26T21:30:27.4439143+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\skybox0002.bmp</Source>
+      <Name>Textures\skybox0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\skybox0002.xnb</Output>
+      <Time>2013-02-26T21:30:27.4751611+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\skybox0003.bmp</Source>
+      <Name>Textures\skybox0003</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\skybox0003.xnb</Output>
+      <Time>2013-02-26T21:30:27.6001676+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\skybox0004.bmp</Source>
+      <Name>Textures\skybox0004</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\skybox0004.xnb</Output>
+      <Time>2013-02-26T21:30:27.6470453+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\skybox0005.bmp</Source>
+      <Name>Textures\skybox0005</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\skybox0005.xnb</Output>
+      <Time>2013-02-26T21:30:27.6939273+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\skybox0006.bmp</Source>
+      <Name>Textures\skybox0006</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\skybox0006.xnb</Output>
+      <Time>2013-02-26T21:30:27.7876773+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Granit_Rock_diffuse.png</Source>
+      <Name>Textures\Granit_Rock_diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\Granit_Rock_diffuse.xnb</Output>
+      <Time>2013-02-26T21:30:27.3345345+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Granit_Rock_normal.png</Source>
+      <Name>Textures\Granit_Rock_normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\Granit_Rock_normal.xnb</Output>
+      <Time>2013-02-26T21:30:27.3970323+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\stone_01_diffuse.png</Source>
+      <Name>Textures\stone_01_diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\stone_01_diffuse.xnb</Output>
+      <Time>2013-02-26T21:30:27.1001422+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\stone_01_normal.png</Source>
+      <Name>Textures\stone_01_normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\stone_01_normal.xnb</Output>
+      <Time>2013-02-26T21:30:27.1313962+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Dry_Cracked_Ground_diffuse.png</Source>
+      <Name>Textures\Dry_Cracked_Ground_diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\Dry_Cracked_Ground_diffuse.xnb</Output>
+      <Time>2013-02-26T21:30:27.1313962+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Dry_Cracked_Ground_normal.png</Source>
+      <Name>Textures\Dry_Cracked_Ground_normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\Dry_Cracked_Ground_normal.xnb</Output>
+      <Time>2013-02-26T21:30:27.2095226+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\detailmap.tga</Source>
+      <Name>Textures\detailmap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\detailmap.xnb</Output>
+      <Time>2013-02-26T21:30:28.0845698+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\rock.DDS</Source>
+      <Name>Textures\rock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\rock.xnb</Output>
+      <Time>2013-02-26T21:30:28.0533194+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sand.dds</Source>
+      <Name>Textures\sand</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\sand.xnb</Output>
+      <Time>2013-02-26T21:30:27.4907878+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\grass.dds</Source>
+      <Name>Textures\grass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\grass.xnb</Output>
+      <Time>2013-02-26T21:30:27.2563997+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\snow.DDS</Source>
+      <Name>Textures\snow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Textures\snow.xnb</Output>
+      <Time>2013-02-26T21:30:27.553294+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\mesh.x</Source>
+      <Name>Models\mesh</Name>
+      <Importer>XImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\mesh.xnb</Output>
+      <Time>2013-02-26T21:30:22.0686352+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Release\Models\mesh_0.xml</Key>
+        <Value>2013-03-04T22:21:38.13405+01:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\Barrel_DirectX.x</Source>
+      <Name>Models\Barrel_DirectX</Name>
+      <Importer>XImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\Barrel_DirectX.xnb</Output>
+      <Time>2013-02-26T21:30:21.8186192+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Release\Models\Barrel_DirectX_0.xml</Key>
+        <Value>2013-03-04T22:21:41.3842213+01:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Models\xwing.x</Source>
+      <Name>Models\xwing</Name>
+      <Importer>XImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\xwing.xnb</Output>
+      <Time>2013-02-26T21:30:22.0998826+01:00</Time>
+      <Dependency>
+        <Key>obj\x86\Release\Models\xwing_0.xml</Key>
+        <Value>2013-03-04T22:21:42.9155487+01:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Shaders\Landscape.fx</Source>
+      <Name>Shaders\Landscape</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Shaders\Landscape.xnb</Output>
+      <Time>2013-02-26T21:30:44.9135652+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Shaders\Water.fx</Source>
+      <Name>Shaders\Water</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Shaders\Water.xnb</Output>
+      <Time>2013-02-26T21:30:44.9760685+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Shaders\ParticleEffect.fx</Source>
+      <Name>Shaders\ParticleEffect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Shaders\ParticleEffect.xnb</Output>
+      <Time>2013-02-26T21:30:44.9604454+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Shaders\Landscape_Lighting.fx</Source>
+      <Name>Shaders\Landscape_Lighting</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Shaders\Landscape_Lighting.xnb</Output>
+      <Time>2013-02-26T21:30:44.9291925+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Shaders\Landscape_Heightmap.fx</Source>
+      <Name>Shaders\Landscape_Heightmap</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Shaders\Landscape_Heightmap.xnb</Output>
+      <Time>2013-02-26T21:30:44.9448168+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Shaders\basicQ3Effect.fx</Source>
+      <Name>Shaders\basicQ3Effect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Shaders\basicQ3Effect.xnb</Output>
+      <Time>2013-02-26T21:30:44.9760685+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Shaders\effects.fx</Source>
+      <Name>Shaders\effects</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Shaders\effects.xnb</Output>
+      <Time>2013-02-26T21:30:44.9448168+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\dude.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Release\Models\dude_0.xml</Output>
+      <Time>2013-02-26T21:30:21.8654969+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\head.tga</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\head_0.xnb</Output>
+      <Time>2013-02-26T21:30:22.1780101+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\SkinnedModel.fx</Source>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\SkinnedModel_0.xnb</Output>
+      <Time>2013-02-26T21:30:21.7561135+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\jacket.tga</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\jacket_0.xnb</Output>
+      <Time>2013-02-26T21:30:22.1467585+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\pants.tga</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\pants_0.xnb</Output>
+      <Time>2013-02-26T21:30:22.0530091+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\upBodyC.tga</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\upBodyC_0.xnb</Output>
+      <Time>2013-02-26T21:30:21.5998584+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\sphere.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Release\Models\sphere_0.xml</Output>
+      <Time>2013-02-26T21:30:22.1155099+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\pawball.tga</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\pawball_0.xnb</Output>
+      <Time>2013-02-26T21:30:21.7561135+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Yager.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Release\Models\Yager_0.xml</Output>
+      <Time>2013-02-26T21:30:21.7248649+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Texture_Yager_Green.dds</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\Texture_Yager_Green_0.xnb</Output>
+      <Time>2013-02-26T21:30:21.646735+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Yager_New_Add_1.dds</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\Models\Yager_New_Add_1_0.xnb</Output>
+      <Time>2013-02-26T21:30:21.6623587+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\test.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Release\Models\test_0.xml</Output>
+      <Time>2013-02-26T21:30:21.7873676+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\mesh.x</Source>
+      <Importer>XImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Release\Models\mesh_0.xml</Output>
+      <Time>2013-02-26T21:30:22.0686352+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\Barrel_DirectX.x</Source>
+      <Importer>XImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Release\Models\Barrel_DirectX_0.xml</Output>
+      <Time>2013-02-26T21:30:21.8186192+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\xwing.x</Source>
+      <Importer>XImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Release\Models\xwing_0.xml</Output>
+      <Time>2013-02-26T21:30:22.0998826+01:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\Content\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Water3D\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\Q3BSPContentPipelineExtension\bin\x86\Debug\Q3BSPContentPipelineExtension.dll</Key>
+        <Value>2013-02-28T22:24:21.5505241+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\OwnFunctions\bin\Release\OwnFunctions.dll</Key>
+        <Value>2013-02-26T21:30:49.9607032+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\MD5ContentPipelineExtension\bin\x86\Debug\MD5ContentPipelineExtension.dll</Key>
+        <Value>2013-02-28T22:25:04.4277158+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\CustomModelAnimationPipeline\bin\x86\Release\CustomModelAnimationPipeline.dll</Key>
+        <Value>2013-03-04T22:19:47.9828395+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Water3D\CustomModelPipeline\bin\x86\Debug\CustomEffectModelPipeline.dll</Key>
+        <Value>2013-03-04T22:19:48.4984895+01:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-02-28T22:09:20.6148397+01:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

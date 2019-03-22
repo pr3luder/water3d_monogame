@@ -1,0 +1,6 @@
+Transform and Lighting supported
+Pure device supported
+Environment bump mapping supported
+Projective Texturing supported
+Max.8 texture blend stages supported
+Max.8 user clip planes supported

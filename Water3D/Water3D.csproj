@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95F43D6A-1473-4151-9C38-C8E2D2EA92B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Water3D</RootNamespace>
+    <AssemblyName>Water3D</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Camera.cs" />
+    <Compile Include="CodeWindow.cs" />
+    <Compile Include="CompileEventArgs.cs" />
+    <Compile Include="CompileEventHandler.cs" />
+    <Compile Include="Console.cs" />
+    <Compile Include="Cursor.cs" />
+    <Compile Include="DebugDraw.cs" />
+    <Compile Include="EffectContainer.cs" />
+    <Compile Include="EffectContentProcessorContext.cs" />
+    <Compile Include="EffectManager.cs" />
+    <Compile Include="FPSCounter.cs" />
+    <Compile Include="FunctionCompiler.cs" />
+    <Compile Include="GraphicsSystem.cs" />
+    <Compile Include="Landscape.cs" />
+    <Compile Include="LandscapeGeomipmap.cs" />
+    <Compile Include="LandscapeROAM.cs" />
+    <Compile Include="Level3D.cs" />
+    <Compile Include="Model3D.cs" />
+    <Compile Include="Model3DSkinned.cs" />
+    <Compile Include="Object3D.cs" />
+    <Compile Include="Object3DSettings.cs" />
+    <Compile Include="ParticleEmitter.cs" />
+    <Compile Include="ParticleSettings.cs" />
+    <Compile Include="ParticleSystem.cs" />
+    <Compile Include="ParticleSystems\ExplosionParticleSystem.cs" />
+    <Compile Include="ParticleSystems\ExplosionSmokeParticleSystem.cs" />
+    <Compile Include="ParticleSystems\FireParticleSystem.cs" />
+    <Compile Include="ParticleSystems\ProjectileTrailParticleSystem.cs" />
+    <Compile Include="ParticleSystems\SmokePlumeParticleSystem.cs" />
+    <Compile Include="Patch.cs" />
+    <Compile Include="PatchGeomipmap.cs" />
+    <Compile Include="PatchROAM.cs" />
+    <Compile Include="Physics.cs" />
+    <Compile Include="Plane3D.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Projectile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quadtree.cs" />
+    <Compile Include="QuadtreeNode.cs" />
+    <Compile Include="RenderEngine.cs" />
+    <Compile Include="SceneContainer.cs" />
+    <Compile Include="Skybox.cs" />
+    <Compile Include="StatusWindow.cs" />
+    <Compile Include="TextInput.cs" />
+    <Compile Include="TextureManager.cs" />
+    <Compile Include="TextureRenderer.cs" />
+    <Compile Include="Tools3D.cs" />
+    <Compile Include="TriTreeNode.cs" />
+    <Compile Include="VertexDeclarations\ParticleVertex.cs" />
+    <Compile Include="VertexDeclarations\PositionNormalColor.cs" />
+    <Compile Include="VertexDeclarations\PositionNormalColorMultiTexture.cs" />
+    <Compile Include="VertexDeclarations\PositionNormalMultiTexture.cs" />
+    <Compile Include="Water3D.cs" />
+    <Compile Include="Window2D.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Content.Pipeline, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MSBuild\MonoGame\v3.0\Tools\MonoGame.Framework.Content.Pipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct2D1.4.2.0\lib\net45\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D11.4.2.0\lib\net45\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D9.4.2.0\lib\net45\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DXGI.4.2.0\lib\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Mathematics.4.2.0\lib\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.MediaFoundation.4.2.0\lib\net45\SharpDX.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XAudio2, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.XAudio2.4.2.0\lib\net45\SharpDX.XAudio2.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XInput, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.XInput.4.2.0\lib\net45\SharpDX.XInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Content.contentproj.user" />
+    <Content Include="Content\Models\SkinnedModel.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\obj\x86\Debug\Content.contentproj.FileListAbsolute.txt" />
+    <Content Include="Content\obj\x86\Debug\ContentPipeline.xml" />
+    <Content Include="Content\obj\x86\Debug\Models\Barrel_DirectX_0.xml" />
+    <Content Include="Content\obj\x86\Debug\Models\dude_0.xml" />
+    <Content Include="Content\obj\x86\Debug\Models\mesh_0.xml" />
+    <Content Include="Content\obj\x86\Debug\Models\sphere_0.xml" />
+    <Content Include="Content\obj\x86\Debug\Models\test_0.xml" />
+    <Content Include="Content\obj\x86\Debug\Models\Yager_0.xml" />
+    <Content Include="Content\obj\x86\Debug\Water3DContent.contentproj.FileListAbsolute.txt" />
+    <Content Include="Content\obj\x86\Release\Content.contentproj.FileListAbsolute.txt" />
+    <Content Include="Content\obj\x86\Release\ContentPipeline.xml" />
+    <Content Include="Content\obj\x86\Release\Models\dude_0.xml" />
+    <Content Include="Content\obj\x86\Release\Models\mesh_0.xml" />
+    <Content Include="Content\obj\x86\Release\Models\sphere_0.xml" />
+    <Content Include="Content\q3\gfx\2d\backtile.jpg" />
+    <Content Include="Content\q3\gfx\2d\colorbar.jpg" />
+    <Content Include="Content\q3\gfx\2d\lag.jpg" />
+    <Content Include="Content\q3\gfx\2d\net.jpg" />
+    <Content Include="Content\q3\gfx\colors\black.jpg" />
+    <Content Include="Content\q3\gfx\damage\bullet_mrk.jpg" />
+    <Content Include="Content\q3\gfx\damage\burn_med_mrk.jpg" />
+    <Content Include="Content\q3\gfx\damage\hole_lg_mrk.jpg" />
+    <Content Include="Content\q3\gfx\misc\console02.jpg" />
+    <Content Include="Content\q3\gfx\misc\flare.jpg" />
+    <Content Include="Content\q3\gfx\misc\lightning3.jpg" />
+    <Content Include="Content\q3\gfx\misc\railcorethin_mono.jpg" />
+    <Content Include="Content\q3\gfx\misc\raildisc_mono2.jpg" />
+    <Content Include="Content\q3\gfx\misc\sun.jpg" />
+    <Content Include="Content\q3\gfx\misc\teleportEffect2.jpg" />
+    <Content Include="Content\q3\gfx\misc\tracer2.jpg" />
+    <Content Include="Content\q3\models\mapobjects\bitch\hologirl2.jpg" />
+    <Content Include="Content\q3\models\mapobjects\corpse\corpse.jpg" />
+    <Content Include="Content\q3\models\mapobjects\eagleban.jpg" />
+    <Content Include="Content\q3\models\mapobjects\gargoyle.jpg" />
+    <Content Include="Content\q3\models\mapobjects\gratelamp\gratetorch2.jpg" />
+    <Content Include="Content\q3\models\mapobjects\gratelamp\gratetorch2b.jpg" />
+    <Content Include="Content\q3\models\mapobjects\kmlamp1.jpg" />
+    <Content Include="Content\q3\models\mapobjects\lamps\bot_flare.jpg" />
+    <Content Include="Content\q3\models\mapobjects\lamps\bot_flare2.jpg" />
+    <Content Include="Content\q3\models\mapobjects\lamps\bot_lamp.jpg" />
+    <Content Include="Content\q3\models\mapobjects\lamps\bot_lamp2.jpg" />
+    <Content Include="Content\q3\models\mapobjects\lamps\flare03.jpg" />
+    <Content Include="Content\q3\models\mapobjects\major_h_st.jpg" />
+    <Content Include="Content\q3\models\mapobjects\major_st.jpg" />
+    <Content Include="Content\q3\models\mapobjects\podium\podiumfx1.jpg" />
+    <Content Include="Content\q3\models\mapobjects\podium\podiumfx1b.jpg" />
+    <Content Include="Content\q3\models\mapobjects\podium\podskullfx.jpg" />
+    <Content Include="Content\q3\models\mapobjects\portal_2\portal_3.jpg" />
+    <Content Include="Content\q3\models\mapobjects\portal_2\portal_3_edge.jpg" />
+    <Content Include="Content\q3\models\mapobjects\portal_2\portal_3_edge_glo.jpg" />
+    <Content Include="Content\q3\models\mapobjects\portal_2\portal_3_glo.jpg" />
+    <Content Include="Content\q3\models\mapobjects\Skull\skull.jpg" />
+    <Content Include="Content\q3\models\mapobjects\spotlamp\beam.jpg" />
+    <Content Include="Content\q3\models\mapobjects\spotlamp\spotlamp_l.jpg" />
+    <Content Include="Content\q3\models\mapobjects\storch\storch.jpg" />
+    <Content Include="Content\q3\models\mapobjects\storch\storch_tall.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\energy.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\energy2.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\energy3.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\pad.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\teleporter.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\teleporter_edge.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\teleporter_edge2.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\transparency.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\transparency2.jpg" />
+    <Content Include="Content\q3\models\mapobjects\teleporter\widget.jpg" />
+    <Content Include="Content\q3\models\mapobjects\visor_st.jpg" />
+    <Content Include="Content\q3\models\mapobjects\wallhead\lion.jpg" />
+    <Content Include="Content\q3\models\mapobjects\wallhead\wallhead02.jpg" />
+    <Content Include="Content\q3\models\mapobjects\wall_lamp3.jpg" />
+    <Content Include="Content\q3\sprites\plasmaa.jpg" />
+    <Content Include="Content\q3\sprites\splash.jpg" />
+    <Content Include="Content\q3\textures\base_floor\diamond2c.jpg" />
+    <Content Include="Content\q3\textures\base_light\baslt4_1.blend.jpg" />
+    <Content Include="Content\q3\textures\base_light\baslt4_1.jpg" />
+    <Content Include="Content\q3\textures\base_light\ceil1_37.blend.jpg" />
+    <Content Include="Content\q3\textures\base_light\ceil1_37.jpg" />
+    <Content Include="Content\q3\textures\base_light\ceil1_38.blend.jpg" />
+    <Content Include="Content\q3\textures\base_light\ceil1_38.jpg" />
+    <Content Include="Content\q3\textures\base_light\ceil1_39.blend.jpg" />
+    <Content Include="Content\q3\textures\base_light\ceil1_39.jpg" />
+    <Content Include="Content\q3\textures\base_light\light1.blend.jpg" />
+    <Content Include="Content\q3\textures\base_light\light1.jpg" />
+    <Content Include="Content\q3\textures\base_light\light2.blend.jpg" />
+    <Content Include="Content\q3\textures\base_light\light2.jpg" />
+    <Content Include="Content\q3\textures\base_light\light5.jpg" />
+    <Content Include="Content\q3\textures\base_support\cable.jpg" />
+    <Content Include="Content\q3\textures\base_support\metal14_1.jpg" />
+    <Content Include="Content\q3\textures\base_trim\basemetalsupport.jpg" />
+    <Content Include="Content\q3\textures\base_trim\border11b.jpg" />
+    <Content Include="Content\q3\textures\base_trim\border11light.glow.jpg" />
+    <Content Include="Content\q3\textures\base_trim\border11light.jpg" />
+    <Content Include="Content\q3\textures\base_trim\spiderbit4.jpg" />
+    <Content Include="Content\q3\textures\base_wall\atech1_a.jpg" />
+    <Content Include="Content\q3\textures\base_wall\atech1_e.jpg" />
+    <Content Include="Content\q3\textures\base_wall\bluemetal2.jpg" />
+    <Content Include="Content\q3\textures\base_wall\comp3text.jpg" />
+    <Content Include="Content\q3\textures\base_wall\comp3textb.jpg" />
+    <Content Include="Content\q3\textures\base_wall\c_met5_2.jpg" />
+    <Content Include="Content\q3\textures\base_wall\c_met7_2.jpg" />
+    <Content Include="Content\q3\textures\base_wall\metalblack03.jpg" />
+    <Content Include="Content\q3\textures\base_wall\metalfloor_wall_10.jpg" />
+    <Content Include="Content\q3\textures\base_wall\metalfloor_wall_15.jpg" />
+    <Content Include="Content\q3\textures\base_wall\metaltech06final.jpg" />
+    <Content Include="Content\q3\textures\base_wall\metaltech12darkfinal.jpg" />
+    <Content Include="Content\q3\textures\base_wall\metaltech12final.jpg" />
+    <Content Include="Content\q3\textures\base_wall\metaltech13final.jpg" />
+    <Content Include="Content\q3\textures\base_wall\metfloor_block_3.jpg" />
+    <Content Include="Content\q3\textures\base_wall\patch10_beatup2.jpg" />
+    <Content Include="Content\q3\textures\base_wall\patch10_beatup4.jpg" />
+    <Content Include="Content\q3\textures\base_wall\steed1ge.jpg" />
+    <Content Include="Content\q3\textures\effects\envmap.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapbfg.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapblue.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapblue2.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapdim.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapgold.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapgold2.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapligh.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapmach.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapplas.jpg" />
+    <Content Include="Content\q3\textures\effects\envmappurp.jpg" />
+    <Content Include="Content\q3\textures\effects\envmaprail.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapred.jpg" />
+    <Content Include="Content\q3\textures\effects\envmapyel.jpg" />
+    <Content Include="Content\q3\textures\effects\invismap.jpg" />
+    <Content Include="Content\q3\textures\effects\quadmap2.jpg" />
+    <Content Include="Content\q3\textures\effects\regenmap2.jpg" />
+    <Content Include="Content\q3\textures\effects\tinfx.jpg" />
+    <Content Include="Content\q3\textures\effects\tinfx2.jpg" />
+    <Content Include="Content\q3\textures\effects\tinfx2b.jpg" />
+    <Content Include="Content\q3\textures\effects\tinfx2c.jpg" />
+    <Content Include="Content\q3\textures\effects\tinfx2d.jpg" />
+    <Content Include="Content\q3\textures\effects\tinfx3.jpg" />
+    <Content Include="Content\q3\textures\effects\tinfxb.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks10.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks11b.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks11bbroke3.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks15.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks17.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks17e.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks17g.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks18b.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks18c.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks18cblood.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks18c_3.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\blocks20b.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\evil2ckillblockglow.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\gkc15b.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\gkc15c.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\gkc19a.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\gkc19b.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\gkc20a.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\gkc20b.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\killblock.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\killblock_i.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\killblock_i4.jpg" />
+    <Content Include="Content\q3\textures\gothic_block\windowevil2c_killblock.jpg" />
+    <Content Include="Content\q3\textures\gothic_button\timbutton.jpg" />
+    <Content Include="Content\q3\textures\gothic_button\timbutton2.jpg" />
+    <Content Include="Content\q3\textures\gothic_button\timbuttonside.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\ceilingtech01_f.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\ceilingtech02_a.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\ceilingtech02_b.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\ceilingtech02_c2.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\ceilingtech02_d.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\ceilingtech03_afinal.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\ceilingtechplain.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\stucco7top.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\woodceiling1a.jpg" />
+    <Content Include="Content\q3\textures\gothic_ceiling\woodceiling1b_dark.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\archpart1.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\archpart10.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\archpart2.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\archpart6.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\archpart7.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\archpart9.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\km_arena1archfinalc_top.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\km_arena1archfinald_bot.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\km_arena1archfinald_mid.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\km_arena1columna2R.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\xian_tourneyarch_bottom2.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\xian_tourneyarch_inside2.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\xian_tourneyarch_med1b.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\xian_tourneyarch_tall1c.jpg" />
+    <Content Include="Content\q3\textures\gothic_door\xian_tourneyarch_tall2b.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\blocks17floor2.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\blocks17floor3.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\goopq1metal7_98e.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\largeblockfloor3.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\largeblockfloor4.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\largeblockfloor4broke.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\largerblock3b.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\largerblock3b3.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\largerblock3b4.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\metalbridge06.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\metalbridge06b.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\metalbridge06broke.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\q1metal7_99.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\q1metal7_99stair.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\q1metal7_99stair2.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\q1metal7_99stair3.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\q1metal7_99_broke.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstairtop4.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstairtop4bbrn.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstairtop7.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstairtop8.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstepborder10.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstepborder12.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstepborder13.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstepborder3.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstepborder3brn.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstepborder7.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstepborder8.jpg" />
+    <Content Include="Content\q3\textures\gothic_floor\xstepborder9.jpg" />
+    <Content Include="Content\q3\textures\gothic_light\gothic_light2_blend.jpg" />
+    <Content Include="Content\q3\textures\gothic_light\gothic_light3.jpg" />
+    <Content Include="Content\q3\textures\gothic_light\ironcrosslt2.blend.jpg" />
+    <Content Include="Content\q3\textures\gothic_light\ironcrosslt2.jpg" />
+    <Content Include="Content\q3\textures\gothic_light\pentagram_light1.jpg" />
+    <Content Include="Content\q3\textures\gothic_light\pentagram_light1_blend.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard04.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard07.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard08_d.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09_c3.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09_e.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09_e2.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09_g.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09_g3.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09_l.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09_l2.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard09_o3.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\baseboard10_d.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\border12.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\column2c_test.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\columnsupportbottoms.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\columnsupportops.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\km_arena1tower4.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\km_arena1tower4_a.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\metalbase8a_brick.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\metaldemonkillblock.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\metalsupport4b.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\metalsupsolid.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\pitted_rust.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\pitted_rust2.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\pitted_rust3.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\q1metal7.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\skullsvertgray02b.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\supportborder.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\supportborderside.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\tower_front.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\tower_side2.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\tower_side2b.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\tower_top.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\window_a1.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\window_a2.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\window_a_base.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\window_a_bottom1.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\window_a_bottom2.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\xian_tourney_trim.jpg" />
+    <Content Include="Content\q3\textures\gothic_trim\x_noblightfx.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\crack5c.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\iron01_b.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\iron01_e.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\iron01_ntech3.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\iron01_p2.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\purptileb.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\skull4.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\slateroofc.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\streetbricks10.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\streetbricks11.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\supportborder_blue_b.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\supportborder_blue_c.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\window_evil6a.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\window_evil6a_glow.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\xiantourneycolumn_b4.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\xiantourneywall_C1.jpg" />
+    <Content Include="Content\q3\textures\gothic_wall\xiantourneywall_R1.jpg" />
+    <Content Include="Content\q3\textures\liquids\kc_fogcloud3.jpg" />
+    <Content Include="Content\q3\textures\liquids\lavahell.jpg" />
+    <Content Include="Content\q3\textures\liquids\proto_gruel3.jpg" />
+    <Content Include="Content\q3\textures\liquids\proto_grueldark2.jpg" />
+    <Content Include="Content\q3\textures\organics\dirt.jpg" />
+    <Content Include="Content\q3\textures\organics\dirt2.jpg" />
+    <Content Include="Content\q3\textures\sfx\beam.jpg" />
+    <Content Include="Content\q3\textures\sfx\beam_1.jpg" />
+    <Content Include="Content\q3\textures\sfx\bolts.jpg" />
+    <Content Include="Content\q3\textures\sfx\bouncepad01block18b.jpg" />
+    <Content Include="Content\q3\textures\sfx\bouncepad01b_layer1.jpg" />
+    <Content Include="Content\q3\textures\sfx\bouncepad01_diamond2cTGA.jpg" />
+    <Content Include="Content\q3\textures\sfx\bouncepad1q1metal7_99.jpg" />
+    <Content Include="Content\q3\textures\sfx\compscreen\letters5.jpg" />
+    <Content Include="Content\q3\textures\sfx\computerpurptileb.jpg" />
+    <Content Include="Content\q3\textures\sfx\computer_blocks17.jpg" />
+    <Content Include="Content\q3\textures\sfx\detail.jpg" />
+    <Content Include="Content\q3\textures\sfx\electricgrade3.jpg" />
+    <Content Include="Content\q3\textures\sfx\electricslime.jpg" />
+    <Content Include="Content\q3\textures\sfx\firegorre2.jpg" />
+    <Content Include="Content\q3\textures\sfx\fireswirl2.jpg" />
+    <Content Include="Content\q3\textures\sfx\flame1.jpg" />
+    <Content Include="Content\q3\textures\sfx\flame2.jpg" />
+    <Content Include="Content\q3\textures\sfx\flame3.jpg" />
+    <Content Include="Content\q3\textures\sfx\flame4.jpg" />
+    <Content Include="Content\q3\textures\sfx\flame5.jpg" />
+    <Content Include="Content\q3\textures\sfx\flame6.jpg" />
+    <Content Include="Content\q3\textures\sfx\flame7.jpg" />
+    <Content Include="Content\q3\textures\sfx\flame8.jpg" />
+    <Content Include="Content\q3\textures\sfx\flameball.jpg" />
+    <Content Include="Content\q3\textures\sfx\hologirl.jpg" />
+    <Content Include="Content\q3\textures\sfx\jumppadsmall.jpg" />
+    <Content Include="Content\q3\textures\sfx\kenelectric.jpg" />
+    <Content Include="Content\q3\textures\sfx\launchpad_arrow2.jpg" />
+    <Content Include="Content\q3\textures\sfx\launchpad_diamond.jpg" />
+    <Content Include="Content\q3\textures\sfx\launchpad_dot.jpg" />
+    <Content Include="Content\q3\textures\sfx\logo512.jpg" />
+    <Content Include="Content\q3\textures\sfx\metalbridge06_bounce.jpg" />
+    <Content Include="Content\q3\textures\sfx\pentagramfloor_red_glow.jpg" />
+    <Content Include="Content\q3\textures\sfx\pentdirt2_%40256.jpg" />
+    <Content Include="Content\q3\textures\sfx\pentfloorq1metal7_99.jpg" />
+    <Content Include="Content\q3\textures\sfx\pentfloor_diamond2c.jpg" />
+    <Content Include="Content\q3\textures\sfx\portalfog.jpg" />
+    <Content Include="Content\q3\textures\sfx\portal_sfx.jpg" />
+    <Content Include="Content\q3\textures\sfx\portal_sfx_ring.jpg" />
+    <Content Include="Content\q3\textures\sfx\portal_sfx_ring_electric.jpg" />
+    <Content Include="Content\q3\textures\sfx\proto_zzzt.jpg" />
+    <Content Include="Content\q3\textures\sfx\proto_zzztblu2.jpg" />
+    <Content Include="Content\q3\textures\sfx\shadow.jpg" />
+    <Content Include="Content\q3\textures\sfx\snow.jpg" />
+    <Content Include="Content\q3\textures\sfx\specular.jpg" />
+    <Content Include="Content\q3\textures\sfx\x_conduit.jpg" />
+    <Content Include="Content\q3\textures\sfx\x_conduit2.jpg" />
+    <Content Include="Content\q3\textures\sfx\x_conduit3.jpg" />
+    <Content Include="Content\q3\textures\skies\inteldimclouds.jpg" />
+    <Content Include="Content\q3\textures\skies\intelredclouds.jpg" />
+    <Content Include="Content\q3\textures\skies\killsky_1.jpg" />
+    <Content Include="Content\q3\textures\skies\killsky_2.jpg" />
+    <Content Include="Content\q3\textures\skin\chapthroat.jpg" />
+    <Content Include="Content\q3\textures\skin\chapthroat2.jpg" />
+    <Content Include="Content\q3\textures\skin\skin6.jpg" />
+    <Content Include="Content\q3\textures\skin\skin7_teeth.jpg" />
+    <Content Include="Content\q3\textures\skin\surface8.jpg" />
+    <Content Include="Content\q3\textures\skin\tongue.jpg" />
+    <Content Include="Content\Shaders\basicQ3Effect.fx" />
+    <Content Include="Content\Shaders\Bump.fx" />
+    <Content Include="Content\Shaders\effects.fx" />
+    <Content Include="Content\Shaders\Landscape.fx" />
+    <Content Include="Content\Shaders\Landscape1.fx" />
+    <Content Include="Content\Shaders\Landscape_Heightmap.fx" />
+    <Content Include="Content\Shaders\Landscape_Lighting.fx" />
+    <Content Include="Content\Shaders\ParticleEffect.fx" />
+    <Content Include="Content\Shaders\SkinnedModel.fx" />
+    <Content Include="Content\Shaders\test.fx" />
+    <Content Include="Content\Shaders\Water.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\bumpmap.bmp" />
+    <Content Include="Content\Textures\cursor.png" />
+    <Content Include="Content\Textures\Dry_Cracked_Ground_diffuse.png" />
+    <Content Include="Content\Textures\Dry_Cracked_Ground_normal.png" />
+    <Content Include="Content\Textures\explosion.png" />
+    <Content Include="Content\Textures\fire.png" />
+    <Content Include="Content\Textures\Granit_Rock_diffuse.png" />
+    <Content Include="Content\Textures\Granit_Rock_normal.png" />
+    <Content Include="Content\Textures\heightmap_cm.bmp" />
+    <Content Include="Content\Textures\skybox0001.bmp" />
+    <Content Include="Content\Textures\skybox0002.bmp" />
+    <Content Include="Content\Textures\skybox0003.bmp" />
+    <Content Include="Content\Textures\skybox0004.bmp" />
+    <Content Include="Content\Textures\skybox0005.bmp" />
+    <Content Include="Content\Textures\skybox0006.bmp" />
+    <Content Include="Content\Textures\smoke.png" />
+    <Content Include="Content\Textures\stone_01_diffuse.png" />
+    <Content Include="Content\Textures\stone_01_normal.png" />
+    <Content Include="Content\Textures\terrain_detail_texture.jpg" />
+    <Content Include="Content\Textures\test2_cm.bmp" />
+    <Content Include="Content\Textures\test2_hm.bmp" />
+    <Content Include="Content\Textures\test2_lm.bmp" />
+    <Content Include="Content\Water3DContent.contentproj.user" />
+    <Content Include="Effects\BumpMap2.fx" />
+    <Content Include="Effects\BumpMap3.fx" />
+    <Content Include="Effects\HelloWorld.fx" />
+    <Content Include="Effects\Landscape.fx" />
+    <Content Include="Effects\Particle.fx" />
+    <Content Include="Effects\Phong.fx" />
+    <Content Include="Effects\ReflProj.fx" />
+    <Content Include="Effects\SkinnedModel.fx" />
+    <Content Include="Effects\Water.fx" />
+    <Content Include="EffectXml\Basic.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\BasicLandscape.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\BasicWater.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Effect1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Effect2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\ExplosionParticleSystem.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\ExplosionSmokeParticleSystem.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\HelloWorld.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Landscape.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Landscape1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Particle.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Patch.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Phong.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\ProjectileTrailParticleSystem.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\ProjText.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\SkinnedModel.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Water.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\Water1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EffectXml\XWing.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+    <Content Include="Icon.ico" />
+    <Content Include="Logs\log.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Media\Bumpmaps\bumpmap.bmp" />
+    <Content Include="Media\Heightmaps\heightmap_hm.bmp" />
+    <Content Include="Media\Heightmaps\test2_hm.bmp" />
+    <Content Include="Media\Heightmaps\test_hm.bmp" />
+    <Content Include="Media\Lightmaps\heightmap_lm.bmp" />
+    <Content Include="Media\Skybox\skybox0001.bmp" />
+    <Content Include="Media\Skybox\skybox0002.bmp" />
+    <Content Include="Media\Skybox\skybox0003.bmp" />
+    <Content Include="Media\Skybox\skybox0004.bmp" />
+    <Content Include="Media\Skybox\skybox0005.bmp" />
+    <Content Include="Media\Skybox\skybox0006.bmp" />
+    <Content Include="Media\Textures\caustics_001.jpg" />
+    <Content Include="Media\Textures\caustics_002.jpg" />
+    <Content Include="Media\Textures\caustics_003.jpg" />
+    <Content Include="Media\Textures\caustics_004.jpg" />
+    <Content Include="Media\Textures\caustics_005.jpg" />
+    <Content Include="Media\Textures\caustics_006.jpg" />
+    <Content Include="Media\Textures\caustics_007.jpg" />
+    <Content Include="Media\Textures\caustics_008.jpg" />
+    <Content Include="Media\Textures\caustics_009.jpg" />
+    <Content Include="Media\Textures\caustics_010.jpg" />
+    <Content Include="Media\Textures\caustics_011.jpg" />
+    <Content Include="Media\Textures\caustics_012.jpg" />
+    <Content Include="Media\Textures\caustics_013.jpg" />
+    <Content Include="Media\Textures\caustics_014.jpg" />
+    <Content Include="Media\Textures\caustics_015.jpg" />
+    <Content Include="Media\Textures\caustics_016.jpg" />
+    <Content Include="Media\Textures\heightmap_cm.bmp" />
+    <Content Include="Media\Textures\terrain_base_texture.jpg" />
+    <Content Include="Media\Textures\terrain_detail_texture.jpg" />
+    <Content Include="Media\Textures\test.png" />
+    <Content Include="Media\Textures\test2_cm.bmp" />
+    <Content Include="Media\Textures\test2_lm.bmp" />
+    <Content Include="Media\Textures\test_cm.bmp" />
+    <Content Include="Media\Textures\test_lm.bmp" />
+    <Content Include="Readme.txt" />
+    <Content Include="Scenes\Scene.xml" />
+    <Content Include="Template.txt" />
+    <Content Include="ToDo.txt" />
+    <Content Include="WaveGen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Content\Fonts\SpriteFont1.spritefont" />
+    <None Include="Content\Models\dude\dude.fbx" />
+    <None Include="Content\Models\dude\head.tga" />
+    <None Include="Content\Models\dude\jacket.tga" />
+    <None Include="Content\Models\dude\pants.tga" />
+    <None Include="Content\Models\dude\pawball.tga" />
+    <None Include="Content\Models\dude\upBodyC.tga" />
+    <None Include="Content\Models\xwing\xwing.x" />
+    <None Include="Content\obj\x86\Debug\build.force" />
+    <None Include="Content\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Content\obj\x86\Debug\ResolveAssemblyReference.cache" />
+    <None Include="Content\obj\x86\Debug\Water3DContent.contentprojResolveAssemblyReference.cache" />
+    <None Include="Content\obj\x86\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Content\obj\x86\Release\ResolveAssemblyReference.cache" />
+    <None Include="Content\q3\gfx\2d\bigchars.tga" />
+    <None Include="Content\q3\gfx\2d\crosshaira.tga" />
+    <None Include="Content\q3\gfx\2d\crosshairb.tga" />
+    <None Include="Content\q3\gfx\2d\crosshairc.tga" />
+    <None Include="Content\q3\gfx\2d\crosshaird.tga" />
+    <None Include="Content\q3\gfx\2d\crosshaire.tga" />
+    <None Include="Content\q3\gfx\2d\crosshairf.tga" />
+    <None Include="Content\q3\gfx\2d\crosshairg.tga" />
+    <None Include="Content\q3\gfx\2d\crosshairh.tga" />
+    <None Include="Content\q3\gfx\2d\crosshairi.tga" />
+    <None Include="Content\q3\gfx\2d\crosshairj.tga" />
+    <None Include="Content\q3\gfx\2d\defer.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\eight_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\five_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\four_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\minus_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\nine_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\one_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\seven_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\six_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\three_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\two_32b.tga" />
+    <None Include="Content\q3\gfx\2d\numbers\zero_32b.tga" />
+    <None Include="Content\q3\gfx\2d\select.tga" />
+    <None Include="Content\q3\gfx\damage\blood_screen.tga" />
+    <None Include="Content\q3\gfx\damage\blood_spurt.tga" />
+    <None Include="Content\q3\gfx\damage\blood_stain.tga" />
+    <None Include="Content\q3\gfx\damage\plasma_mrk.tga" />
+    <None Include="Content\q3\gfx\damage\shadow.tga" />
+    <None Include="Content\q3\gfx\misc\console01.tga" />
+    <None Include="Content\q3\gfx\misc\smokepuff2b.tga" />
+    <None Include="Content\q3\gfx\misc\smokepuff3.tga" />
+    <None Include="Content\q3\gfx\misc\smokepuffragepro.tga" />
+    <None Include="Content\q3\maps\q3dm1.bsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\q3\maps\q3dm17.bsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\q3\maps\q3dm7.bsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\q3\maps\q3tourney2.bsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\q3\models\mapobjects\banner\q3banner02.tga" />
+    <None Include="Content\q3\models\mapobjects\banner\q3banner02x.tga" />
+    <None Include="Content\q3\models\mapobjects\baph\baphomet_gold.tga" />
+    <None Include="Content\q3\models\mapobjects\chain\chain.tga" />
+    <None Include="Content\q3\models\mapobjects\flag\banner_strgg.tga" />
+    <None Include="Content\q3\models\mapobjects\lamps\bot_wing.tga" />
+    <None Include="Content\q3\models\mapobjects\podium\podium.tga" />
+    <None Include="Content\q3\models\mapobjects\podium\podiumglo.tga" />
+    <None Include="Content\q3\models\mapobjects\podium\podskull.tga" />
+    <None Include="Content\q3\models\mapobjects\skel\skel.tga" />
+    <None Include="Content\q3\models\mapobjects\spotlamp\spotlamp.tga" />
+    <None Include="Content\q3\models\mapobjects\timlamp\timlamp.tga" />
+    <None Include="Content\q3\models\mapobjects\wallhead\lion_m.tga" />
+    <None Include="Content\q3\scripts\base.shader" />
+    <None Include="Content\q3\scripts\base_button.shader" />
+    <None Include="Content\q3\scripts\base_floor.shader" />
+    <None Include="Content\q3\scripts\base_light.shader" />
+    <None Include="Content\q3\scripts\base_object.shader" />
+    <None Include="Content\q3\scripts\base_support.shader" />
+    <None Include="Content\q3\scripts\base_trim.shader" />
+    <None Include="Content\q3\scripts\base_wall.shader" />
+    <None Include="Content\q3\scripts\common.shader" />
+    <None Include="Content\q3\scripts\ctf.shader" />
+    <None Include="Content\q3\scripts\eerie.shader" />
+    <None Include="Content\q3\scripts\gfx.shader" />
+    <None Include="Content\q3\scripts\gothic_block.shader" />
+    <None Include="Content\q3\scripts\gothic_floor.shader" />
+    <None Include="Content\q3\scripts\gothic_light.shader" />
+    <None Include="Content\q3\scripts\gothic_trim.shader" />
+    <None Include="Content\q3\scripts\gothic_wall.shader" />
+    <None Include="Content\q3\scripts\hell.shader" />
+    <None Include="Content\q3\scripts\liquid.shader" />
+    <None Include="Content\q3\scripts\models.shader" />
+    <None Include="Content\q3\scripts\organics.shader" />
+    <None Include="Content\q3\scripts\sfx.shader" />
+    <None Include="Content\q3\scripts\shrine.shader" />
+    <None Include="Content\q3\scripts\skin.shader" />
+    <None Include="Content\q3\scripts\sky.shader" />
+    <None Include="Content\q3\scripts\test.shader" />
+    <None Include="Content\q3\sprites\balloon4.tga" />
+    <None Include="Content\q3\sprites\bubble.tga" />
+    <None Include="Content\q3\sprites\foe2.tga" />
+    <None Include="Content\q3\textures\base_floor\diamond2c_ow.tga" />
+    <None Include="Content\q3\textures\base_floor\pjgrate2.tga" />
+    <None Include="Content\q3\textures\base_support\cable_trans.tga" />
+    <None Include="Content\q3\textures\base_trim\pewter_shiney.tga" />
+    <None Include="Content\q3\textures\base_wall\atech1_alpha.tga" />
+    <None Include="Content\q3\textures\base_wall\main_q3abanner.tga" />
+    <None Include="Content\q3\textures\base_wall\metalfloor_wall_15ow.tga" />
+    <None Include="Content\q3\textures\base_wall\protobanner.tga" />
+    <None Include="Content\q3\textures\base_wall\steed1gf.tga" />
+    <None Include="Content\q3\textures\effects\blueflagmap.tga" />
+    <None Include="Content\q3\textures\gothic_block\blocks17_ow.tga" />
+    <None Include="Content\q3\textures\gothic_block\blocks18cgeomtrn2.tga" />
+    <None Include="Content\q3\textures\gothic_block\demon_block15fx.tga" />
+    <None Include="Content\q3\textures\gothic_block\killblockgeomtrn.tga" />
+    <None Include="Content\q3\textures\gothic_block\largerblock3blood.tga" />
+    <None Include="Content\q3\textures\gothic_door\skullarch_a.tga" />
+    <None Include="Content\q3\textures\gothic_door\skullarch_b.tga" />
+    <None Include="Content\q3\textures\gothic_door\skullarch_c.tga" />
+    <None Include="Content\q3\textures\gothic_door\skull_door_a.tga" />
+    <None Include="Content\q3\textures\gothic_door\skull_door_b.tga" />
+    <None Include="Content\q3\textures\gothic_door\skull_door_c.tga" />
+    <None Include="Content\q3\textures\gothic_door\skull_door_d.tga" />
+    <None Include="Content\q3\textures\gothic_door\skull_door_e.tga" />
+    <None Include="Content\q3\textures\gothic_door\skull_door_f.tga" />
+    <None Include="Content\q3\textures\gothic_floor\center2trn.tga" />
+    <None Include="Content\q3\textures\gothic_floor\largerblock3b_ow.tga" />
+    <None Include="Content\q3\textures\gothic_trim\km_arena1tower_short.tga" />
+    <None Include="Content\q3\textures\gothic_trim\xsupportborderside_shiney.tga" />
+    <None Include="Content\q3\textures\gothic_trim\x_noblight.tga" />
+    <None Include="Content\q3\textures\gothic_wall\iron01_m.tga" />
+    <None Include="Content\q3\textures\gothic_wall\iron01_ndark.tga" />
+    <None Include="Content\q3\textures\sfx\compscreen\letters1.tga" />
+    <None Include="Content\q3\textures\sfx\compscreen\letters2.tga" />
+    <None Include="Content\q3\textures\sfx\compscreen\letters3.tga" />
+    <None Include="Content\q3\textures\sfx\compscreen\letters4.tga" />
+    <None Include="Content\q3\textures\sfx\firegorre.tga" />
+    <None Include="Content\q3\textures\sfx\firewalla.tga" />
+    <None Include="Content\q3\textures\sfx\launchpad_arrow.tga" />
+    <None Include="Content\q3\textures\sfx\portal_sfx1.tga" />
+    <None Include="Content\q3\textures\sfx\portal_sfx3.tga" />
+    <None Include="Content\q3\textures\sfx\portal_sfx_ring_blue1.tga" />
+    <None Include="Content\q3\textures\skin\chapthroatooz.tga" />
+    <None Include="Content\Textures\detailmap.tga" />
+    <None Include="Content\Textures\grass.dds" />
+    <None Include="Content\Textures\NoiseVolume.dds" />
+    <None Include="Content\Textures\rock.DDS" />
+    <None Include="Content\Textures\sand.dds" />
+    <None Include="Content\Textures\skybox.dds" />
+    <None Include="Content\Textures\snow.DDS" />
+    <None Include="Content\Water3DContent.contentproj" />
+    <None Include="Content\Water3DContent.mgcb" />
+    <None Include="Effects\Particle.fx.bak" />
+    <None Include="Media\Bumpmaps\Thumbs.db" />
+    <None Include="Media\Cubemaps\skybox.dds" />
+    <None Include="Media\Cubemaps\Thumbs.db" />
+    <None Include="Media\Heightmaps\1.RAW" />
+    <None Include="Media\Heightmaps\Thumbs.db" />
+    <None Include="Media\Meshes\mesh.x" />
+    <None Include="Media\Skybox\Thumbs.db" />
+    <None Include="Media\Textures\NoiseVolume.dds" />
+    <None Include="Media\Textures\Thumbs.db" />
+    <None Include="Media\Textures\waves2.dds" />
+    <None Include="packages.config" />
+    <None Include="q3dm1.bsp" />
+    <None Include="q3dm17.bsp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomModelAnimation\CustomModelAnimation.csproj">
+      <Project>{401f31b0-ce00-42dd-84d3-dbff22c6cb7e}</Project>
+      <Name>CustomModelAnimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OwnFunctions\OwnFunctions.csproj">
+      <Project>{84e09560-ab0e-4d9d-95f5-7291f24c0f86}</Project>
+      <Name>OwnFunctions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XNAQ3Lib.Q3BSP\XNAQ3Lib.Q3BSP.csproj">
+      <Project>{3889e7b9-f76c-493f-9c61-d8aa625b222e}</Project>
+      <Name>XNAQ3Lib.Q3BSP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\obj\Models\" />
+    <Folder Include="Content\obj\Windows\" />
+    <Folder Include="Content\obj\x86\Debug\Refactor\" />
+    <Folder Include="Content\obj\x86\Debug\TempPE\" />
+    <Folder Include="Content\obj\x86\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <Import Project="..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets" Condition="Exists('..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
