@@ -3,11 +3,11 @@
   <SourceFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/jacket.tga</SourceFile>
   <SourceTime>2015-11-11T16:45:27.5076215+01:00</SourceTime>
   <DestFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/dude/jacket_0.xnb</DestFile>
-  <DestTime>2019-03-21T17:01:32.4350882+01:00</DestTime>
+  <DestTime>2019-05-24T11:53:50.2140805+02:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
+  <ImporterTime>2019-05-24T11:51:32.2920016+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
+  <ProcessorTime>2019-05-24T11:51:32.2920016+02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>0,0,0,0</Value>

@@ -1,0 +1,142 @@
+// Shader: textures/base_trim/electric_blue
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_electricwall_blue;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_electricwall_blue;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_electric2_blend;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_electricwall_blue>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_electricwall_blue>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_electric2_blend>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage1.uv.x *= 2;
+	output.stage1.uv.y *= 2;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.texcoords;
+	output.stage3.uv.x *= 2;
+	output.stage3.uv.y *= 2;
+	 float s_stage3 = output.stage3.uv.x;
+	 float t_stage3 = output.stage3.uv.y;
+	output.stage3.uv.x = s_stage3*cos(0.9424778 * gameTime) + t_stage3 * -sin(0.9424778 * gameTime) + (0.5 - 0.5 * cos(0.9424778 * gameTime)+ 0.5 *sin(0.9424778 * gameTime));
+	output.stage3.uv.y = s_stage3*sin(0.9424778 * gameTime) + t_stage3 * cos(0.9424778 * gameTime) + (0.5 - 0.5 * sin(0.9424778 * gameTime)- 0.5 *cos(0.9424778 * gameTime));
+	output.stage3.uv.x += 0.53 * gameTime;
+	output.stage3.uv.y += 0.43 * gameTime;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_electricwall_blue
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_electricwall_blue
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	// stage3_electric2_blend
+	destination = (tex2D(stage3_sampler, input.stage3.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+

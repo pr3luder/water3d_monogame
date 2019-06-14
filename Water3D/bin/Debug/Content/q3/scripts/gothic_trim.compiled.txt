@@ -1,0 +1,3584 @@
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_x_noblight_generated.fx
+// Shader: textures/gothic_trim/x_noblight
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_firegorre2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_x_noblight;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_x_noblightfx;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_firegorre2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_x_noblight>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_x_noblightfx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x += 0.1 * gameTime;
+	output.stage0.uv.y += 1 * gameTime;
+	output.stage0.uv.x *= 1;
+	output.stage0.uv.y *= 1;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+	output.stage3.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_firegorre2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_x_noblight
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	// stage3_x_noblightfx
+	destination = (tex2D(stage3_sampler, input.stage3.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_zinc_shiny_generated.fx
+// Shader: textures/gothic_trim/zinc_shiny
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_tinfx;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_zinc_shiny;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_tinfx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_zinc_shiny>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_tinfx
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_zinc_shiny
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_chrome_rivet_generated.fx
+// Shader: textures/gothic_trim/chrome_rivet
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_tinfx;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_chrome_rivet;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_tinfx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_chrome_rivet>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_tinfx
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_chrome_rivet
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_km_arena1tower4fx_generated.fx
+// Shader: textures/gothic_trim/km_arena1tower4fx
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_tinfx;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_km_arena1tower4fx;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_tinfx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_km_arena1tower4fx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_tinfx
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_km_arena1tower4fx
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_km_arena1towerblue_generated.fx
+// Shader: textures/gothic_trim/km_arena1towerblue
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_tinfx;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_km_arena1towerblue;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_tinfx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_km_arena1towerblue>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_tinfx
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_km_arena1towerblue
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_column2c_trans_generated.fx
+// Shader: textures/gothic_trim/column2c_trans
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_column2c_test;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_column2c_test>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_column2c_test
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalsupport4b_trans_generated.fx
+// Shader: textures/gothic_trim/metalsupport4b_trans
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalsupport4b;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalsupport4b>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalsupport4b
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalsupport4j_trans_generated.fx
+// Shader: textures/gothic_trim/metalsupport4j_trans
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalsupport4j;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalsupport4j>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalsupport4j
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_border6_trans_generated.fx
+// Shader: textures/gothic_trim/border6_trans
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_border6;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_border6>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_border6
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_pitted_rust2_trans_generated.fx
+// Shader: textures/gothic_trim/pitted_rust2_trans
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_pitted_rust2;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_pitted_rust2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_pitted_rust2
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_pitted_rust3_trans_generated.fx
+// Shader: textures/gothic_trim/pitted_rust3_trans
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_pitted_rust3;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_pitted_rust3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_pitted_rust3
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_block_killtrim_trans_generated.fx
+// Shader: textures/gothic_block/killtrim_trans
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_killtrim;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_killtrim>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_killtrim
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_baseboard09_p_shiny_generated.fx
+// Shader: textures/gothic_trim/baseboard09_p_shiny
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_baseboard09_p_shiny;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_baseboard09_p_shiny>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_baseboard09_p_shiny
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_km_arena1tower4_shiny_generated.fx
+// Shader: textures/gothic_trim/km_arena1tower4_shiny
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_km_arena1tower4_shiny;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_km_arena1tower4_shiny>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_km_arena1tower4_shiny
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalsupport4h_shiny_generated.fx
+// Shader: textures/gothic_trim/metalsupport4h_shiny
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalsupport4h_shiny;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalsupport4h_shiny>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalsupport4h_shiny
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalsupport4h_trans_generated.fx
+// Shader: textures/gothic_trim/metalsupport4h_trans
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalsupport4h_shiny;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalsupport4h_shiny>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalsupport4h_shiny
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_supportborderside_shiney_generated.fx
+// Shader: textures/gothic_trim/supportborderside_shiney
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_xsupportborderside_shiney;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_xsupportborderside_shiney>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_xsupportborderside_shiney
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metlsupport4i_shiney_generated.fx
+// Shader: textures/gothic_trim/metlsupport4i_shiney
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_xmetalsupport4i_alpha;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_xmetalsupport4i_alpha>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_xmetalsupport4i_alpha
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_barbedwire_generated.fx
+// Shader: textures/gothic_trim/barbedwire
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_barbedwire;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_barbedwire>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_barbedwire
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_button_timbutton_generated.fx
+// Shader: textures/gothic_button/timbutton
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_timbutton;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_timbutton2;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_timbutton>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_timbutton2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+	output.stage2.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_timbutton
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_timbutton2
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_wall_window_evil6a_generated.fx
+// Shader: textures/gothic_wall/window_evil6a
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_window_evil6a;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_window_evil6a_glow;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_window_evil6a>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_window_evil6a_glow>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_window_evil6a
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_window_evil6a_glow
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_wall_window_evil7_generated.fx
+// Shader: textures/gothic_wall/window_evil7
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_window_evil7;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_window_evil7_glow;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_window_evil7>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_window_evil7_glow>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_window_evil7
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_window_evil7_glow
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_wall_glass_stained1_generated.fx
+// Shader: textures/gothic_wall/glass_stained1
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_glass_stained1;
+uniform float3x2 stage0_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_glass_stained1>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_glass_stained1
+	float4 stage0_source = tex2D(stage0_sampler, input.stage0.uv);
+	destination = (stage0_source * stage0_source.a) + (destination * (1.0 -stage0_source.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_gothgrate3_generated.fx
+// Shader: textures/gothic_trim/gothgrate3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_gothgrate3;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_gothgrate3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_gothgrate3
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_gothgrate2_generated.fx
+// Shader: textures/gothic_trim/gothgrate2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_gothgrate2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_gothgrate2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_gothgrate2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_tongue_bone_generated.fx
+// Shader: textures/gothic_trim/tongue_bone
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_tongue_bone;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_tongue_bone_blend;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_tongue_bone>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_tongue_bone_blend>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_tongue_bone
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_tongue_bone_blend
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase09d_iron_generated.fx
+// Shader: textures/gothic_trim/metalbase09d_iron
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_iron01_e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase09_d;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_iron01_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase09_d>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_iron01_e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase09_d
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase09e_iron_generated.fx
+// Shader: textures/gothic_trim/metalbase09e_iron
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_iron01_e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase09_e;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_iron01_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase09_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_iron01_e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase09_e
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase02b_iron_generated.fx
+// Shader: textures/gothic_trim/metalbase02b_iron
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_iron01_e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase02_b;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_iron01_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase02_b>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_iron01_e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase02_b
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase03c_iron_generated.fx
+// Shader: textures/gothic_trim/metalbase03c_iron
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_iron01_e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase03_c;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_iron01_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase03_c>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_iron01_e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase03_c
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase02c_iron_generated.fx
+// Shader: textures/gothic_trim/metalbase02c_iron
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_iron01_e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase02_c;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_iron01_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase02_c>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_iron01_e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase02_c
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase03b_iron_generated.fx
+// Shader: textures/gothic_trim/metalbase03b_iron
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_iron01_e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase03_b;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_iron01_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase03_b>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_iron01_e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase03_b
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase09b_iron_generated.fx
+// Shader: textures/gothic_trim/metalbase09b_iron
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_iron01_e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase09_b;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_iron01_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase09_b>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_iron01_e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase09_b
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase03a_brick_generated.fx
+// Shader: textures/gothic_trim/metalbase03a_brick
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_streetbricks10;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase03_a;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_streetbricks10>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase03_a>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_streetbricks10
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase03_a
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_trimtextures_gothic_trim_metalbase03d_iron_generated.fx
+// Shader: textures/gothic_trim/metalbase03d_iron
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_iron01_e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbase03_d;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_iron01_e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbase03_d>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_iron01_e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbase03_d
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
+		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+	}
+}
+

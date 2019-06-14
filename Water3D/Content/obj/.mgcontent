@@ -4,16 +4,8 @@
   <Platform>Windows</Platform>
   <Config>Debug</Config>
   <SourceFiles>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude2/dude2.fbx</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/dude.fbx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/Landscape.fx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/Water.fx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/ParticleEffect.fx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/Landscape_Lighting.fx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/Landscape_Heightmap.fx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/basicQ3Effect.fx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/effects.fx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/test.fx</File>
-    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/SkinnedModel.fx</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Fonts/SpriteFont1.spritefont</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/gfx/2d/backtile.jpg</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/gfx/2d/bigchars.tga</File>
@@ -117,6 +109,32 @@
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/models/mapobjects/wallhead/lion_m.tga</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/models/mapobjects/wallhead/wallhead02.jpg</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/models/mapobjects/wall_lamp3.jpg</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base_button.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base_floor.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base_light.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base_object.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base_support.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base_trim.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base_wall.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/common.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/ctf.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/eerie.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/gfx.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/gothic_block.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/gothic_floor.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/gothic_light.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/gothic_trim.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/gothic_wall.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/hell.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/liquid.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/models.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/organics.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/sfx.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/shrine.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/skin.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/sky.shader</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/test.shader</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/sprites/balloon4.tga</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/sprites/bubble.tga</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/sprites/foe2.tga</File>
@@ -438,12 +456,17 @@
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/heightmap_cm.bmp</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/terrain_detail_texture.jpg</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/cursor.png</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/Landscape.fx</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/Water.fx</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/smoke.png</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/explosion.png</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/fire.png</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/ParticleEffect.fx</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/Landscape_Lighting.fx</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/skybox.dds</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/test2_cm.bmp</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/test2_lm.bmp</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/Landscape_Heightmap.fx</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/bumpmap.bmp</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/test2_hm.bmp</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/skybox0001.bmp</File>
@@ -459,15 +482,22 @@
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/Dry_Cracked_Ground_diffuse.png</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/Dry_Cracked_Ground_normal.png</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/detailmap.tga</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/basicQ3Effect.fx</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/rock.DDS</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/sand.dds</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/grass.dds</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/snow.DDS</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/effects.fx</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/head.tga</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/jacket.tga</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/pants.tga</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/pawball.tga</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/upBodyC.tga</File>
     <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/xwing/xwing.x</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/test.fx</File>
+    <File>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Shaders/SkinnedModel.fx</File>
   </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+  </DestFiles>
 </SourceFileCollection>

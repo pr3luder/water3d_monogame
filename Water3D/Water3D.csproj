@@ -137,8 +137,7 @@
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="MonoGame.Framework.Content.Pipeline, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MonoGame.Framework.Content.Pipeline">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MSBuild\MonoGame\v3.0\Tools\MonoGame.Framework.Content.Pipeline.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
@@ -674,6 +673,12 @@
     <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="Content\Fonts\SpriteFont1.spritefont" />
+    <None Include="Content\Models\dude2\dude2.fbx" />
+    <None Include="Content\Models\dude2\head.tga" />
+    <None Include="Content\Models\dude2\jacket.tga" />
+    <None Include="Content\Models\dude2\pants.tga" />
+    <None Include="Content\Models\dude2\pawball.tga" />
+    <None Include="Content\Models\dude2\upBodyC.tga" />
     <None Include="Content\Models\dude\dude.fbx" />
     <None Include="Content\Models\dude\head.tga" />
     <None Include="Content\Models\dude\jacket.tga" />

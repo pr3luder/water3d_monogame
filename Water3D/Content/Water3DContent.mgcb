@@ -22,6 +22,123 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/SpriteFont1.spritefont
 
+#begin Models/dude/dude.fbx
+/importer:FbxImporter
+/processor:SkinnedModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:Models/dude/dude.fbx
+
+#begin Models/dude/head.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/dude/head.tga
+
+#begin Models/dude/jacket.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/dude/jacket.tga
+
+#begin Models/dude/pants.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/dude/pants.tga
+
+#begin Models/dude/pawball.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/dude/pawball.tga
+
+#begin Models/dude/upBodyC.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Models/dude/upBodyC.tga
+
+#begin Models/dude2/dude2.fbx
+/importer:FbxImporter
+/processor:SkinnedModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:Models/dude2/dude2.fbx
+
+#begin Models/xwing/xwing.x
+/importer:XImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:Models/xwing/xwing.x
+
 #begin q3/gfx/2d/backtile.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1198,6 +1315,18 @@
 /processorParam:TextureFormat=Color
 /build:q3/models/mapobjects/visor_st.jpg
 
+#begin q3/models/mapobjects/wall_lamp3.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/models/mapobjects/wall_lamp3.jpg
+
 #begin q3/models/mapobjects/wallhead/lion.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1233,18 +1362,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/models/mapobjects/wallhead/wallhead02.jpg
-
-#begin q3/models/mapobjects/wall_lamp3.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/models/mapobjects/wall_lamp3.jpg
 
 #begin q3/scripts/base.shader
 /importer:ShaderContentImporter
@@ -1810,30 +1927,6 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/base_wall/bluemetal2.jpg
 
-#begin q3/textures/base_wall/comp3text.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/base_wall/comp3text.jpg
-
-#begin q3/textures/base_wall/comp3textb.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/base_wall/comp3textb.jpg
-
 #begin q3/textures/base_wall/c_met5_2.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1857,6 +1950,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/base_wall/c_met7_2.jpg
+
+#begin q3/textures/base_wall/comp3text.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/base_wall/comp3text.jpg
+
+#begin q3/textures/base_wall/comp3textb.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/base_wall/comp3textb.jpg
 
 #begin q3/textures/base_wall/main_q3abanner.tga
 /importer:TextureImporter
@@ -2398,6 +2515,18 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_block/blocks17.jpg
 
+#begin q3/textures/gothic_block/blocks17_ow.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_block/blocks17_ow.tga
+
 #begin q3/textures/gothic_block/blocks17e.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2421,18 +2550,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_block/blocks17g.jpg
-
-#begin q3/textures/gothic_block/blocks17_ow.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_block/blocks17_ow.tga
 
 #begin q3/textures/gothic_block/blocks18b.jpg
 /importer:TextureImporter
@@ -2458,6 +2575,18 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_block/blocks18c.jpg
 
+#begin q3/textures/gothic_block/blocks18c_3.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_block/blocks18c_3.jpg
+
 #begin q3/textures/gothic_block/blocks18cblood.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2481,18 +2610,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_block/blocks18cgeomtrn2.tga
-
-#begin q3/textures/gothic_block/blocks18c_3.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_block/blocks18c_3.jpg
 
 #begin q3/textures/gothic_block/blocks20b.jpg
 /importer:TextureImporter
@@ -2614,18 +2731,6 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_block/killblock.jpg
 
-#begin q3/textures/gothic_block/killblockgeomtrn.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_block/killblockgeomtrn.tga
-
 #begin q3/textures/gothic_block/killblock_i.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2649,6 +2754,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_block/killblock_i4.jpg
+
+#begin q3/textures/gothic_block/killblockgeomtrn.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_block/killblockgeomtrn.tga
 
 #begin q3/textures/gothic_block/largerblock3blood.tga
 /importer:TextureImporter
@@ -2950,42 +3067,6 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_door/km_arena1columna2R.jpg
 
-#begin q3/textures/gothic_door/skullarch_a.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_door/skullarch_a.tga
-
-#begin q3/textures/gothic_door/skullarch_b.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_door/skullarch_b.tga
-
-#begin q3/textures/gothic_door/skullarch_c.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_door/skullarch_c.tga
-
 #begin q3/textures/gothic_door/skull_door_a.tga
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -3057,6 +3138,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_door/skull_door_f.tga
+
+#begin q3/textures/gothic_door/skullarch_a.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_door/skullarch_a.tga
+
+#begin q3/textures/gothic_door/skullarch_b.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_door/skullarch_b.tga
+
+#begin q3/textures/gothic_door/skullarch_c.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_door/skullarch_c.tga
 
 #begin q3/textures/gothic_door/xian_tourneyarch_bottom2.jpg
 /importer:TextureImporter
@@ -3214,6 +3331,18 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_floor/largerblock3b.jpg
 
+#begin q3/textures/gothic_floor/largerblock3b_ow.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_floor/largerblock3b_ow.tga
+
 #begin q3/textures/gothic_floor/largerblock3b3.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -3237,18 +3366,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_floor/largerblock3b4.jpg
-
-#begin q3/textures/gothic_floor/largerblock3b_ow.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_floor/largerblock3b_ow.tga
 
 #begin q3/textures/gothic_floor/metalbridge06.jpg
 /importer:TextureImporter
@@ -3298,6 +3415,18 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_floor/q1metal7_99.jpg
 
+#begin q3/textures/gothic_floor/q1metal7_99_broke.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_floor/q1metal7_99_broke.jpg
+
 #begin q3/textures/gothic_floor/q1metal7_99stair.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -3333,18 +3462,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_floor/q1metal7_99stair3.jpg
-
-#begin q3/textures/gothic_floor/q1metal7_99_broke.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_floor/q1metal7_99_broke.jpg
 
 #begin q3/textures/gothic_floor/xstairtop4.jpg
 /importer:TextureImporter
@@ -3766,6 +3883,18 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_trim/columnsupportops.jpg
 
+#begin q3/textures/gothic_trim/km_arena1tower_short.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_trim/km_arena1tower_short.tga
+
 #begin q3/textures/gothic_trim/km_arena1tower4.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -3789,18 +3918,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_trim/km_arena1tower4_a.jpg
-
-#begin q3/textures/gothic_trim/km_arena1tower_short.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_trim/km_arena1tower_short.tga
 
 #begin q3/textures/gothic_trim/metalbase8a_brick.jpg
 /importer:TextureImporter
@@ -3982,30 +4099,6 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_trim/tower_top.jpg
 
-#begin q3/textures/gothic_trim/window_a1.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_trim/window_a1.jpg
-
-#begin q3/textures/gothic_trim/window_a2.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/gothic_trim/window_a2.jpg
-
 #begin q3/textures/gothic_trim/window_a_base.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -4042,7 +4135,7 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_trim/window_a_bottom2.jpg
 
-#begin q3/textures/gothic_trim/xian_tourney_trim.jpg
+#begin q3/textures/gothic_trim/window_a1.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -4052,9 +4145,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:q3/textures/gothic_trim/xian_tourney_trim.jpg
+/build:q3/textures/gothic_trim/window_a1.jpg
 
-#begin q3/textures/gothic_trim/xsupportborderside_shiney.tga
+#begin q3/textures/gothic_trim/window_a2.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -4064,7 +4157,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:q3/textures/gothic_trim/xsupportborderside_shiney.tga
+/build:q3/textures/gothic_trim/window_a2.jpg
 
 #begin q3/textures/gothic_trim/x_noblight.tga
 /importer:TextureImporter
@@ -4089,6 +4182,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/gothic_trim/x_noblightfx.jpg
+
+#begin q3/textures/gothic_trim/xian_tourney_trim.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_trim/xian_tourney_trim.jpg
+
+#begin q3/textures/gothic_trim/xsupportborderside_shiney.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/gothic_trim/xsupportborderside_shiney.tga
 
 #begin q3/textures/gothic_wall/crack5c.jpg
 /importer:TextureImporter
@@ -4426,7 +4543,7 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/sfx/bolts.jpg
 
-#begin q3/textures/sfx/bouncepad01block18b.jpg
+#begin q3/textures/sfx/bouncepad01_diamond2cTGA.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -4436,7 +4553,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:q3/textures/sfx/bouncepad01block18b.jpg
+/build:q3/textures/sfx/bouncepad01_diamond2cTGA.jpg
 
 #begin q3/textures/sfx/bouncepad01b_layer1.jpg
 /importer:TextureImporter
@@ -4450,7 +4567,7 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/sfx/bouncepad01b_layer1.jpg
 
-#begin q3/textures/sfx/bouncepad01_diamond2cTGA.jpg
+#begin q3/textures/sfx/bouncepad01block18b.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -4460,7 +4577,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:q3/textures/sfx/bouncepad01_diamond2cTGA.jpg
+/build:q3/textures/sfx/bouncepad01block18b.jpg
 
 #begin q3/textures/sfx/bouncepad1q1metal7_99.jpg
 /importer:TextureImporter
@@ -4534,18 +4651,6 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/sfx/compscreen/letters5.jpg
 
-#begin q3/textures/sfx/computerpurptileb.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/sfx/computerpurptileb.jpg
-
 #begin q3/textures/sfx/computer_blocks17.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -4557,6 +4662,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/sfx/computer_blocks17.jpg
+
+#begin q3/textures/sfx/computerpurptileb.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/sfx/computerpurptileb.jpg
 
 #begin q3/textures/sfx/detail.jpg
 /importer:TextureImporter
@@ -4882,18 +4999,6 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/sfx/pentdirt2_@256.jpg
 
-#begin q3/textures/sfx/pentfloorq1metal7_99.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/sfx/pentfloorq1metal7_99.jpg
-
 #begin q3/textures/sfx/pentfloor_diamond2c.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -4906,7 +5011,7 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/sfx/pentfloor_diamond2c.jpg
 
-#begin q3/textures/sfx/portalfog.jpg
+#begin q3/textures/sfx/pentfloorq1metal7_99.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -4916,7 +5021,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:q3/textures/sfx/portalfog.jpg
+/build:q3/textures/sfx/pentfloorq1metal7_99.jpg
 
 #begin q3/textures/sfx/portal_sfx.jpg
 /importer:TextureImporter
@@ -4929,30 +5034,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/sfx/portal_sfx.jpg
-
-#begin q3/textures/sfx/portal_sfx1.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/sfx/portal_sfx1.tga
-
-#begin q3/textures/sfx/portal_sfx3.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:q3/textures/sfx/portal_sfx3.tga
 
 #begin q3/textures/sfx/portal_sfx_ring.jpg
 /importer:TextureImporter
@@ -4989,6 +5070,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:q3/textures/sfx/portal_sfx_ring_electric.jpg
+
+#begin q3/textures/sfx/portal_sfx1.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/sfx/portal_sfx1.tga
+
+#begin q3/textures/sfx/portal_sfx3.tga
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/sfx/portal_sfx3.tga
+
+#begin q3/textures/sfx/portalfog.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:q3/textures/sfx/portalfog.jpg
 
 #begin q3/textures/sfx/proto_zzzt.jpg
 /importer:TextureImporter
@@ -5218,19 +5335,63 @@
 /processorParam:TextureFormat=Color
 /build:q3/textures/skin/tongue.jpg
 
-#begin Textures/heightmap_cm.bmp
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/heightmap_cm.bmp
+#begin Shaders/basicQ3Effect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Shaders/basicQ3Effect.fx
 
-#begin Textures/terrain_detail_texture.jpg
+#begin Shaders/effects.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/processorParam:Defines=
+/build:Shaders/effects.fx
+
+#begin Shaders/Landscape.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/processorParam:Defines=
+/build:Shaders/Landscape.fx
+
+#begin Shaders/Landscape_Heightmap.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Shaders/Landscape_Heightmap.fx
+
+#begin Shaders/Landscape_Lighting.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Shaders/Landscape_Lighting.fx
+
+#begin Shaders/ParticleEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Shaders/ParticleEffect.fx
+
+#begin Shaders/SkinnedModel.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Shaders/SkinnedModel.fx
+
+#begin Shaders/test.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Shaders/test.fx
+
+#begin Shaders/Water.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Shaders/Water.fx
+
+#begin Textures/bumpmap.bmp
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -5240,7 +5401,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/terrain_detail_texture.jpg
+/build:Textures/bumpmap.bmp
 
 #begin Textures/cursor.png
 /importer:TextureImporter
@@ -5254,20 +5415,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/cursor.png
 
-#begin Shaders/Landscape.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/processorParam:Defines=
-/build:Shaders/Landscape.fx
-
-#begin Shaders/Water.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:Shaders/Water.fx
-
-#begin Textures/smoke.png
+#begin Textures/detailmap.tga
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -5277,7 +5425,31 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/smoke.png
+/build:Textures/detailmap.tga
+
+#begin Textures/Dry_Cracked_Ground_diffuse.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Dry_Cracked_Ground_diffuse.png
+
+#begin Textures/Dry_Cracked_Ground_normal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Dry_Cracked_Ground_normal.png
 
 #begin Textures/explosion.png
 /importer:TextureImporter
@@ -5303,17 +5475,77 @@
 /processorParam:TextureFormat=Color
 /build:Textures/fire.png
 
-#begin Shaders/ParticleEffect.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:Shaders/ParticleEffect.fx
+#begin Textures/Granit_Rock_diffuse.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Granit_Rock_diffuse.png
 
-#begin Shaders/Landscape_Lighting.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:Shaders/Landscape_Lighting.fx
+#begin Textures/Granit_Rock_normal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Granit_Rock_normal.png
+
+#begin Textures/grass.dds
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/grass.dds
+
+#begin Textures/heightmap_cm.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/heightmap_cm.bmp
+
+#begin Textures/rock.DDS
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/rock.DDS
+
+#begin Textures/sand.dds
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/sand.dds
 
 #begin Textures/skybox.dds
 /importer:TextureImporter
@@ -5326,60 +5558,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/skybox.dds
-
-#begin Textures/test2_cm.bmp
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/test2_cm.bmp
-
-#begin Textures/test2_lm.bmp
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/test2_lm.bmp
-
-#begin Shaders/Landscape_Heightmap.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:Shaders/Landscape_Heightmap.fx
-
-#begin Textures/bumpmap.bmp
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/bumpmap.bmp
-
-#begin Textures/test2_hm.bmp
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/test2_hm.bmp
 
 #begin Textures/skybox0001.bmp
 /importer:TextureImporter
@@ -5453,7 +5631,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/skybox0006.bmp
 
-#begin Textures/Granit_Rock_diffuse.png
+#begin Textures/smoke.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -5463,9 +5641,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Granit_Rock_diffuse.png
+/build:Textures/smoke.png
 
-#begin Textures/Granit_Rock_normal.png
+#begin Textures/snow.DDS
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -5475,7 +5653,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Granit_Rock_normal.png
+/build:Textures/snow.DDS
 
 #begin Textures/stone_01_diffuse.png
 /importer:TextureImporter
@@ -5501,7 +5679,7 @@
 /processorParam:TextureFormat=Color
 /build:Textures/stone_01_normal.png
 
-#begin Textures/Dry_Cracked_Ground_diffuse.png
+#begin Textures/terrain_detail_texture.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -5511,9 +5689,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Dry_Cracked_Ground_diffuse.png
+/build:Textures/terrain_detail_texture.jpg
 
-#begin Textures/Dry_Cracked_Ground_normal.png
+#begin Textures/test2_cm.bmp
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -5523,9 +5701,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/Dry_Cracked_Ground_normal.png
+/build:Textures/test2_cm.bmp
 
-#begin Textures/detailmap.tga
+#begin Textures/test2_hm.bmp
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -5535,15 +5713,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/detailmap.tga
+/build:Textures/test2_hm.bmp
 
-#begin Shaders/basicQ3Effect.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:Shaders/basicQ3Effect.fx
-
-#begin Textures/rock.DDS
+#begin Textures/test2_lm.bmp
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -5553,158 +5725,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Textures/rock.DDS
-
-#begin Textures/sand.dds
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/sand.dds
-
-#begin Textures/grass.dds
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/grass.dds
-
-#begin Textures/snow.DDS
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/snow.DDS
-
-#begin Shaders/effects.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/processorParam:Defines=
-/build:Shaders/effects.fx
-
-#begin Models/dude/dude.fbx
-/importer:FbxImporter
-/processor:SkinnedModelProcessor
-/processorParam:ColorKeyColor=0,0,0,0
-/processorParam:ColorKeyEnabled=True
-/processorParam:DefaultEffect=BasicEffect
-/processorParam:GenerateMipmaps=True
-/processorParam:GenerateTangentFrames=False
-/processorParam:PremultiplyTextureAlpha=True
-/processorParam:PremultiplyVertexColors=True
-/processorParam:ResizeTexturesToPowerOfTwo=False
-/processorParam:RotationX=0
-/processorParam:RotationY=0
-/processorParam:RotationZ=0
-/processorParam:Scale=1
-/processorParam:SwapWindingOrder=False
-/processorParam:TextureFormat=Compressed
-/build:Models/dude/dude.fbx
-
-#begin Models/dude/head.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Models/dude/head.tga
-
-#begin Models/dude/jacket.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Models/dude/jacket.tga
-
-#begin Models/dude/pants.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Models/dude/pants.tga
-
-#begin Models/dude/pawball.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Models/dude/pawball.tga
-
-#begin Models/dude/upBodyC.tga
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Models/dude/upBodyC.tga
-
-#begin Models/xwing/xwing.x
-/importer:XImporter
-/processor:ModelProcessor
-/processorParam:ColorKeyColor=0,0,0,0
-/processorParam:ColorKeyEnabled=True
-/processorParam:DefaultEffect=BasicEffect
-/processorParam:GenerateMipmaps=True
-/processorParam:GenerateTangentFrames=False
-/processorParam:PremultiplyTextureAlpha=True
-/processorParam:PremultiplyVertexColors=True
-/processorParam:ResizeTexturesToPowerOfTwo=False
-/processorParam:RotationX=0
-/processorParam:RotationY=0
-/processorParam:RotationZ=0
-/processorParam:Scale=1
-/processorParam:SwapWindingOrder=False
-/processorParam:TextureFormat=Compressed
-/build:Models/xwing/xwing.x
-
-#begin Shaders/test.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:Shaders/test.fx
-
-#begin Shaders/SkinnedModel.fx
-/importer:EffectImporter
-/processor:EffectProcessor
-/processorParam:DebugMode=Auto
-/build:Shaders/SkinnedModel.fx
+/build:Textures/test2_lm.bmp
 

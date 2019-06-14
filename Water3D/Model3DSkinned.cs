@@ -80,6 +80,10 @@ namespace Water3D
             if (animate)
             {
                 skinnedAnimationPlayer.Update(gameTime);
+            } else
+            {
+                //skinnedAnimationPlayer.Update(TimeSpan.Zero, true, Matrix.Identity);
+                //skinnedAnimationPlayer.Update(new GameTime(TimeSpan.Zero, TimeSpan.Zero));
             }
         }
 
@@ -123,12 +127,17 @@ namespace Water3D
             this.startAnimation();
         }
 
+        public override void Update(GameTime gameTime)
+        {
+
+        }
+
         public override void Draw(GameTime time)
         {
-           
+            
             //worldMatrix = Matrix.CreateFromQuaternion(rotationQuat) * Matrix.CreateTranslation(pos);
-            //scene.Game.GraphicsDevice.RasterizerState = RasterizerState.CullNone;
-            //scene.Game.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+            scene.Game.GraphicsDevice.RasterizerState = RasterizerState.CullNone;
+            scene.Game.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
             
             boneTransforms = skinnedAnimationPlayer.GetSkinTransforms();
             effectContainer.updateMutable(this);
@@ -161,7 +170,7 @@ namespace Water3D
             {
                 startAnimation();
             }
-            updateAnimation(time);
+            updateAnimation(time); // FIXME hier gibt es Animationsprobleme - aendern
             base.Draw(time);
         }
 

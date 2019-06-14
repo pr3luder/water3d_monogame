@@ -214,7 +214,7 @@ namespace Water3D
             model.Mode = "fly";
             
 
-            modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 5.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/dude/dude", "Take 001");
+            modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 100.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/dude2/dude2", "Take 001");
             //modelAnim = new Model3DSkinned(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(0.005f, 0.005f, 0.005f), "Models/dude", "Take 001");
             modelAnim.setEffect(skinnedEffect);
             modelAnim.Mode = "go";
@@ -411,7 +411,7 @@ namespace Water3D
                 camera.getObjective().rotateObjectQuaternion(turningSpeedX, turningSpeedY, turningSpeedZ);
                 camera.followObjectiveQuaternion(0.01f);
             }
-
+            camera.getObjective().Update(gameTime);
             UpdateMouse(gameTime);
             UpdateInput(gameTime);
             

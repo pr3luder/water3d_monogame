@@ -18,7 +18,6 @@
 using System;
 using System.Drawing;
 using System.Collections.Generic;
-using OwnFunctions;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -96,7 +95,7 @@ namespace Water3D
             initIndexBuffer();
             setObject(pos.X, pos.Y, pos.Z); 
             scaleObject(scale.X, scale.Y, scale.Z);
-		}
+        }
 
         void timer_Elapsed(object sender, ElapsedEventArgs e)
         {

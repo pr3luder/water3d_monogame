@@ -29,8 +29,8 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnima
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\bin\Debug\SharpDX.XAudio2.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\bin\Debug\SharpDX.XInput.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\bin\Debug\SharpDX.XInput.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\obj\Debug\CustomModelAnimation.csprojAssemblyReference.cache
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\obj\Debug\CustomModelAnimation.csproj.CoreCompileInputs.cache
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\obj\Debug\CustomModelAnimation.csproj.CopyComplete
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\obj\Debug\CustomModelAnimation.dll
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\obj\Debug\CustomModelAnimation.pdb
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimation\obj\Debug\CustomModelAnimation.csprojAssemblyReference.cache

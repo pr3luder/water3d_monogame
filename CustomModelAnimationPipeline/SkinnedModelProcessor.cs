@@ -102,10 +102,41 @@ namespace CustomModelAnimationPipeline
             bool isWeights = geometry.Vertices.Channels[vertexChannelIndex].Name == VertexChannelNames.Weights();
 
             base.ProcessVertexChannel(geometry, vertexChannelIndex, context);
-            
+
             if (isWeights)
             {
                 geometry.Vertices.Channels.ConvertChannelContent<Vector4>("BlendIndices0"); //fixme hier stand mal Vector4 -> beobachten
+               
+                /*
+                Console.WriteLine(geometry.Vertices.Channels[0]);
+                Console.WriteLine(geometry.Vertices.Channels[1]);
+                Console.WriteLine(geometry.Vertices.Channels[2]);
+                Console.WriteLine(geometry.Vertices.Channels["BlendIndices0"].ToString());
+                VertexChannelCollection channels = geometry.Vertices.Channels;
+                int index = channels.IndexOf("BlendIndices0");
+                VertexChannel channel = channels[index];
+                channels.RemoveAt(index);
+                //Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel<Microsoft.Xna.Framework.Vector4>
+                //VertexChannel<Vector4> newChannel = new VertexChannel<Vector4>("BlendIndices0");
+
+
+                for (int i = 0; i < channel.Count; i++)
+                {
+                    if(channel[i].GetType() == typeof(Byte4))
+                    {
+                        Vector4 test = ((Byte4)channel[i]).ToVector4();
+                        //channel[i] = ((Byte4)channel[i]).ToVector4();
+                    }
+                }
+                //channels.Insert(index, channel.Name, typeof(Vector4), channel.ReadConvertedContent<Vector4>());
+                //channels.Insert(index, channel.Name, channel.ReadConvertedContent<Vector4>());
+                */
+                /*
+                geometry.Vertices.Channels["BlendIndices0"].IndexOf()
+                var index = channels.FindIndex((v) => v.Name == "BlendIndices0");
+                */
+                //result = geometry.Vertices.Channels.Insert(index, channel.Name, channel.ReadConvertedContent<TargetType>());
+                //Microsoft.Xna.Framework.Graphics.PackedVector.
                 geometry.Vertices.Channels.ConvertChannelContent<Vector4>("BlendWeight0");
             }
         }

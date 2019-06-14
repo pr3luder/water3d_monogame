@@ -19,7 +19,8 @@ namespace Water3D
         public override string IntermediateDirectory { get { return string.Empty; } }
         public override string OutputDirectory { get { return string.Empty; } }
         public override string OutputFilename { get { return string.Empty; } }
-        //public override ContentIdentity SourceIdentity => throw new NotImplementedException();
+        public override ContentIdentity SourceIdentity { get { return new ContentIdentity(OutputFilename); } }
+        //public ContentIdentity SourceIdentity { get { return new ContentIdentity(); } }
 
         public override OpaqueDataDictionary Parameters { get { return parameters; } }
         OpaqueDataDictionary parameters = new OpaqueDataDictionary();

@@ -357,12 +357,12 @@ namespace Water3D
             effectContainer.updateMutable(this);
             effectContainer.drawMutable();
         }
-
+        
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
         }
-
+        
 		/// <summary>
 		/// Chapter 4.3, Listing 4.3.3
 		/// apply world matrix
