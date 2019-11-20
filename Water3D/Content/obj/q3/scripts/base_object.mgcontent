@@ -3,11 +3,11 @@
   <SourceFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/q3/scripts/base_object.shader</SourceFile>
   <SourceTime>2015-11-11T16:46:03.8276989+01:00</SourceTime>
   <DestFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/base_object.xnb</DestFile>
-  <DestTime>2019-04-05T16:34:44.9984719+02:00</DestTime>
+  <DestTime>2019-08-30T10:30:50.0343198+02:00</DestTime>
   <Importer>ShaderContentImporter</Importer>
-  <ImporterTime>2019-03-15T16:40:52.6818593+01:00</ImporterTime>
+  <ImporterTime>2019-05-24T14:26:17.6101939+02:00</ImporterTime>
   <Processor>ShaderContentProcessor</Processor>
-  <ProcessorTime>2019-03-15T16:40:52.6818593+01:00</ProcessorTime>
+  <ProcessorTime>2019-05-24T14:26:17.6101939+02:00</ProcessorTime>
   <Parameters>
     <Key>ShaderModel</Key>
     <Value>ShaderModel4</Value>

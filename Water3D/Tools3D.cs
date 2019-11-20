@@ -41,5 +41,18 @@ namespace Water3D
             return true;
         }
 
+        public static Matrix getProjectiveScaleMatrix()
+        {
+            Matrix matTexScale = Matrix.Identity;
+            float fOffset = 0.5f;
+            matTexScale.M11 = 0.5f;
+            matTexScale.M22 = -0.5f;
+            matTexScale.M33 = 0.5f;
+            matTexScale.M44 = 1.0f;
+            matTexScale.M41 = fOffset;
+            matTexScale.M42 = fOffset;
+            return matTexScale;
+        }
+
     }
 }

@@ -14,10 +14,8 @@ namespace Water3D
 
         public GraphicsSystem()
         {
-            /*  */
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
         }
 
         /// <summary>

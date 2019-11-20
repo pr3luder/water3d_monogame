@@ -3,11 +3,11 @@
   <SourceFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/upBodyC.tga</SourceFile>
   <SourceTime>2015-11-11T16:45:27.5916263+01:00</SourceTime>
   <DestFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/dude/upBodyC_0.xnb</DestFile>
-  <DestTime>2019-05-24T11:53:55.3231021+02:00</DestTime>
+  <DestTime>2019-11-13T14:14:30.7013394+01:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2019-05-24T11:51:32.2920016+02:00</ImporterTime>
+  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2019-05-24T11:51:32.2920016+02:00</ProcessorTime>
+  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>0,0,0,0</Value>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,7 +13,7 @@
     <AssemblyName>Water3D</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -31,6 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -78,45 +79,45 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Camera.cs" />
+    <Compile Include="Camera\Camera.cs" />
     <Compile Include="CodeWindow.cs" />
     <Compile Include="CompileEventArgs.cs" />
     <Compile Include="CompileEventHandler.cs" />
     <Compile Include="Console.cs" />
     <Compile Include="Cursor.cs" />
     <Compile Include="DebugDraw.cs" />
-    <Compile Include="EffectContainer.cs" />
-    <Compile Include="EffectContentProcessorContext.cs" />
-    <Compile Include="EffectManager.cs" />
+    <Compile Include="Effect\EffectContainer.cs" />
+    <Compile Include="Effect\EffectContentProcessorContext.cs" />
+    <Compile Include="Effect\EffectManager.cs" />
     <Compile Include="FPSCounter.cs" />
     <Compile Include="FunctionCompiler.cs" />
     <Compile Include="GraphicsSystem.cs" />
-    <Compile Include="Landscape.cs" />
-    <Compile Include="LandscapeGeomipmap.cs" />
-    <Compile Include="LandscapeROAM.cs" />
+    <Compile Include="Terrain\Landscape.cs" />
+    <Compile Include="Terrain\LandscapeGeomipmap.cs" />
+    <Compile Include="Terrain\LandscapeROAM.cs" />
     <Compile Include="Level3D.cs" />
-    <Compile Include="Model3D.cs" />
-    <Compile Include="Model3DSkinned.cs" />
-    <Compile Include="Object3D.cs" />
-    <Compile Include="Object3DSettings.cs" />
-    <Compile Include="ParticleEmitter.cs" />
-    <Compile Include="ParticleSettings.cs" />
-    <Compile Include="ParticleSystem.cs" />
-    <Compile Include="ParticleSystems\ExplosionParticleSystem.cs" />
-    <Compile Include="ParticleSystems\ExplosionSmokeParticleSystem.cs" />
-    <Compile Include="ParticleSystems\FireParticleSystem.cs" />
-    <Compile Include="ParticleSystems\ProjectileTrailParticleSystem.cs" />
-    <Compile Include="ParticleSystems\SmokePlumeParticleSystem.cs" />
-    <Compile Include="Patch.cs" />
-    <Compile Include="PatchGeomipmap.cs" />
-    <Compile Include="PatchROAM.cs" />
-    <Compile Include="Physics.cs" />
-    <Compile Include="Plane3D.cs" />
+    <Compile Include="Object3D\Model3D.cs" />
+    <Compile Include="Object3D\Model3DSkinned.cs" />
+    <Compile Include="Object3D\Object3D.cs" />
+    <Compile Include="Object3D\Object3DSettings.cs" />
+    <Compile Include="ParticleSystem\ParticleEmitter.cs" />
+    <Compile Include="ParticleSystem\ParticleSettings.cs" />
+    <Compile Include="ParticleSystem\ParticleSystem.cs" />
+    <Compile Include="ParticleSystem\ExplosionParticleSystem.cs" />
+    <Compile Include="ParticleSystem\ExplosionSmokeParticleSystem.cs" />
+    <Compile Include="ParticleSystem\FireParticleSystem.cs" />
+    <Compile Include="ParticleSystem\ProjectileTrailParticleSystem.cs" />
+    <Compile Include="ParticleSystem\SmokePlumeParticleSystem.cs" />
+    <Compile Include="Terrain\Patch.cs" />
+    <Compile Include="Terrain\PatchGeomipmap.cs" />
+    <Compile Include="Terrain\PatchROAM.cs" />
+    <Compile Include="Physics\Physics.cs" />
+    <Compile Include="Object3D\Plane3D.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Projectile.cs" />
+    <Compile Include="ParticleSystem\Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quadtree.cs" />
-    <Compile Include="QuadtreeNode.cs" />
+    <Compile Include="DataStructure\Quadtree.cs" />
+    <Compile Include="DataStructure\QuadtreeNode.cs" />
     <Compile Include="RenderEngine.cs" />
     <Compile Include="SceneContainer.cs" />
     <Compile Include="Skybox.cs" />
@@ -125,13 +126,13 @@
     <Compile Include="TextureManager.cs" />
     <Compile Include="TextureRenderer.cs" />
     <Compile Include="Tools3D.cs" />
-    <Compile Include="TriTreeNode.cs" />
+    <Compile Include="DataStructure\TriTreeNode.cs" />
     <Compile Include="VertexDeclarations\ParticleVertex.cs" />
     <Compile Include="VertexDeclarations\PositionNormalColor.cs" />
     <Compile Include="VertexDeclarations\PositionNormalColorMultiTexture.cs" />
     <Compile Include="VertexDeclarations\PositionNormalMultiTexture.cs" />
     <Compile Include="Water3D.cs" />
-    <Compile Include="Window2D.cs" />
+    <Compile Include="Object2D\Window2D.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
@@ -673,12 +674,25 @@
     <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="Content\Fonts\SpriteFont1.spritefont" />
-    <None Include="Content\Models\dude2\dude2.fbx" />
-    <None Include="Content\Models\dude2\head.tga" />
-    <None Include="Content\Models\dude2\jacket.tga" />
-    <None Include="Content\Models\dude2\pants.tga" />
-    <None Include="Content\Models\dude2\pawball.tga" />
-    <None Include="Content\Models\dude2\upBodyC.tga" />
+    <None Include="Content\Models\dude2_0\Dude.drmdl" />
+    <None Include="Content\Models\dude2_0\Dude.fbx" />
+    <None Include="Content\Models\dude2_0\Eyes.drmat" />
+    <None Include="Content\Models\dude2_0\Head.drmat" />
+    <None Include="Content\Models\dude2_0\head.tga" />
+    <None Include="Content\Models\dude2_0\headN.tga" />
+    <None Include="Content\Models\dude2_0\headS.tga" />
+    <None Include="Content\Models\dude2_0\Jacket.drmat" />
+    <None Include="Content\Models\dude2_0\jacket.tga" />
+    <None Include="Content\Models\dude2_0\jacketN.tga" />
+    <None Include="Content\Models\dude2_0\jacketS.tga" />
+    <None Include="Content\Models\dude2_0\Pants.drmat" />
+    <None Include="Content\Models\dude2_0\pants.tga" />
+    <None Include="Content\Models\dude2_0\pantsN.tga" />
+    <None Include="Content\Models\dude2_0\pantsS.tga" />
+    <None Include="Content\Models\dude2_0\UpBody.drmat" />
+    <None Include="Content\Models\dude2_0\upBodyC.tga" />
+    <None Include="Content\Models\dude2_0\upbodyN.tga" />
+    <None Include="Content\Models\dude2_0\upBodyS.tga" />
     <None Include="Content\Models\dude\dude.fbx" />
     <None Include="Content\Models\dude\head.tga" />
     <None Include="Content\Models\dude\jacket.tga" />
@@ -842,8 +856,6 @@
     <None Include="Media\Textures\Thumbs.db" />
     <None Include="Media\Textures\waves2.dds" />
     <None Include="packages.config" />
-    <None Include="q3dm1.bsp" />
-    <None Include="q3dm17.bsp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CustomModelAnimation\CustomModelAnimation.csproj">

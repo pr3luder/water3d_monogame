@@ -24,7 +24,6 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnima
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\CustomModelAnimation.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\CustomModelAnimation.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\MonoGame.Framework.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\MonoGame.Framework.Content.Pipeline.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\MonoGame.Framework.Content.Pipeline.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\SharpDX.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\SharpDX.Direct2D1.pdb
@@ -44,12 +43,7 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnima
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\SharpDX.XInput.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\SharpDX.XInput.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\SharpDX.D3DCompiler.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\AssimpNet.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\AssimpNet.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\AssimpNet.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\ATI.TextureConverter.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\Nvidia.TextureTools.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\PVRTexLibNET.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\bin\Debug\SharpFont.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\obj\Debug\CustomModelAnimationPipeline.csprojAssemblyReference.cache
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomModelAnimationPipeline\obj\Debug\CustomModelAnimationPipeline.csproj.CoreCompileInputs.cache

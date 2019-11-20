@@ -37,8 +37,7 @@ namespace Water3D
         private TextureRenderer refract;
         private TextureManager textureManager;
         private float seaHeight = 0.0f;
-        public SceneContainer(Camera camera, TextureManager textureManager)
-            : base(RenderEngine.Game)
+        public SceneContainer(Camera camera, TextureManager textureManager) : base(RenderEngine.Game)
 		{
             this.camera = camera;
             this.textureManager = textureManager;
@@ -48,6 +47,11 @@ namespace Water3D
             objectsMirrorList = new Hashtable();
             objectsRefractList = new Hashtable();
 		}
+
+        public SceneContainer(TextureManager textureManager) : this(null, textureManager)
+        {
+
+        }
 
         public override void Initialize()
         {
@@ -60,6 +64,11 @@ namespace Water3D
         {
             reflect.reset();
             refract.reset();
+        }
+
+        public void setCamera(Camera camera)
+        {
+            this.camera = camera;
         }
 
         public List<Object3D> getObjects()

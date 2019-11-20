@@ -72,13 +72,14 @@ namespace CustomModelAnimation
             {
                 TimeSpan time = value;
 
+                /* FIXME resets animation */
                 // If the position moved backwards, reset the keyframe index.
                 if (time < currentTimeValue)
                 {
                     currentKeyframe = 0;
                     InitClip();
                 }
-
+                
                 currentTimeValue = time;
 
                 // Read keyframe matrices.

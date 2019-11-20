@@ -212,14 +212,16 @@ namespace Water3D
             model = new Model3D(scene, new Vector3(1220.0f, 50.0f, -1300.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/xwing/xwing");
             model.setEffect(xwingEffect);
             model.Mode = "fly";
-            
 
-            modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 100.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/dude2/dude2", "Take 001");
+
+            //modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 100.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/dude/dude", "Take 001");
+            //modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 100.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/spider/Spider", "run_ani_back");
             //modelAnim = new Model3DSkinned(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(0.005f, 0.005f, 0.005f), "Models/dude", "Take 001");
+            modelAnim = new Model3DSkinned(scene, new Vector3(2220.0f, 10.0f, -150.0f), Matrix.Identity, new Vector3(0.1f, 0.1f, 0.1f), "Models/dude2_0/Dude");
             modelAnim.setEffect(skinnedEffect);
             modelAnim.Mode = "go";
 
-            /*
+            /* wenn man keine grossen Wellen haben moechte, sondern z.B. nur den Wasser Effekt
             plane = new Plane3D(scene, new Vector3(-2048.0f, 0.0f, 2048.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), 8192.0f, 8192.0f);
             plane.setEffect(waterEffect);
             */
@@ -240,7 +242,7 @@ namespace Water3D
             debugDraw = new DebugDraw(game.GraphicsDevice);
 
             // quake 3 level
-            level = new Level3D(scene, new Vector3(2048.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), @"Content\q3\maps\q3dm1.bsp", @"q3\scripts\", @"q3\", false);
+            level = new Level3D(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), @"Content\q3\maps\q3dm1.bsp", @"q3\scripts\", @"q3\", false);
             //level = new Level3D(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), false);
             
             /* old code
@@ -404,6 +406,12 @@ namespace Water3D
         public void Update(GameTime gameTime)
         {
             updateTime = gameTime;
+
+            /*
+            if (camera.getObjective().GetType() == typeof(Model3DSkinned))
+            {
+                ((Model3DSkinned)camera.getObjective()).updateAnimation(gameTime);
+            }*/
             
             if (camera.getObjective().Mode == "fly")
             { 
@@ -411,7 +419,7 @@ namespace Water3D
                 camera.getObjective().rotateObjectQuaternion(turningSpeedX, turningSpeedY, turningSpeedZ);
                 camera.followObjectiveQuaternion(0.01f);
             }
-            camera.getObjective().Update(gameTime);
+            //camera.getObjective().Update(gameTime);
             UpdateMouse(gameTime);
             UpdateInput(gameTime);
             
@@ -602,22 +610,22 @@ namespace Water3D
                 {
                     if (key == Keys.W)
                     {
-                        camera.getObjective().goForward();
+                        camera.getObjective().goForward("Take 001");
                     }//forward
 
                     if (key == Keys.S)
                     {
-                        camera.getObjective().goBackwards();  
+                        camera.getObjective().goBackwards("Take 001");  
                     }//back
 
                     if (key == Keys.A)
                     {
-                        camera.getObjective().turnLeft();
+                        camera.getObjective().turnLeft("Take 001");
                     }//strafe left
 
                     if (key == Keys.D)
                     {
-                        camera.getObjective().turnRight();
+                        camera.getObjective().turnRight("Take 001");
                     }//strafe right
 
                     if (key == Keys.R)
@@ -816,11 +824,11 @@ namespace Water3D
                     {
                         if (state.X - mouseSaveX < 0)
                         {
-                            camera.getObjective().turnLeft();
+                            camera.getObjective().turnLeft("Take 001");
                         }
                         if (state.X - mouseSaveX > 0)
                         {
-                            camera.getObjective().turnRight();
+                            camera.getObjective().turnRight("Take 001");
                         }
                         if (state.Y - mouseSaveY > 0)
                         {

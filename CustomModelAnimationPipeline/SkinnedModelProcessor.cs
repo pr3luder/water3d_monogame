@@ -105,9 +105,17 @@ namespace CustomModelAnimationPipeline
 
             if (isWeights)
             {
-                geometry.Vertices.Channels.ConvertChannelContent<Vector4>("BlendIndices0"); //fixme hier stand mal Vector4 -> beobachten
-               
-                /*
+                try
+                {
+                    geometry.Vertices.Channels.ConvertChannelContent<Vector4>("BlendIndices0"); //fixme hier stand mal Vector4 -> beobachten
+                    geometry.Vertices.Channels.ConvertChannelContent<Vector4>("BlendWeight0");
+                }
+                catch(Exception e)
+                {
+                    // converting from Byte4 to Vector4 channel not supported
+                }
+
+                /* debugging code
                 Console.WriteLine(geometry.Vertices.Channels[0]);
                 Console.WriteLine(geometry.Vertices.Channels[1]);
                 Console.WriteLine(geometry.Vertices.Channels[2]);
@@ -135,9 +143,7 @@ namespace CustomModelAnimationPipeline
                 geometry.Vertices.Channels["BlendIndices0"].IndexOf()
                 var index = channels.FindIndex((v) => v.Name == "BlendIndices0");
                 */
-                //result = geometry.Vertices.Channels.Insert(index, channel.Name, channel.ReadConvertedContent<TargetType>());
-                //Microsoft.Xna.Framework.Graphics.PackedVector.
-                geometry.Vertices.Channels.ConvertChannelContent<Vector4>("BlendWeight0");
+
             }
         }
         

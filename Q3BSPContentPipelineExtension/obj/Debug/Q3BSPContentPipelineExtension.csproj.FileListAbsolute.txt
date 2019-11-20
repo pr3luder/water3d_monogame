@@ -24,7 +24,6 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipe
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\XNAQ3Lib.Q3BSP.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\XNAQ3Lib.Q3BSP.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\MonoGame.Framework.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\MonoGame.Framework.Content.Pipeline.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\MonoGame.Framework.Content.Pipeline.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\SharpDX.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\SharpDX.Direct2D1.pdb
@@ -44,12 +43,7 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipe
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\SharpDX.XInput.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\SharpDX.XInput.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\SharpDX.D3DCompiler.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\AssimpNet.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\AssimpNet.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\AssimpNet.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\ATI.TextureConverter.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\Nvidia.TextureTools.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\PVRTexLibNET.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\bin\Debug\SharpFont.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\obj\Debug\Q3BSPContentPipelineExtension.csprojAssemblyReference.cache
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Q3BSPContentPipelineExtension\obj\Debug\Q3BSPContentPipelineExtension.csproj.CoreCompileInputs.cache

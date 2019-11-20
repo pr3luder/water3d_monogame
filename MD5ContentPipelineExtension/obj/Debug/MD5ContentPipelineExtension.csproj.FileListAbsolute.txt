@@ -24,7 +24,6 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipeli
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\XNAQ3Lib.MD5.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\XNAQ3Lib.MD5.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\MonoGame.Framework.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\MonoGame.Framework.Content.Pipeline.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\MonoGame.Framework.Content.Pipeline.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\SharpDX.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\SharpDX.Direct2D1.pdb
@@ -44,12 +43,7 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipeli
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\SharpDX.XInput.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\SharpDX.XInput.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\SharpDX.D3DCompiler.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\AssimpNet.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\AssimpNet.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\AssimpNet.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\ATI.TextureConverter.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\Nvidia.TextureTools.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\PVRTexLibNET.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\bin\Debug\SharpFont.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\obj\Debug\MD5ContentPipelineExtension.csprojAssemblyReference.cache
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\MD5ContentPipelineExtension\obj\Debug\MD5ContentPipelineExtension.csproj.CoreCompileInputs.cache

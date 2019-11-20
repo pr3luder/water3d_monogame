@@ -3,11 +3,11 @@
   <SourceFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude/dude.fbx</SourceFile>
   <SourceTime>2019-03-05T11:14:44.5642552+01:00</SourceTime>
   <DestFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/dude/dude.xnb</DestFile>
-  <DestTime>2019-05-24T11:53:55.8006976+02:00</DestTime>
+  <DestTime>2019-11-13T14:14:30.9653394+01:00</DestTime>
   <Importer>FbxImporter</Importer>
-  <ImporterTime>2019-05-24T11:51:32.2920016+02:00</ImporterTime>
+  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>SkinnedModelProcessor</Processor>
-  <ProcessorTime>2019-05-22T11:01:24.7261731+02:00</ProcessorTime>
+  <ProcessorTime>2019-08-30T12:08:38.7553198+02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>0,0,0,0</Value>

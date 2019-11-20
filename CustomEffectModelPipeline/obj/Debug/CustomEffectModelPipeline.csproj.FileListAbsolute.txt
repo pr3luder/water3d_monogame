@@ -21,7 +21,6 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectMode
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\PVRTexLibNET.dll
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\SharpFont.dll
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\MonoGame.Framework.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\MonoGame.Framework.Content.Pipeline.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\MonoGame.Framework.Content.Pipeline.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\SharpDX.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\SharpDX.Direct2D1.pdb
@@ -41,15 +40,10 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectMode
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\SharpDX.XInput.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\SharpDX.XInput.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\SharpDX.D3DCompiler.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\AssimpNet.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\AssimpNet.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\AssimpNet.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\ATI.TextureConverter.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\Nvidia.TextureTools.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\PVRTexLibNET.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\bin\Debug\SharpFont.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\obj\Debug\CustomEffectModelPipeline.csprojAssemblyReference.cache
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\obj\Debug\CustomEffectModelPipeline.csproj.CoreCompileInputs.cache
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\obj\Debug\CustomEffectModelPipeline.csproj.CopyComplete
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\obj\Debug\CustomEffectModelPipeline.dll
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\obj\Debug\CustomEffectModelPipeline.pdb
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\CustomEffectModelPipeline\obj\Debug\CustomEffectModelPipeline.csprojAssemblyReference.cache

@@ -45,7 +45,6 @@ namespace Water3D
         {
             if (isVisible)
             {
-                game.GraphicsDevice.BlendState = BlendState.AlphaBlend;
                 sprite.Begin(SpriteSortMode.Texture, BlendState.AlphaBlend);
                 sprite.Draw(texture, rect, Color.White);
                 sprite.DrawString(font, "Insert your Code here:\n" + buffer, new Vector2(rect.Location.X, rect.Location.Y), Color.White);

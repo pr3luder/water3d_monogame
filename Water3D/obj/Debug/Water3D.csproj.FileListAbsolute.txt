@@ -56,7 +56,6 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debu
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\XNAQ3Lib.Q3BSP.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\XNAQ3Lib.Q3BSP.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\MonoGame.Framework.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\MonoGame.Framework.Content.Pipeline.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\MonoGame.Framework.Content.Pipeline.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\SharpDX.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\SharpDX.Direct2D1.pdb
@@ -76,13 +75,11 @@ C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debu
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\SharpDX.XInput.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\SharpDX.XInput.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\SharpDX.D3DCompiler.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\AssimpNet.pdb
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\AssimpNet.xml
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\AssimpNet.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\ATI.TextureConverter.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\Nvidia.TextureTools.dll.config
-C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\PVRTexLibNET.dll.config
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\SharpFont.xml
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\obj\Debug\Water3D.csproj.CopyComplete
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\obj\Debug\Water3D.exe
 C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\obj\Debug\Water3D.pdb
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\OwnFunctions.dll
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\OwnFunctions.pdb
+C:\Users\a.zimmer\Documents\Visual Studio 2017\Projects\Water3D\Water3D\bin\Debug\OwnFunctions.dll.config

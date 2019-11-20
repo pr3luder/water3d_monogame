@@ -3,11 +3,11 @@
   <SourceFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/SkinnedModel.fx</SourceFile>
   <SourceTime>2019-03-14T16:34:10.3156059+01:00</SourceTime>
   <DestFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/SkinnedModel_0.xnb</DestFile>
-  <DestTime>2019-05-24T11:53:44.5759531+02:00</DestTime>
+  <DestTime>2019-08-30T12:03:51.3183198+02:00</DestTime>
   <Importer>EffectImporter</Importer>
-  <ImporterTime>2019-05-24T11:51:32.2920016+02:00</ImporterTime>
+  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>EffectProcessor</Processor>
-  <ProcessorTime>2019-05-24T11:51:32.2920016+02:00</ProcessorTime>
+  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
   <Dependencies />
   <BuildAsset />
   <BuildOutput />
