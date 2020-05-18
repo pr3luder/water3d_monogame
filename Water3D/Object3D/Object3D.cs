@@ -60,7 +60,7 @@ namespace Water3D
         protected BoundingBox bb;
         protected float currentTime;
         protected bool moving;
-        protected DebugDraw debugDraw;
+        
         protected String mode;
         protected Model model;
         protected Matrix[] boneTransforms;
@@ -68,6 +68,8 @@ namespace Water3D
         protected float maxBackwardSpeed;
         protected float maxTurningSpeed;
 
+        protected bool isDebugMode = false;
+        protected DebugDraw debugDraw = null;
 
         protected Object3DSettings settings;
         
@@ -133,6 +135,18 @@ namespace Water3D
 
         }
 
+
+        public void setDebugMode(bool isDebugMode)
+        {
+            this.isDebugMode = isDebugMode;
+            if (isDebugMode == true)
+            {
+                debugDraw = new DebugDraw(GraphicsDevice);
+            } else
+            {
+                debugDraw = null;
+            }
+        }
         public override void Initialize()
         {
             base.Initialize();
@@ -363,18 +377,25 @@ namespace Water3D
             base.Update(gameTime);
         }
         
+        public virtual void DrawDebug()
+        {
+            if (debugDraw != null)
+            {
+                debugDraw.Begin(scene.Camera.MView, scene.Camera.MProjection);
+                debugDraw.DrawWireSphere(BoundingSphere, Color.Red);
+                debugDraw.DrawWireBox(BoundingBox, Color.Red);
+                debugDraw.End();
+            }
+        }
+
 		/// <summary>
 		/// Chapter 4.3, Listing 4.3.3
 		/// apply world matrix
 		/// </summary>
         public override void Draw(GameTime gameTime)
         {
-            /*
-            debugDraw.Begin(scene.Camera.MView, scene.Camera.MProjection);
-            debugDraw.DrawWireSphere(BoundingSphere, Color.Red);
-            debugDraw.DrawWireBox(BoundingBox, Color.Green);
-            debugDraw.End();
-            */
+
+            DrawDebug();
             if (oldPos != pos)
             {
                 moving = true;

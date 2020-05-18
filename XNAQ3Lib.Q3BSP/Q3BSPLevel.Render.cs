@@ -55,7 +55,7 @@ namespace XNAQ3Lib.Q3BSP
             Matrix matrixWorldViewProjection = worldMatrix * viewMatrix * projMatrix;
 
             graphics.DepthStencilState = DepthStencilState.Default;
-            /*raphics.RasterizerState = rStateCullNoneWireFrame;*/
+            /*graphics.RasterizerState = rStateCullNoneWireFrame;*/
             
             graphics.SetVertexBuffer(vertexBuffer);
 
@@ -88,7 +88,7 @@ namespace XNAQ3Lib.Q3BSP
 
             if (0 > cameraCluster)
             {
-                cameraCluster = lastGoodCluster;
+                //cameraCluster = lastGoodCluster; /* if we are outside, we want to render all*/
             }
             lastGoodCluster = cameraCluster;
             
@@ -114,6 +114,7 @@ namespace XNAQ3Lib.Q3BSP
                 */
                 /* oriented bounding boxes fix the upper problem */
                 // create oriented bounding box in world space
+
                 
                 obb = new OrientedBoundingBox(leaf.Bounds, worldMatrix);
                 if (!frustum.Intersects(obb.AABBWorld))

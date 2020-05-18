@@ -85,6 +85,7 @@
     <Compile Include="CompileEventHandler.cs" />
     <Compile Include="Console.cs" />
     <Compile Include="Cursor.cs" />
+    <Compile Include="DataStructure\OrientedBoundingBox.cs" />
     <Compile Include="DebugDraw.cs" />
     <Compile Include="Effect\EffectContainer.cs" />
     <Compile Include="Effect\EffectContentProcessorContext.cs" />

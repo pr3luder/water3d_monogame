@@ -217,9 +217,10 @@ namespace Water3D
             //modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 100.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/dude/dude", "Take 001");
             //modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 100.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/spider/Spider", "run_ani_back");
             //modelAnim = new Model3DSkinned(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(0.005f, 0.005f, 0.005f), "Models/dude", "Take 001");
-            modelAnim = new Model3DSkinned(scene, new Vector3(2220.0f, 10.0f, -150.0f), Matrix.Identity, new Vector3(0.1f, 0.1f, 0.1f), "Models/dude2_0/Dude");
+            modelAnim = new Model3DSkinned(scene, new Vector3(50.0f, 10.0f, -150.0f), Matrix.Identity, new Vector3(0.1f, 0.1f, 0.1f), "Models/dude2_0/Dude");
             modelAnim.setEffect(skinnedEffect);
             modelAnim.Mode = "go";
+            modelAnim.setDebugMode(true);
 
             /* wenn man keine grossen Wellen haben moechte, sondern z.B. nur den Wasser Effekt
             plane = new Plane3D(scene, new Vector3(-2048.0f, 0.0f, 2048.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), 8192.0f, 8192.0f);
@@ -239,7 +240,7 @@ namespace Water3D
             //modelAnim = new Model3DSkinned(game, camera, new Vector3(0.0f, 0.0f, 0.0f), new Vector3(0.05f, 0.05f, 0.05f), textureManager, "SkinnedModel.xml", "Models/dude", "Take 001");
             //modelAnim2 = new Model3DSkinned(game, camera, new Vector3(1300.0f, 5.0f, -1250.0f), new Vector3(0.05f, 0.05f, 0.05f), textureManager, "SkinnedModel.xml", "Models/dude", "Take 001");
             
-            debugDraw = new DebugDraw(game.GraphicsDevice);
+            //debugDraw = new DebugDraw(game.GraphicsDevice);
 
             // quake 3 level
             level = new Level3D(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), @"Content\q3\maps\q3dm1.bsp", @"q3\scripts\", @"q3\", false);

@@ -76,7 +76,8 @@ namespace XNAQ3Lib.Q3BSP
             bspLogger = new Q3BSPLogger("log.txt");
 
             rStateWireFrame = new RasterizerState() { FillMode = FillMode.WireFrame };
-            rStateSolid = new RasterizerState() { FillMode = FillMode.Solid };
+            /* if the building should be seen from outside, cullmode must be off */
+            rStateSolid = new RasterizerState() { FillMode = FillMode.Solid, CullMode = CullMode.None }; 
             rStateCullNoneWireFrame = new RasterizerState() { CullMode = CullMode.None, FillMode = FillMode.WireFrame };
         }
 

@@ -52,7 +52,7 @@ namespace Water3D
             vertexBuffer = new DynamicVertexBuffer(device, typeof(VertexPositionColor), MAX_VERTS, BufferUsage.WriteOnly);
             indexBuffer = new DynamicIndexBuffer(device, typeof(ushort), MAX_INDICES, BufferUsage.WriteOnly);
 
-            basicEffect = new BasicEffect(device); //(device, null);
+            basicEffect = new BasicEffect(device);
             basicEffect.LightingEnabled = false;
             basicEffect.VertexColorEnabled = true;
             basicEffect.TextureEnabled = false;
