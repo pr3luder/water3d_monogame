@@ -1,4 +1,4 @@
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_q1met_redpad_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_q1met_redpad_generated.fx
 // Shader: textures/base/q1met_redpad
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -105,12 +105,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_bluegoal_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_bluegoal_generated.fx
 // Shader: textures/base/bluegoal
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -177,12 +177,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_redgoal_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_redgoal_generated.fx
 // Shader: textures/base/redgoal
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -249,12 +249,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_comp_panel_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_comp_panel_generated.fx
 // Shader: textures/base/comp_panel
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -341,12 +341,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_ceil1_8_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_ceil1_8_generated.fx
 // Shader: textures/base/ceil1_8
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -432,12 +432,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_ceil1_3_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_ceil1_3_generated.fx
 // Shader: textures/base/ceil1_3
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -523,12 +523,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_ceil1_4_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_ceil1_4_generated.fx
 // Shader: textures/base/ceil1_4
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -614,12 +614,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_border11light_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_border11light_generated.fx
 // Shader: textures/base/border11light
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -726,12 +726,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_electricwall_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/basetextures_base_electricwall_generated.fx
 // Shader: textures/base/electricwall
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -861,8 +861,8 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/Content/q3/scripts/base_floor.shader</SourceFile>
+  <SourceTime>2020-06-02T16:32:58.3721856+02:00</SourceTime>
+  <DestFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floor.xnb</DestFile>
+  <DestTime>2020-09-03T12:15:50.3863192+02:00</DestTime>
+  <Importer>ShaderContentImporter</Importer>
+  <ImporterTime>2020-09-03T12:13:42.973758+02:00</ImporterTime>
+  <Processor>ShaderContentProcessor</Processor>
+  <ProcessorTime>2020-09-03T12:13:42.973758+02:00</ProcessorTime>
+  <Parameters>
+    <Key>ShaderModel</Key>
+    <Value>ShaderModel2</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

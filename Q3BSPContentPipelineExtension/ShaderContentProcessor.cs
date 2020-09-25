@@ -84,8 +84,9 @@ namespace Q3BSPContentPipelineExtension
                 processor.DebugMode = EffectProcessorDebugMode.Debug;
                 EffectContent effectContent = new EffectContent();
                 sw.WriteLine("// " + effectFileFx);
-                string code = GenerateEffectFromShader(shader, effectFileFx, true);
+                string code = GenerateEffectFromShader(shader, effectFileFx, false);
                 sw.Write(code);
+                //sw.Close();
                 //GenerateEffectFromShader(shader, effectFileFx);
                 effectContent.EffectCode = code;
                 effectContent.Name = shader.shaderName;
@@ -308,7 +309,8 @@ namespace Q3BSPContentPipelineExtension
             #endregion
 
             #region Generate Technique
-            string shaderModel = "4_0_level_9_1";
+            //string shaderModel = "4_0_level_9_3";
+            string shaderModel = "4_1";
 
             if (this.shaderModel == ShaderModel.ShaderModel2)
             {
@@ -316,7 +318,7 @@ namespace Q3BSPContentPipelineExtension
                 //shaderModel = "4_0_level_9_1";
                 
             } else if (this.shaderModel == ShaderModel.ShaderModel4 || shader.stages.Count > 4) {
-                shaderModel = "4_0_level_9_1";
+                shaderModel = "4_1";
             }
 
             sb.AppendLine("technique Technique1");

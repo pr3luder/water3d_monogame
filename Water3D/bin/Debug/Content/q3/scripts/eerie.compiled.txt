@@ -1,4 +1,4 @@
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_floor3_3dark_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_floor3_3dark_generated.fx
 // Shader: textures/eerie/floor3_3dark
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -84,12 +84,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xblocks11be_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xblocks11be_generated.fx
 // Shader: textures/eerie/xblocks11be
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -202,12 +202,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_blackness_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_blackness_generated.fx
 // Shader: textures/eerie/blackness
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -272,12 +272,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_surface6jumppad_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_surface6jumppad_generated.fx
 // Shader: textures/eerie/surface6jumppad
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -384,12 +384,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xgoopjumpypad_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xgoopjumpypad_generated.fx
 // Shader: textures/eerie/xgoopjumpypad
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -496,12 +496,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xgoopy_pentagram_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xgoopy_pentagram_generated.fx
 // Shader: textures/eerie/xgoopy_pentagram
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -612,12 +612,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_gkcspine_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_gkcspine_generated.fx
 // Shader: textures/eerie/gkcspine
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -703,12 +703,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lavafogshader_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lavafogshader_generated.fx
 // Shader: textures/eerie/lavafogshader
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -794,12 +794,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lavahell_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lavahell_generated.fx
 // Shader: textures/eerie/lavahell
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -866,12 +866,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lavahell2_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lavahell2_generated.fx
 // Shader: textures/eerie/lavahell2
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -940,12 +940,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lavahell_goddamnbright_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lavahell_goddamnbright_generated.fx
 // Shader: textures/eerie/lavahell_goddamnbright
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1014,12 +1014,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_uberiron_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_uberiron_generated.fx
 // Shader: textures/eerie/uberiron
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1132,12 +1132,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_iron01_e_flicker_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_iron01_e_flicker_generated.fx
 // Shader: textures/eerie/iron01_e_flicker
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1277,12 +1277,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_q1metal7_98d_flicker_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_q1metal7_98d_flicker_generated.fx
 // Shader: textures/eerie/q1metal7_98d_flicker
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1395,12 +1395,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_iron01_d_flicker_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_iron01_d_flicker_generated.fx
 // Shader: textures/eerie/iron01_d_flicker
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1519,12 +1519,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_iron01_g_flicker_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_iron01_g_flicker_generated.fx
 // Shader: textures/eerie/iron01_g_flicker
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1643,12 +1643,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_firewall_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_firewall_generated.fx
 // Shader: textures/eerie/firewall
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1771,12 +1771,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xq1metalbig_nojumppad_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xq1metalbig_nojumppad_generated.fx
 // Shader: textures/eerie/xq1metalbig_nojumppad
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1883,12 +1883,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_metal3_3_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_metal3_3_generated.fx
 // Shader: textures/eerie/metal3_3
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1974,12 +1974,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_teslacoil_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_teslacoil_generated.fx
 // Shader: textures/eerie/teslacoil
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2119,12 +2119,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_tesla_cable_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_tesla_cable_generated.fx
 // Shader: textures/eerie/tesla_cable
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2237,12 +2237,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_jesus_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_jesus_generated.fx
 // Shader: textures/eerie/jesus
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2349,12 +2349,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xq1metalbig_jumppad_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xq1metalbig_jumppad_generated.fx
 // Shader: textures/eerie/xq1metalbig_jumppad
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2461,12 +2461,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_blocks15b_jumppad_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_blocks15b_jumppad_generated.fx
 // Shader: textures/eerie/blocks15b_jumppad
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2573,12 +2573,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_blocks11b_jumppad_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_blocks11b_jumppad_generated.fx
 // Shader: textures/eerie/blocks11b_jumppad
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2685,12 +2685,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_blocks11b_jumppad_smaller_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_blocks11b_jumppad_smaller_generated.fx
 // Shader: textures/eerie/blocks11b_jumppad_smaller
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2797,12 +2797,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_pentagramfloor_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_pentagramfloor_generated.fx
 // Shader: textures/eerie/pentagramfloor
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2909,12 +2909,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_pentagramfloor_rotating_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_pentagramfloor_rotating_generated.fx
 // Shader: textures/eerie/pentagramfloor_rotating
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3025,12 +3025,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_q1metal7_98d_pent_256_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_q1metal7_98d_pent_256_generated.fx
 // Shader: textures/eerie/q1metal7_98d_pent_256
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3137,12 +3137,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_border11light_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_border11light_generated.fx
 // Shader: textures/eerie/border11light
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3249,12 +3249,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_borderlight_500_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_borderlight_500_generated.fx
 // Shader: textures/eerie/borderlight_500
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3361,12 +3361,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_darkness_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_darkness_generated.fx
 // Shader: textures/eerie/darkness
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3452,12 +3452,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_redgoal_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_redgoal_generated.fx
 // Shader: textures/eerie/redgoal
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3524,12 +3524,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_bluegoal_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_bluegoal_generated.fx
 // Shader: textures/eerie/bluegoal
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3596,12 +3596,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_powerupshit_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_powerupshit_generated.fx
 // Shader: textures/eerie/powerupshit
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3668,12 +3668,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xian_rune11_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xian_rune11_generated.fx
 // Shader: textures/eerie/xian_rune11
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3780,12 +3780,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xian_rune21_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xian_rune21_generated.fx
 // Shader: textures/eerie/xian_rune21
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3892,12 +3892,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lightcone_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_lightcone_generated.fx
 // Shader: textures/eerie/lightcone
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3962,12 +3962,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_q1metal7_97b_mirror_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_q1metal7_97b_mirror_generated.fx
 // Shader: textures/eerie/q1metal7_97b_mirror
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4032,12 +4032,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_cross_1000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_cross_1000_generated.fx
 // Shader: textures/eerie/cross_1000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4144,12 +4144,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_cross_2500_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_cross_2500_generated.fx
 // Shader: textures/eerie/cross_2500
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4256,12 +4256,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_light1_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_light1_generated.fx
 // Shader: textures/eerie/light1
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4368,12 +4368,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_light1_5000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_light1_5000_generated.fx
 // Shader: textures/eerie/light1_5000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4480,12 +4480,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_light2_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_light2_generated.fx
 // Shader: textures/eerie/light2
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4592,12 +4592,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_light3_8_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_light3_8_generated.fx
 // Shader: textures/eerie/light3_8
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4704,12 +4704,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xian_light3_7_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/eerietextures_eerie_xian_light3_7_generated.fx
 // Shader: textures/eerie/xian_light3_7
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4816,8 +4816,8 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 

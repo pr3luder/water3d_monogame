@@ -89,8 +89,8 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 

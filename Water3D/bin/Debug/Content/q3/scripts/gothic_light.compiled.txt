@@ -1,4 +1,4 @@
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_border7_ceil39b_10k_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_border7_ceil39b_10k_generated.fx
 // Shader: textures/gothic_light/border7_ceil39b_10k
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -105,12 +105,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_border7_ceil39_6k_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_border7_ceil39_6k_generated.fx
 // Shader: textures/gothic_light/border7_ceil39_6k
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -217,12 +217,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_border7_ceil22a_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_border7_ceil22a_generated.fx
 // Shader: textures/gothic_light/border7_ceil22a
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -329,12 +329,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_border7_ceil30_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_border7_ceil30_generated.fx
 // Shader: textures/gothic_light/border7_ceil30
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -441,12 +441,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_lrg_2k_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_lrg_2k_generated.fx
 // Shader: textures/gothic_light/gothic_light2_lrg_2k
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -553,12 +553,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_lrg_1k_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_lrg_1k_generated.fx
 // Shader: textures/gothic_light/gothic_light2_lrg_1k
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -665,12 +665,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_lrg_200_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_lrg_200_generated.fx
 // Shader: textures/gothic_light/gothic_light2_lrg_200
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -777,12 +777,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_lrg_500_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_lrg_500_generated.fx
 // Shader: textures/gothic_light/gothic_light2_lrg_500
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -889,12 +889,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_goth_lt2_lrg2k_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_goth_lt2_lrg2k_generated.fx
 // Shader: textures/gothic_light/goth_lt2_lrg2k
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1001,12 +1001,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_15K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_15K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_15K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1113,12 +1113,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_20K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_20K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_20K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1225,12 +1225,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_10K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_10K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_10K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1337,12 +1337,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_6K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_6K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_6K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1449,12 +1449,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_7K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_7K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_7K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1561,12 +1561,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_8K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_8K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_8K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1673,12 +1673,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_5K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_5K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_5K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1785,12 +1785,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_4K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_4K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_4K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -1897,12 +1897,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_3k_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_3k_generated.fx
 // Shader: textures/gothic_light/gothic_light3_3k
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2009,12 +2009,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_2K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_2K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_2K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2121,12 +2121,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_1K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light3_1K_generated.fx
 // Shader: textures/gothic_light/gothic_light3_1K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2233,12 +2233,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_4K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_4K_generated.fx
 // Shader: textures/gothic_light/gothic_light2_4K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2345,12 +2345,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_1k_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_1k_generated.fx
 // Shader: textures/gothic_light/gothic_light2_1k
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2457,12 +2457,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_2K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_gothic_light2_2K_generated.fx
 // Shader: textures/gothic_light/gothic_light2_2K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2569,12 +2569,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_1K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_1K_generated.fx
 // Shader: textures/gothic_light/pentagram_light1_1K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2681,12 +2681,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_2K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_2K_generated.fx
 // Shader: textures/gothic_light/pentagram_light1_2K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2793,12 +2793,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_3K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_3K_generated.fx
 // Shader: textures/gothic_light/pentagram_light1_3K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -2905,12 +2905,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_4K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_4K_generated.fx
 // Shader: textures/gothic_light/pentagram_light1_4K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3017,12 +3017,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_5K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_5K_generated.fx
 // Shader: textures/gothic_light/pentagram_light1_5K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3129,12 +3129,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_10K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_10K_generated.fx
 // Shader: textures/gothic_light/pentagram_light1_10K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3241,12 +3241,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_15K_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_pentagram_light1_15K_generated.fx
 // Shader: textures/gothic_light/pentagram_light1_15K
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3353,12 +3353,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_2000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_2000_generated.fx
 // Shader: textures/gothic_light/ironcrossltred_2000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3465,12 +3465,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_3000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_3000_generated.fx
 // Shader: textures/gothic_light/ironcrossltred_3000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3577,12 +3577,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_4000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_4000_generated.fx
 // Shader: textures/gothic_light/ironcrossltred_4000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3689,12 +3689,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_5000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_5000_generated.fx
 // Shader: textures/gothic_light/ironcrossltred_5000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3801,12 +3801,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_10000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_10000_generated.fx
 // Shader: textures/gothic_light/ironcrossltred_10000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -3913,12 +3913,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_20000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_20000_generated.fx
 // Shader: textures/gothic_light/ironcrossltred_20000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4025,12 +4025,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_30000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltred_30000_generated.fx
 // Shader: textures/gothic_light/ironcrossltred_30000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4137,12 +4137,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_2000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_2000_generated.fx
 // Shader: textures/gothic_light/ironcrossltblue_2000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4249,12 +4249,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_3000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_3000_generated.fx
 // Shader: textures/gothic_light/ironcrossltblue_3000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4361,12 +4361,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_4000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_4000_generated.fx
 // Shader: textures/gothic_light/ironcrossltblue_4000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4473,12 +4473,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_5000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_5000_generated.fx
 // Shader: textures/gothic_light/ironcrossltblue_5000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4585,12 +4585,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_10000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_10000_generated.fx
 // Shader: textures/gothic_light/ironcrossltblue_10000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4697,12 +4697,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_20000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_20000_generated.fx
 // Shader: textures/gothic_light/ironcrossltblue_20000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4809,12 +4809,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_30000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrossltblue_30000_generated.fx
 // Shader: textures/gothic_light/ironcrossltblue_30000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -4921,12 +4921,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_crosslt1_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_crosslt1_generated.fx
 // Shader: textures/gothic_light/crosslt1
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5033,12 +5033,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_light1_6Kgothicred_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_light1_6Kgothicred_generated.fx
 // Shader: textures/gothic_light/light1_6Kgothicred
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5145,12 +5145,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_light1_4Kgothic_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_light1_4Kgothic_generated.fx
 // Shader: textures/gothic_light/light1_4Kgothic
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5257,12 +5257,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_light1_6Kgothic_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_light1_6Kgothic_generated.fx
 // Shader: textures/gothic_light/light1_6Kgothic
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5369,12 +5369,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_2500_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_2500_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_2500
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5481,12 +5481,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_1000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_1000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_1000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5593,12 +5593,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_2000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_2000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_2000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5705,12 +5705,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_120000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_120000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_120000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5817,12 +5817,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_500000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_500000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_500000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -5929,12 +5929,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_3000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_3000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_3000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6041,12 +6041,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_4000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_4000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_4000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6153,12 +6153,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_5000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_5000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_5000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6265,12 +6265,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_10000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_10000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_10000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6377,12 +6377,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_20000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_20000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_20000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6489,12 +6489,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_30000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_30000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_30000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6601,12 +6601,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_40000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt1_40000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt1_40000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6713,12 +6713,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_2000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_2000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_2000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6825,12 +6825,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_2500_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_2500_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_2500
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -6937,12 +6937,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_3000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_3000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_3000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -7049,12 +7049,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_4000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_4000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_4000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -7161,12 +7161,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_5000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_5000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_5000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -7273,12 +7273,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_10000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_10000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_10000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -7385,12 +7385,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_20000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_20000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_20000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -7497,12 +7497,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_30000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_30000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_30000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -7609,12 +7609,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_40000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_40000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_40000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -7721,12 +7721,12 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_1000_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/gothic_lighttextures_gothic_light_ironcrosslt2_1000_generated.fx
 // Shader: textures/gothic_light/ironcrosslt2_1000
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -7833,8 +7833,8 @@ technique Technique1
 {
 	pass Pass1
 	{
-		VertexShader = compile vs_4_0_level_9_1 VertexShaderProgram();
-		PixelShader = compile ps_4_0_level_9_1 PixelShaderProgram();
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
 	}
 }
 

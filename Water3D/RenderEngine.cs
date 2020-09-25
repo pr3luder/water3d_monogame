@@ -209,15 +209,19 @@ namespace Water3D
             */
 
 
-            model = new Model3D(scene, new Vector3(1220.0f, 50.0f, -1300.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/xwing/xwing");
-            model.setEffect(xwingEffect);
+            //model = new Model3D(scene, new Vector3(1220.0f, 50.0f, -1300.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/xwing/xwing");
+            model = new Model3D(scene, new Vector3(50.0f, 5.0f, -150.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), "Models/bea/bea");
+            //model.setEffect(xwingEffect);
+            model.setEffect(basicEffect);
             model.Mode = "fly";
 
-
+            
             //modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 100.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/dude/dude", "Take 001");
             //modelAnim = new Model3DSkinned(scene, new Vector3(1220.0f, 100.0f, -1500.0f), Matrix.Identity, new Vector3(0.05f, 0.05f, 0.05f), "Models/spider/Spider", "run_ani_back");
             //modelAnim = new Model3DSkinned(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(0.005f, 0.005f, 0.005f), "Models/dude", "Take 001");
             modelAnim = new Model3DSkinned(scene, new Vector3(50.0f, 10.0f, -150.0f), Matrix.Identity, new Vector3(0.1f, 0.1f, 0.1f), "Models/dude2_0/Dude");
+            //modelAnim = new Model3DSkinned(scene, new Vector3(50.0f, 10.0f, -150.0f), Matrix.Identity, new Vector3(0.1f, 0.1f, 0.1f), "Models/bea/untitled");
+            //modelAnim = new Model3DSkinned(scene, new Vector3(50.0f, 10.0f, -150.0f), Matrix.Identity, new Vector3(0.1f, 0.1f, 0.1f), "Models/dude/dude");
             modelAnim.setEffect(skinnedEffect);
             modelAnim.Mode = "go";
             modelAnim.setDebugMode(true);
@@ -230,10 +234,9 @@ namespace Water3D
             /* eigentliche Diplomarbeit */
             water = new Water3D(scene, this, new Vector3(-2048.0f, 0.0f, 2048.0f), Matrix.Identity, new Vector3(5.0f, 1.0f, 5.0f), 32.0f, 32.0f, 64);
             water.setEffect(waterEffect);
-           
-            
+
             /* float minimum = Math.Max(landscape.getHeight(camera.VEye), plane.getPosition().Y); */
-            
+
             camera.Mode = "go";
             camera.setObjective(modelAnim);
             
@@ -275,10 +278,10 @@ namespace Water3D
             //game.Components.Add(model);
             
             game.Components.Add(fpsCounter);
-            game.Components.Add(projectileTrailParticles);
-            game.Components.Add(explosionSmokeParticles);
-            game.Components.Add(explosionParticles);
-            game.Components.Add(projectile);
+            //game.Components.Add(projectileTrailParticles);
+            //game.Components.Add(explosionSmokeParticles);
+            //game.Components.Add(explosionParticles);
+            //game.Components.Add(projectile);
 
             game.Components.Add(consoleWindow);
             game.Components.Add(statusWindow);
@@ -507,15 +510,15 @@ namespace Water3D
         {
             if (full)
             {
-                game.Graphics.PreferredBackBufferWidth = 1024;
-                game.Graphics.PreferredBackBufferHeight = 768;
-                game.Graphics.IsFullScreen = true;
-                game.Graphics.ApplyChanges();
+                Game.Graphics.PreferredBackBufferWidth = 1024;
+                Game.Graphics.PreferredBackBufferHeight = 768;
+                Game.Graphics.IsFullScreen = true;
+                Game.Graphics.ApplyChanges();
             }
             else 
             {
-                game.Graphics.IsFullScreen = false;
-                game.Graphics.ApplyChanges();
+                Game.Graphics.IsFullScreen = false;
+                Game.Graphics.ApplyChanges();
             }
 
         }

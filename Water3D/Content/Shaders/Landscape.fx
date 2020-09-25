@@ -103,7 +103,7 @@ technique TShader2
         //DestBlend = INVSRCCOLOR;
         
         // compile shaders
-        VertexShader = compile vs_4_0_level_9_1 VS_multitext();
-        PixelShader = compile ps_4_0_level_9_1 PS_multitext();
+        VertexShader = compile vs_4_1 VS_multitext();
+        PixelShader = compile ps_4_1 PS_multitext();
     }
 }

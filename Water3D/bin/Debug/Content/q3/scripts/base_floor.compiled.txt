@@ -1,4 +1,4 @@
-// C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_techfloor2_generated.fx
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_techfloor2_generated.fx
 // Shader: textures/base_floor/techfloor2
 // Generic Externs
 uniform float4x4 worldViewProj;
@@ -137,4 +137,5667 @@ float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
 	return destination;
 }
 
-technique Tech
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_techfloor_generated.fx
+// Shader: textures/base_floor/techfloor
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_zzztpink;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_techfloor;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_zzztpink>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_techfloor>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 9 * gameTime;
+	output.stage0.uv.y += 5 * gameTime;
+	output.stage1.uv = input.texcoords;
+	 float s_stage1 = output.stage1.uv.x;
+	 float t_stage1 = output.stage1.uv.y;
+	output.stage1.uv.x = s_stage1*cos(2.96706 * gameTime) + t_stage1 * -sin(2.96706 * gameTime) + (0.5 - 0.5 * cos(2.96706 * gameTime)+ 0.5 *sin(2.96706 * gameTime));
+	output.stage1.uv.y = s_stage1*sin(2.96706 * gameTime) + t_stage1 * cos(2.96706 * gameTime) + (0.5 - 0.5 * sin(2.96706 * gameTime)- 0.5 *cos(2.96706 * gameTime));
+	// Invalid or unparsed tcMod statement.
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_zzztpink
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_techfloor
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source * stage2_source.a) + (destination * (1.0 -stage2_source.a));
+
+	// stage3_lightmap
+	destination = tex2D(stage3_sampler, input.stage3.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_metalbridge04dbroke_generated.fx
+// Shader: textures/base_floor/metalbridge04dbroke
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_zzztblu2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalbridge04dbroke;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_zzztblu2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalbridge04dbroke>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 9 * gameTime;
+	output.stage0.uv.y += 5 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_zzztblu2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalbridge04dbroke
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clang_floor_ow3_generated.fx
+// Shader: textures/base_floor/clang_floor_ow3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_zzztblu2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clang_floor_ow3;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_zzztblu2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clang_floor_ow3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 9 * gameTime;
+	output.stage0.uv.y += 5 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_zzztblu2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clang_floor_ow3
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_floor3_3dark_ow_generated.fx
+// Shader: textures/base_floor/floor3_3dark_ow
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_envmapblue;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_floor3_3dark_ow;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_envmapblue>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_floor3_3dark_ow>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x += 0 * gameTime;
+	output.stage0.uv.y += 1 * gameTime;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (5.6 * gameTime))) % 1025) * 6.283185) * 0.25;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (5.6 * gameTime))) % 1025) * 6.283185) * 0.25;
+	output.stage0.uv.x *= 0.6666667;
+	output.stage0.uv.y *= 0.6666667;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_envmapblue
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_floor3_3dark_ow
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_proto_rustygrate2_generated.fx
+// Shader: textures/base_floor/proto_rustygrate2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_rustygrate2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_rustygrate2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_rustygrate2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_cybergrate3_generated.fx
+// Shader: textures/base_floor/cybergrate3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_hologirl;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_cybergrate3;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_hologirl>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_cybergrate3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 0.8333333;
+	output.stage0.uv.y *= 2;
+	output.stage0.uv.x += 3.1 * gameTime;
+	output.stage0.uv.y += 1.1 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_hologirl
+	destination = (tex2D(stage0_sampler, input.stage0.uv)) + (destination);
+
+	// stage1_cybergrate3
+	destination = tex2D(stage1_sampler, input.stage1.uv);
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_cybergrate2_generated.fx
+// Shader: textures/base_floor/cybergrate2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_cybergrate2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_cybergrate2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_cybergrate2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clang_floor_ow_generated.fx
+// Shader: textures/base_floor/clang_floor_ow
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_zzztblu2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clang_floor_ow;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_zzztblu2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clang_floor_ow>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 9 * gameTime;
+	output.stage0.uv.y += 5 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_zzztblu2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clang_floor_ow
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clangdark_ow3_generated.fx
+// Shader: textures/base_floor/clangdark_ow3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_zzztblu2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clangdark_ow3;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_zzztblu2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clangdark_ow3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 9 * gameTime;
+	output.stage0.uv.y += 5 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_zzztblu2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clangdark_ow3
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_cybergrate_generated.fx
+// Shader: textures/base_floor/cybergrate
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_cybergrate;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_cybergrate>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_cybergrate
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_diamond2c_ow_generated.fx
+// Shader: textures/base_floor/diamond2c_ow
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_zzztblu2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_diamond2c_ow;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_zzztblu2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_diamond2c_ow>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (9.6 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 9 * gameTime;
+	output.stage0.uv.y += 5 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_zzztblu2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_diamond2c_ow
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	// stage2_lightmap
+	destination = (tex2D(stage2_sampler, input.stage2.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_diamond2cspot_generated.fx
+// Shader: textures/base_floor/diamond2cspot
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grueldark2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_tinfx3;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_diamond2cspot;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grueldark2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_tinfx3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_diamond2cspot>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 0.01 * gameTime;
+	output.stage0.uv.y += 0.03 * gameTime;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (0.05 * gameTime))) % 1025) * 6.283185) * 0.05;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (0.05 * gameTime))) % 1025) * 6.283185) * 0.05;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grueldark2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_tinfx3
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination);
+
+	// stage2_diamond2cspot
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source * stage2_source.a) + (destination * (1.0 -stage2_source.a));
+
+	// stage3_lightmap
+	destination = (tex2D(stage3_sampler, input.stage3.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clang_floor3blava_generated.fx
+// Shader: textures/base_floor/clang_floor3blava
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_protolava2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clang_floor3blava;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_protolava2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clang_floor3blava>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 5;
+	output.stage0.uv.y *= 5;
+	output.stage0.uv.x += 0.04 * gameTime;
+	output.stage0.uv.y += 0.03 * gameTime;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (0.01 * gameTime))) % 1025) * 6.283185) * 0.1;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (0.01 * gameTime))) % 1025) * 6.283185) * 0.1;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_protolava2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clang_floor3blava
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * stage1_source.a) + (destination * (1.0 -stage1_source.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_pool_side2_generated.fx
+// Shader: textures/base_floor/pool_side2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_pool3d_5e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_pool3d_6e;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_pool_side2;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_pool3d_5e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_pool3d_6e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_pool_side2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= -2;
+	output.stage0.uv.y *= -4;
+	output.stage0.uv.x += 0.025 * gameTime;
+	output.stage0.uv.y += 0.025 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage1.uv.x *= 2;
+	output.stage1.uv.y *= 4;
+	output.stage1.uv.x += 0.025 * gameTime;
+	output.stage1.uv.y += 0.025 * gameTime;
+	output.stage2.uv = input.texcoords;
+	output.stage2.uv.x *= 2;
+	output.stage2.uv.y *= 2;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_pool3d_5e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_pool3d_6e
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination);
+
+	// stage2_pool_side2
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source) + (destination * stage2_source);
+
+	// stage3_lightmap
+	destination = tex2D(stage3_sampler, input.stage3.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_pool_side3_generated.fx
+// Shader: textures/base_floor/pool_side3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_pool3d_5e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_pool3d_6e;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_patch10rusty5;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_pool3d_5e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_pool3d_6e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_patch10rusty5>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= -2;
+	output.stage0.uv.y *= -4;
+	output.stage0.uv.x += 0.025 * gameTime;
+	output.stage0.uv.y += 0.025 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage1.uv.x *= 2;
+	output.stage1.uv.y *= 4;
+	output.stage1.uv.x += 0.025 * gameTime;
+	output.stage1.uv.y += 0.025 * gameTime;
+	output.stage2.uv = input.texcoords;
+	output.stage2.uv.x *= 2;
+	output.stage2.uv.y *= 2;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_pool3d_5e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_pool3d_6e
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination);
+
+	// stage2_patch10rusty5
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source) + (destination * stage2_source);
+
+	// stage3_lightmap
+	destination = tex2D(stage3_sampler, input.stage3.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_pool_floor2_generated.fx
+// Shader: textures/base_floor/pool_floor2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_pool3d_5e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_pool3d_6e;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_pool_floor2;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_pool3d_5e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_pool3d_6e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_pool_floor2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= -4;
+	output.stage0.uv.y *= -4;
+	output.stage0.uv.x += 0.025 * gameTime;
+	output.stage0.uv.y += 0.025 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage1.uv.x *= 4;
+	output.stage1.uv.y *= 4;
+	output.stage1.uv.x += 0.025 * gameTime;
+	output.stage1.uv.y += 0.025 * gameTime;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_pool3d_5e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_pool3d_6e
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination);
+
+	// stage2_pool_floor2
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source) + (destination * stage2_source);
+
+	// stage3_lightmap
+	destination = tex2D(stage3_sampler, input.stage3.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_pool_floor3_generated.fx
+// Shader: textures/base_floor/pool_floor3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_pool3d_5e;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_pool3d_6e;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_patch10rusty5;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_pool3d_5e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_pool3d_6e>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_patch10rusty5>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= -4;
+	output.stage0.uv.y *= -4;
+	output.stage0.uv.x += 0.025 * gameTime;
+	output.stage0.uv.y += 0.025 * gameTime;
+	output.stage1.uv = input.texcoords;
+	output.stage1.uv.x *= 4;
+	output.stage1.uv.y *= 4;
+	output.stage1.uv.x += 0.025 * gameTime;
+	output.stage1.uv.y += 0.025 * gameTime;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_pool3d_5e
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_pool3d_6e
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination);
+
+	// stage2_patch10rusty5
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source) + (destination * stage2_source);
+
+	// stage3_lightmap
+	destination = tex2D(stage3_sampler, input.stage3.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_hfloor3_generated.fx
+// Shader: textures/base_floor/hfloor3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_hfloor3;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_tinfx;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_hfloor3;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_hfloor3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_tinfx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_hfloor3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_hfloor3
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	// stage2_tinfx
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	// stage3_hfloor3
+	destination = tex2D(stage3_sampler, input.stage3.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clangspot_generated.fx
+// Shader: textures/base_floor/clangspot
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grueldark;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_tinfx3;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_clangspot;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grueldark>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_tinfx3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_clangspot>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 0.01 * gameTime;
+	output.stage0.uv.y += 0.03 * gameTime;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (0.05 * gameTime))) % 1025) * 6.283185) * 0.05;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (0.05 * gameTime))) % 1025) * 6.283185) * 0.05;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grueldark
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_tinfx3
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination);
+
+	// stage2_clangspot
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source * stage2_source.a) + (destination * (1.0 -stage2_source.a));
+
+	// stage3_lightmap
+	destination = (tex2D(stage3_sampler, input.stage3.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clangspot2_generated.fx
+// Shader: textures/base_floor/clangspot2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grueldark;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_tinfx3;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_clangspot2;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grueldark>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_tinfx3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_clangspot2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 0.01 * gameTime;
+	output.stage0.uv.y += 0.03 * gameTime;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (0.05 * gameTime))) % 1025) * 6.283185) * 0.05;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (0.05 * gameTime))) % 1025) * 6.283185) * 0.05;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grueldark
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_tinfx3
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination);
+
+	// stage2_clangspot2
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source * stage2_source.a) + (destination * (1.0 -stage2_source.a));
+
+	// stage3_lightmap
+	destination = (tex2D(stage3_sampler, input.stage3.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clangdarkspot_generated.fx
+// Shader: textures/base_floor/clangdarkspot
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grueldark;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_tinfx3;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_clangdarkspot;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grueldark>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_tinfx3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_clangdarkspot>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage0.uv.x += 0.01 * gameTime;
+	output.stage0.uv.y += 0.03 * gameTime;
+	output.stage0.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (0.05 * gameTime))) % 1025) * 6.283185) * 0.05;
+	output.stage0.uv.y += 1 - sin(((((input.position.y) * 0.001 + (0.05 * gameTime))) % 1025) * 6.283185) * 0.05;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grueldark
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_tinfx3
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination);
+
+	// stage2_clangdarkspot
+	float4 stage2_source = tex2D(stage2_sampler, input.stage2.uv);
+	destination = (stage2_source * stage2_source.a) + (destination * (1.0 -stage2_source.a));
+
+	// stage3_lightmap
+	destination = (tex2D(stage3_sampler, input.stage3.uv) * destination) + (destination * (1.0 -destination.a));
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_tilefloor5_generated.fx
+// Shader: textures/base_floor/tilefloor5
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_tilefloor5;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_tilefloor5>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_tilefloor5
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_tile5_plain_generated.fx
+// Shader: textures/base_floor/tile5_plain
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_tilefloor5;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_tilefloor5>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_tilefloor5
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_concretefloor1_generated.fx
+// Shader: textures/base_floor/concretefloor1
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_chrome_env;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_concretefloor1;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_concretefloor1;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_lightmap;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_chrome_env>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_concretefloor1>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_concretefloor1>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage1.uv.x *= 10;
+	output.stage1.uv.y *= 10;
+	output.stage2.uv = input.texcoords;
+	output.stage2.uv.x += 1 - sin(((((input.position.x + input.position.z) * 0.001 + (0 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage2.uv.y += 1 - sin(((((input.position.y) * 0.001 + (0 * gameTime))) % 1025) * 6.283185) * 0.5;
+	output.stage3.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_chrome_env
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_concretefloor1
+	destination = destination * tex2D(stage1_sampler, input.stage1.uv).a;
+
+	// stage2_concretefloor1
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination * tex2D(stage2_sampler, input.stage2.uv).a);
+
+	// stage3_lightmap
+	destination = tex2D(stage3_sampler, input.stage3.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_pjgrate1kc_generated.fx
+// Shader: textures/base_floor/pjgrate1kc
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grate5;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grate5>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grate5
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clangfloor_noisy_generated.fx
+// Shader: textures/base_floor/clangfloor_noisy
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clang_floor;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clang_floor>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clang_floor
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clang_floorshiny2_generated.fx
+// Shader: textures/base_floor/clang_floorshiny2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clang_floorshiny_alpha2;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clang_floorshiny_alpha2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage0.uv.x *= 4;
+	output.stage0.uv.y *= 4;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clang_floorshiny_alpha2
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clang_floorwet_generated.fx
+// Shader: textures/base_floor/clang_floorwet
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_tinfx3;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clang_floorwet;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_tinfx3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clang_floorwet>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_tinfx3
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clang_floorwet
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clang_floorshiny_generated.fx
+// Shader: textures/base_floor/clang_floorshiny
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clang_floorshiny_alpha;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_lightmap;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clang_floorshiny_alpha>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage0.uv.x *= 4;
+	output.stage0.uv.y *= 4;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clang_floorshiny_alpha
+	destination = (tex2D(stage1_sampler, input.stage1.uv)) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	// stage2_lightmap
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_tilefloor7_ow_generated.fx
+// Shader: textures/base_floor/tilefloor7_ow
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_tilefloor7_ow;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_tilefloor7_owfx;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_tilefloor7_owfx;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_tilefloor7_ow>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_tilefloor7_owfx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_tilefloor7_owfx>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_tilefloor7_ow
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_tilefloor7_owfx
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	// stage3_tilefloor7_owfx
+	destination = (tex2D(stage3_sampler, input.stage3.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_skylight1_generated.fx
+// Shader: textures/base_floor/skylight1
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_skylight1;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_skylight1_lm;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_skylight1_lm;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_skylight1>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_skylight1_lm>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_skylight1_lm>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_skylight1
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_skylight1_lm
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	// stage3_skylight1_lm
+	destination = (tex2D(stage3_sampler, input.stage3.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_skylight_spec_generated.fx
+// Shader: textures/base_floor/skylight_spec
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_skylight_spec;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_skylight_spec>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_skylight_spec
+	destination = (tex2D(stage1_sampler, input.stage1.uv) * destination) + (destination * tex2D(stage1_sampler, input.stage1.uv).a);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_diamond_dirty_generated.fx
+// Shader: textures/base_floor/diamond_dirty
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_grunge2;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_diamond2;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_grunge2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_diamond2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage1.uv.x *= 14.43001;
+	output.stage1.uv.y *= 14.04494;
+	output.stage2.uv = input.texcoords;
+	output.stage2.uv.x *= 2;
+	output.stage2.uv.y *= 2;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_grunge2
+	float4 stage1_source = tex2D(stage1_sampler, input.stage1.uv);
+	destination = (stage1_source * destination) + (destination * stage1_source);
+
+	// stage2_diamond2
+	destination = tex2D(stage2_sampler, input.stage2.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clangdark_generated.fx
+// Shader: textures/base_floor/clangdark
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clangdark;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clangdark>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clangdark
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_clangdark_ow_generated.fx
+// Shader: textures/base_floor/clangdark_ow
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_clangdark_ow;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_clangdark_ow>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_clangdark_ow
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_diamond_noisy_generated.fx
+// Shader: textures/base_floor/diamond_noisy
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_diamond2;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_diamond2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_diamond2
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_proto_grate_generated.fx
+// Shader: textures/base_floor/proto_grate
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grate;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grate>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grate
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_proto_grate2_generated.fx
+// Shader: textures/base_floor/proto_grate2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grate2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grate2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grate2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_proto_grate3_generated.fx
+// Shader: textures/base_floor/proto_grate3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grate3;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grate3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grate3
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_proto_grate4_generated.fx
+// Shader: textures/base_floor/proto_grate4
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grate4;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grate4>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grate4
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_kc_grate4b_generated.fx
+// Shader: textures/base_floor/kc_grate4b
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_kc_grate4b;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_kc_grate4b>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_kc_grate4b
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_proto_grate5_generated.fx
+// Shader: textures/base_floor/proto_grate5
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_grate5;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_grate5>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_grate5
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_proto_skullgrate_generated.fx
+// Shader: textures/base_floor/proto_skullgrate
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_skullgrate;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_skullgrate>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_skullgrate
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_proto_rustygrate_generated.fx
+// Shader: textures/base_floor/proto_rustygrate
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_proto_rustygrate;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_proto_rustygrate>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_proto_rustygrate
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_rusty_pentagrate_generated.fx
+// Shader: textures/base_floor/rusty_pentagrate
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_rusty_pentagrate;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_rusty_pentagrate>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_rusty_pentagrate
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_rusty_baphograte_generated.fx
+// Shader: textures/base_floor/rusty_baphograte
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_rusty_baphograte;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_rusty_baphograte2;
+uniform float3x2 stage2_tcmod;
+// stage3's externs
+uniform texture stage3_rusty_baphograte3;
+uniform float3x2 stage3_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_rusty_baphograte>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_rusty_baphograte2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage3_sampler = sampler_state
+{
+	Texture = <stage3_rusty_baphograte3>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+struct stage3_input
+{
+	float2 uv : TEXCOORD3;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+	stage3_input stage3;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage1.uv = input.lightmapcoords;
+	output.stage2.uv = input.texcoords;
+	output.stage3.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_rusty_baphograte
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_rusty_baphograte2
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	// stage3_rusty_baphograte3
+	destination = (tex2D(stage3_sampler, input.stage3.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_pjgrate1_generated.fx
+// Shader: textures/base_floor/pjgrate1
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_pjgrate1;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_pjgrate1>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_pjgrate1
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_pjgrate2_generated.fx
+// Shader: textures/base_floor/pjgrate2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_pjgrate2;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_lightmap;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_pjgrate2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.texcoords;
+	output.stage0.uv.x *= 0.5;
+	output.stage0.uv.y *= 0.5;
+	output.stage1.uv = input.lightmapcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_pjgrate2
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_lightmap
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_glowfloor2_generated.fx
+// Shader: textures/base_floor/glowfloor2
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_metalfloor_wall_15;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_glowred1_blend;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_metalfloor_wall_15>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_glowred1_blend>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_metalfloor_wall_15
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_glowred1_blend
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_glowfloor3_generated.fx
+// Shader: textures/base_floor/glowfloor3
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_diamond2;
+uniform float3x2 stage1_tcmod;
+// stage2's externs
+uniform texture stage2_glowred1_blend;
+uniform float3x2 stage2_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_diamond2>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage2_sampler = sampler_state
+{
+	Texture = <stage2_glowred1_blend>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+struct stage2_input
+{
+	float2 uv : TEXCOORD2;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+	stage2_input stage2;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage2.uv = input.texcoords;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_diamond2
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	// stage2_glowred1_blend
+	destination = (tex2D(stage2_sampler, input.stage2.uv)) + (destination);
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+
+// C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/base_floortextures_base_floor_nomarkstone_1_generated.fx
+// Shader: textures/base_floor/nomarkstone_1
+// Generic Externs
+uniform float4x4 worldViewProj;
+uniform float gameTime;
+// stage0's externs
+uniform texture stage0_lightmap;
+uniform float3x2 stage0_tcmod;
+// stage1's externs
+uniform texture stage1_smallstone;
+uniform float3x2 stage1_tcmod;
+
+sampler stage0_sampler = sampler_state
+{
+	Texture = <stage0_lightmap>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+sampler stage1_sampler = sampler_state
+{
+	Texture = <stage1_smallstone>;
+	minfilter = LINEAR;
+	magfilter = LINEAR;
+	mipfilter = NONE;
+	AddressU = Wrap;
+	AddressV = Wrap;
+};
+
+struct stage0_input
+{
+	float2 uv : TEXCOORD0;
+};
+struct stage1_input
+{
+	float2 uv : TEXCOORD1;
+};
+
+struct VertexShaderInput
+{
+	float4 position : POSITION0;
+	float3 normal : NORMAL0;
+	float2 texcoords : TEXCOORD0;
+	float2 lightmapcoords : TEXCOORD1;
+	float4 diffuse : COLOR0;
+};
+
+struct VertexShaderOutput
+{
+	float4 position : POSITION0;
+	stage0_input stage0;
+	stage1_input stage1;
+};
+
+VertexShaderOutput VertexShaderProgram(VertexShaderInput input)
+{
+	VertexShaderOutput output;
+	output.position = mul(input.position, worldViewProj);
+	output.stage0.uv = input.lightmapcoords;
+	output.stage1.uv = input.texcoords;
+	output.stage1.uv.x *= 0.5;
+	output.stage1.uv.y *= 0.5;
+
+	return output;
+};
+
+float4 PixelShaderProgram(VertexShaderOutput input) : COLOR0
+{
+	float4 destination = (float4)0;
+	float4 source = (float4)0;
+
+	// stage0_lightmap
+	destination = tex2D(stage0_sampler, input.stage0.uv);
+
+	// stage1_smallstone
+	destination = tex2D(stage1_sampler, input.stage1.uv) * destination;
+
+	destination.a = 1.0;
+
+	return destination;
+}
+
+technique Technique1
+{
+	pass Pass1
+	{
+		VertexShader = compile vs_4_1 VertexShaderProgram();
+		PixelShader = compile ps_4_1 PixelShaderProgram();
+	}
+}
+

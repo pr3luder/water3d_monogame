@@ -61,6 +61,11 @@ namespace Water3D
             scene.setCamera(this);
         }
 
+        public void setScene(SceneContainer scene)
+        {
+            this.scene = scene;
+        }
+
         public void setObjective(Object3D objective)
         {
             this.objective = objective;
@@ -73,11 +78,10 @@ namespace Water3D
 
         public void reset()
         {
-            if(scene != null)
-            {
-                this.viewportWidth = scene.Game.GraphicsDevice.Viewport.Width;
-                this.viewportHeight = scene.Game.GraphicsDevice.Viewport.Height;
-            }
+
+            this.viewportWidth = RenderEngine.Game.GraphicsDevice.Viewport.Width;
+            this.viewportHeight = RenderEngine.Game.GraphicsDevice.Viewport.Height;
+
             viewMatrix = Matrix.CreateLookAt(vEye, vDest, vUp);
             projMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4, this.viewportWidth / this.viewportHeight, 1.0f, 5000.0f);
             buildViewFrustum();

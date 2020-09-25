@@ -85,17 +85,16 @@ namespace CustomModelAnimationPipeline
                 rootClips.Add(animation.Key, processed);
             }
 
-            
- 
+
             // Store our custom animation data in the Tag property of the model.
             model.Tag = new ModelData(animationClips, null, bindPose, inverseBindPose, skeletonHierarchy);
 
             return model;
         }
 
-        /* dies hier ist mit MonoGame nicht mehr noetig*/
+        /*we dont use our own shader anymore because monogame and xna 4 have its build in SkinnedEffect
         protected override void ProcessVertexChannel(
-            GeometryContent geometry, 
+        GeometryContent geometry, 
             int vertexChannelIndex, 
             ContentProcessorContext context)
         {
@@ -113,39 +112,9 @@ namespace CustomModelAnimationPipeline
                 catch(Exception e)
                 {
                     // converting from Byte4 to Vector4 channel not supported
-                }
-
-                /* debugging code
-                Console.WriteLine(geometry.Vertices.Channels[0]);
-                Console.WriteLine(geometry.Vertices.Channels[1]);
-                Console.WriteLine(geometry.Vertices.Channels[2]);
-                Console.WriteLine(geometry.Vertices.Channels["BlendIndices0"].ToString());
-                VertexChannelCollection channels = geometry.Vertices.Channels;
-                int index = channels.IndexOf("BlendIndices0");
-                VertexChannel channel = channels[index];
-                channels.RemoveAt(index);
-                //Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel<Microsoft.Xna.Framework.Vector4>
-                //VertexChannel<Vector4> newChannel = new VertexChannel<Vector4>("BlendIndices0");
-
-
-                for (int i = 0; i < channel.Count; i++)
-                {
-                    if(channel[i].GetType() == typeof(Byte4))
-                    {
-                        Vector4 test = ((Byte4)channel[i]).ToVector4();
-                        //channel[i] = ((Byte4)channel[i]).ToVector4();
-                    }
-                }
-                //channels.Insert(index, channel.Name, typeof(Vector4), channel.ReadConvertedContent<Vector4>());
-                //channels.Insert(index, channel.Name, channel.ReadConvertedContent<Vector4>());
-                */
-                /*
-                geometry.Vertices.Channels["BlendIndices0"].IndexOf()
-                var index = channels.FindIndex((v) => v.Name == "BlendIndices0");
-                */
-
+                }      
             }
-        }
+        }*/
         
 
 
@@ -321,6 +290,7 @@ namespace CustomModelAnimationPipeline
          /// <summary>
         /// Changes all the materials to use our skinned model effect.
         /// </summary>
+        /* we dont use our own shader anymore because monogame and xna 4 have its build in SkinnedEffect
         protected override MaterialContent ConvertMaterial(MaterialContent material, ContentProcessorContext context)
         {
 
@@ -337,11 +307,6 @@ namespace CustomModelAnimationPipeline
             EffectMaterialContent effectMaterial = new EffectMaterialContent();
 
             // StoreEffectMaterialContent effectMaterial = new EffectMaterialContent(); a reference to our skinned mesh effect.
-            /*
-            StreamWriter w = new StreamWriter("test.txt");
-            w.WriteLine();
-            w.Close();
-            */
             if(File.Exists("Models\\SkinnedModel.fx"))
                 effectPath = Path.GetFullPath("Models\\SkinnedModel.fx");
            
@@ -357,6 +322,6 @@ namespace CustomModelAnimationPipeline
                 effectMaterial.Textures.Add("Texture", basicMaterial.Texture);
             // Chain to the base ModelProcessor converter.
             return base.ConvertMaterial(effectMaterial, context);
-        }
+        }*/
     }
 }

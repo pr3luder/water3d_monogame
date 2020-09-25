@@ -6222,6 +6222,105 @@
             Gets or sets the string representing the processor in a user interface. This name is not used by the content pipeline and should not be passed to the BuildAssets task (a custom MSBuild task used by XNA Game Studio). It is used for display purposes only.
             </summary>
         </member>
+        <member name="T:Microsoft.Xna.Framework.Content.Pipeline.ContentStats">
+            <summary>
+            Content building statistics for a single source content file.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xna.Framework.Content.Pipeline.ContentStats.SourceFile">
+            <summary>
+            The absolute path to the source content file.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xna.Framework.Content.Pipeline.ContentStats.DestFile">
+            <summary>
+            The absolute path to the destination content file.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xna.Framework.Content.Pipeline.ContentStats.ProcessorType">
+            <summary>
+            The content processor type name.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xna.Framework.Content.Pipeline.ContentStats.ContentType">
+            <summary>
+            The content type name.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xna.Framework.Content.Pipeline.ContentStats.SourceFileSize">
+            <summary>
+            The source file size in bytes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xna.Framework.Content.Pipeline.ContentStats.DestFileSize">
+            <summary>
+            The destination file size in bytes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xna.Framework.Content.Pipeline.ContentStats.BuildSeconds">
+            <summary>
+            The content build time in seconds.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection">
+            <summary>
+            A collection of content building statistics for use in diagnosing content issues.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.TryGetStats(System.String,Microsoft.Xna.Framework.Content.Pipeline.ContentStats@)">
+            <summary>
+             Get the content statistics for a source file and returns true if found.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.Reset">
+            <summary>
+            Clears all the content statistics.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.RecordStats(System.String,System.String,System.String,System.Type,System.Single)">
+            <summary>
+            Store content building stats for a source file.
+            </summary>
+            <param name="sourceFile">The absolute path to the source asset file.</param>
+            <param name="destFile">The absolute path to the destination content file.</param>
+            <param name="processorType">The type name of the content processor.</param>
+            <param name="contentType">The content type object.</param>
+            <param name="buildSeconds">The build time in seconds.</param>
+        </member>
+        <member name="M:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.CopyPreviousStats(System.String)">
+            <summary>
+            Copy content building stats to the current collection from the PreviousStats.
+            </summary>
+            <param name="sourceFile">The absolute path to the source asset file.</param>
+        </member>
+        <member name="M:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.Read(System.String)">
+            <summary>
+            Load the content statistics from a folder.
+            </summary>
+            <param name="outputPath">The folder where the .mgstats file can be found.</param>
+            <returns>Returns the content statistics or an empty collection.</returns>
+        </member>
+        <member name="M:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.Write(System.String)">
+            <summary>
+            Write the content statistics to a folder with the .mgstats file name.
+            </summary>
+            <param name="outputPath">The folder to write the .mgstats file.</param>
+        </member>
+        <member name="M:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.MergePreviousStats">
+            <summary>
+            Merge in statistics from PreviousStats that do not exist in this collection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.PreviousStats">
+            <summary>
+            Optionally used for copying stats that were stored in another collection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.Stats">
+            <summary>
+             The internal content statistics dictionary.
+            </summary>
+        </member>
         <member name="T:Microsoft.Xna.Framework.Content.Pipeline.DdsLoader">
             <summary>
             Loader class for DDS format image files.

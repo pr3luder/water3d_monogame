@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using System.Linq;
 using CustomModelAnimation;
 
 namespace Water3D
@@ -27,8 +28,7 @@ namespace Water3D
 	/// describe a 3D object
 	/// </summary>
 	public class Model3DSkinned : Object3D
-	{
-       
+	{     
         private String modelName;
         private SkinnedAnimationPlayer skinnedAnimationPlayer;
         private RootAnimationPlayer rootAnimationPlayer;
@@ -68,6 +68,8 @@ namespace Water3D
                     //skinnedAnimationPlayer.Update(new GameTime(new TimeSpan(), new TimeSpan(2)));
                 }
             }
+            setSkinningEffect();
+
             bsLocal = new BoundingSphere();
             foreach (ModelMesh mesh in model.Meshes)
             {
@@ -75,6 +77,25 @@ namespace Water3D
             }
             setObject(pos.X, pos.Y, pos.Z);
 		}
+
+        public void setSkinningEffect()
+        {
+            foreach(ModelMesh mesh in model.Meshes)
+            {
+                foreach(ModelMeshPart modelMeshPart in mesh.MeshParts)
+                {
+                    SkinnedEffect newEffect = new SkinnedEffect(scene.GraphicsDevice);
+                    BasicEffect oldEffect = ((BasicEffect)modelMeshPart.Effect);
+                    newEffect.EnableDefaultLighting();
+                    newEffect.SpecularColor = Color.Black.ToVector3();
+                    newEffect.AmbientLightColor = oldEffect.AmbientLightColor;
+                    newEffect.DiffuseColor = oldEffect.DiffuseColor;
+                    newEffect.Texture = oldEffect.Texture;
+                    modelMeshPart.Effect = newEffect;
+
+                }
+            }
+        }
 
         public void updateAnimation(GameTime gameTime)
         {
@@ -87,7 +108,8 @@ namespace Water3D
             } else
             {
                 //skinnedAnimationPlayer.Update(TimeSpan.Zero, true, Matrix.Identity);
-                //skinnedAnimationPlayer.Update(new GameTime(TimeSpan.Zero, TimeSpan.Zero));
+                skinnedAnimationPlayer.Update(new GameTime(TimeSpan.Zero, TimeSpan.Zero));
+                //skinnedAnimationPlayer.Update(gameTime);
             }
         }
 
@@ -144,12 +166,12 @@ namespace Water3D
 
         public override void Draw(GameTime time)
         {
-            
             //worldMatrix = Matrix.CreateFromQuaternion(rotationQuat) * Matrix.CreateTranslation(pos);
             scene.Game.GraphicsDevice.RasterizerState = RasterizerState.CullNone;
             scene.Game.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
             
             boneTransforms = skinnedAnimationPlayer.GetSkinTransforms();
+
             effectContainer.updateMutable(this);
             foreach (ModelMesh mesh in model.Meshes)
             {
@@ -159,6 +181,8 @@ namespace Water3D
                     {
                         effectContainer.drawMutable(currentEffect);
                     }
+                    else if (currentEffect.GetType() == typeof(BasicEffect))
+                    { }
                     else
                     {
                         currentEffect.Parameters["Bones"].SetValue(boneTransforms);
@@ -182,6 +206,7 @@ namespace Water3D
             }          
             updateAnimation(time); // FIXME hier gibt es Animationsprobleme - aendern
             base.Draw(time);
+
         }
 
         public override void jump()

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Textures/skybox0006.bmp</SourceFile>
-  <SourceTime>2015-11-11T16:45:30.1137706+01:00</SourceTime>
-  <DestFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Textures/skybox0006.xnb</DestFile>
-  <DestTime>2019-08-30T10:29:02.9693198+02:00</DestTime>
+  <SourceFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/Content/Textures/skybox0006.bmp</SourceFile>
+  <SourceTime>2020-06-02T16:32:57.564346+02:00</SourceTime>
+  <DestFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Textures/skybox0006.xnb</DestFile>
+  <DestTime>2020-09-03T12:19:55.5331381+02:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2019-05-24T11:51:32.2920016+02:00</ImporterTime>
+  <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2019-05-24T11:51:32.2920016+02:00</ProcessorTime>
+  <ProcessorTime>2018-12-08T17:35:54+01:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

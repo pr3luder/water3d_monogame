@@ -9,5 +9,5 @@
       <Matrix name="Projection">Projection</Matrix>
     </Mutable>
   </Variables>
-  <Technique>TShader2</Technique>
+  <Technique>SkinnedModelTechnique</Technique>
 </ShaderEffect>

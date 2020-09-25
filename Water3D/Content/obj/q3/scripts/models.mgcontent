@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/Content/q3/scripts/models.shader</SourceFile>
+  <SourceTime>2020-06-02T16:32:58.3851509+02:00</SourceTime>
+  <DestFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/q3/scripts/models.xnb</DestFile>
+  <DestTime>2020-09-03T12:18:42.9719221+02:00</DestTime>
+  <Importer>ShaderContentImporter</Importer>
+  <ImporterTime>2020-09-03T12:13:42.973758+02:00</ImporterTime>
+  <Processor>ShaderContentProcessor</Processor>
+  <ProcessorTime>2020-09-03T12:13:42.973758+02:00</ProcessorTime>
+  <Parameters>
+    <Key>ShaderModel</Key>
+    <Value>ShaderModel4</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

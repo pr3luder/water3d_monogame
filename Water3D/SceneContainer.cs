@@ -40,6 +40,7 @@ namespace Water3D
         public SceneContainer(Camera camera, TextureManager textureManager) : base(RenderEngine.Game)
 		{
             this.camera = camera;
+            this.camera.setScene(this);
             this.textureManager = textureManager;
             objectsList = new List<Object3D>();
             reflectionsList = new Hashtable();

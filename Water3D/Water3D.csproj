@@ -13,7 +13,7 @@
     <AssemblyName>Water3D</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -175,7 +175,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Content.contentproj.user" />
-    <Content Include="Content\Models\SkinnedModel.fx">
+    <Content Include="Content\Models\bea\bea_tex.png" />
+    <Content Include="Effects\SkinnedModel.fx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\obj\x86\Debug\Content.contentproj.FileListAbsolute.txt" />
@@ -564,7 +565,6 @@
     <Content Include="Effects\Particle.fx" />
     <Content Include="Effects\Phong.fx" />
     <Content Include="Effects\ReflProj.fx" />
-    <Content Include="Effects\SkinnedModel.fx" />
     <Content Include="Effects\Water.fx" />
     <Content Include="EffectXml\Basic.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -675,6 +675,7 @@
     <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="Content\Fonts\SpriteFont1.spritefont" />
+    <None Include="Content\Models\bea\bea_geo.fbx" />
     <None Include="Content\Models\dude2_0\Dude.drmdl" />
     <None Include="Content\Models\dude2_0\Dude.fbx" />
     <None Include="Content\Models\dude2_0\Eyes.drmat" />

@@ -8,13 +8,15 @@ namespace Water3D
     /// </summary>
     public class GraphicsSystem : Game
     {
-        GraphicsDeviceManager graphics;
         private CompileEvent compileEvent;
         private RenderEngine re;
 
         public GraphicsSystem()
         {
-            graphics = new GraphicsDeviceManager(this);
+            Graphics = new GraphicsDeviceManager(this);
+            Graphics.GraphicsProfile = GraphicsProfile.HiDef;
+            //graphics.PreferredBackBufferWidth = 500;
+            //graphics.PreferredBackBufferHeight = 200;
             Content.RootDirectory = "Content";
         }
 
@@ -30,7 +32,6 @@ namespace Water3D
             re = new RenderEngine(this);
             // TODO: Add your initialization logic here
             base.Initialize();
-            
             this.Window.AllowUserResizing = true;
         }
 

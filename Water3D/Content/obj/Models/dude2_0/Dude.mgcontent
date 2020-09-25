@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/Content/Models/dude2_0/Dude.fbx</SourceFile>
-  <SourceTime>2019-11-13T10:16:04.1416504+01:00</SourceTime>
-  <DestFile>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/dude2_0/Dude.xnb</DestFile>
-  <DestTime>2019-11-14T15:57:23.684076+01:00</DestTime>
+  <SourceFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/Content/Models/dude2_0/Dude.fbx</SourceFile>
+  <SourceTime>2020-06-02T16:32:56.7764511+02:00</SourceTime>
+  <DestFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Models/dude2_0/Dude.xnb</DestFile>
+  <DestTime>2020-09-03T12:15:36.771767+02:00</DestTime>
   <Importer>FbxImporter</Importer>
-  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
+  <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>SkinnedModelProcessor</Processor>
-  <ProcessorTime>2019-08-30T12:08:38.7553198+02:00</ProcessorTime>
+  <ProcessorTime>2020-09-03T12:13:44.8537377+02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>0,0,0,0</Value>
@@ -66,11 +66,10 @@
   </Parameters>
   <Dependencies />
   <BuildAsset>
-    <string>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/SkinnedModel_0.xnb</string>
-    <string>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/dude2_0/head_0.xnb</string>
-    <string>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/dude2_0/jacket_0.xnb</string>
-    <string>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/dude2_0/pants_0.xnb</string>
-    <string>C:/Users/a.zimmer/Documents/Visual Studio 2017/Projects/Water3D/Water3D/bin/Debug/Content/Models/dude2_0/upBodyC_0.xnb</string>
+    <string>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Models/dude2_0/head_0.xnb</string>
+    <string>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Models/dude2_0/jacket_0.xnb</string>
+    <string>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Models/dude2_0/pants_0.xnb</string>
+    <string>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Models/dude2_0/upBodyC_0.xnb</string>
   </BuildAsset>
   <BuildOutput />
 </PipelineBuildEvent>
