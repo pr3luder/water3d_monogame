@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/Content/Shaders/Water.fx</SourceFile>
-  <SourceTime>2020-06-02T16:32:57.2152798+02:00</SourceTime>
-  <DestFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Shaders/Water.xnb</DestFile>
-  <DestTime>2020-09-03T12:19:54.133879+02:00</DestTime>
+  <SourceFile>C:/Users/a.zimmer/source/repos/water3d_monogame/Water3D/Content/Shaders/Water.fx</SourceFile>
+  <SourceTime>2021-08-17T17:15:39.3815271+02:00</SourceTime>
+  <DestFile>C:/Users/a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Shaders/Water.xnb</DestFile>
+  <DestTime>2021-08-18T16:57:30.2831463+02:00</DestTime>
   <Importer>EffectImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>EffectProcessor</Processor>

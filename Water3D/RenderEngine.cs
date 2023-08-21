@@ -174,7 +174,7 @@ namespace Water3D
             // Construct our particle system components.
             explosionParticles = new ExplosionParticleSystem(scene, Vector3.Zero, Vector3.Zero);
             explosionParticles.setEffect(explosion);
-            
+
             explosionSmokeParticles = new ExplosionSmokeParticleSystem(scene, Vector3.Zero, Vector3.Zero);
             explosionSmokeParticles.setEffect(explosionSmoke);
             
@@ -190,7 +190,8 @@ namespace Water3D
                                                 explosionSmokeParticles,
                                                 projectileTrailParticles,
                                                 dir);
-            
+
+
             shootingRay = new Ray();
             
             
@@ -248,7 +249,7 @@ namespace Water3D
             // quake 3 level
             level = new Level3D(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), @"Content\q3\maps\q3dm1.bsp", @"q3\scripts\", @"q3\", false);
             //level = new Level3D(scene, new Vector3(0.0f, 0.0f, 0.0f), Matrix.Identity, new Vector3(1.0f, 1.0f, 1.0f), false);
-            
+
             /* old code
             level = new Q3BSPLevel(game, camera, modelAnim, new Vector3(1000.0f, 5.1f, -1000.0f), new Vector3(1.0f, 1.0f, 1.0f), textureManager, "Basic.xml", true, Q3BSPRenderType.BSPCulling);
             level.BasePath = "q3dm1";
@@ -258,30 +259,31 @@ namespace Water3D
                 bool levelLoaded = level.InitializeLevel(game.GraphicsDevice, game.Content, @"q3\scripts\");
             }
             */
-
+           
             game.Components.Add(scene);
-            
+
             /*
             scene.addObject(skybox);
             scene.addObject(landscape);
             scene.addObject(modelAnim);
             */
             //game.Components.Add(level);
-            
+
             //game.Components.Add(skybox);
             //game.Components.Add(modelAnim);
             //game.Components.Add(modelAnim2);
             //game.Components.Add(landscape);
             //game.Components.Add(plane);
             //game.Components.Add(water);
-           
+
             //game.Components.Add(model);
-            
+
             game.Components.Add(fpsCounter);
-            //game.Components.Add(projectileTrailParticles);
-            //game.Components.Add(explosionSmokeParticles);
-            //game.Components.Add(explosionParticles);
-            //game.Components.Add(projectile);
+
+            game.Components.Add(projectileTrailParticles);
+            game.Components.Add(explosionSmokeParticles);
+            game.Components.Add(explosionParticles);
+            game.Components.Add(projectile);
 
             game.Components.Add(consoleWindow);
             game.Components.Add(statusWindow);

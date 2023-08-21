@@ -32,11 +32,12 @@ float2 EndSize;
 
 
 // Particle texture and sampler.
-texture Texture;
 
-sampler Sampler = sampler_state
+texture2D tex0;
+
+sampler2D Particle = sampler_state
 {
-    Texture = (Texture);
+    Texture = <tex0>;
     
     MinFilter = Linear;
     MagFilter = Linear;
@@ -180,7 +181,9 @@ VertexShaderOutput ParticleVertexShader(VertexShaderInput input)
 // Pixel shader for drawing particles.
 float4 ParticlePixelShader(VertexShaderOutput input) : COLOR0
 {
-    return tex2D(Sampler, input.TextureCoordinate) * input.Color;
+    float4 test = tex2D(Particle, input.TextureCoordinate) * input.Color;
+    return test;
+    //return tex2D(Particle, input.TextureCoordinate) * input.Color;
 }
 
 
@@ -189,7 +192,12 @@ technique Particles
 {
     pass P0
     {
-        VertexShader = compile vs_4_1 ParticleVertexShader();
-        PixelShader = compile ps_4_1 ParticlePixelShader();
+       /*
+        VertexShader = compile vs_2_0 ParticleVertexShader();
+        PixelShader = compile ps_2_0 ParticlePixelShader();
+        */ 
+        VertexShader = compile vs_4_0_level_9_1 ParticleVertexShader();
+        PixelShader = compile ps_4_0_level_9_1 ParticlePixelShader();
+        
     }
 }

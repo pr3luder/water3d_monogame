@@ -26,7 +26,7 @@ namespace Water3D
         #region Fields
 
         // Settings class controls the appearance and animation of this particle system.
-        ParticleSettings settings = new ParticleSettings();
+        ParticleSettings particleSettings = new ParticleSettings();
 
         // An array of particles, treated as a circular queue.
         ParticleVertex[] particles;
@@ -139,16 +139,16 @@ namespace Water3D
         /// </summary>
         public override void Initialize()
         {
-            InitializeSettings(settings);
+            InitializeSettings(particleSettings);
             // Allocate the particle array, and fill in the corner fields (which never change).
-            particles = new ParticleVertex[settings.MaxParticles * 4];
+            particles = new ParticleVertex[particleSettings.MaxParticles * 4];
 
-            for (int i = 0; i < settings.MaxParticles; i++)
+            for (int i = 0; i < particleSettings.MaxParticles; i++)
             {
-                particles[i * 4 + 0].Corner = new Short2(-1, -1);
-                particles[i * 4 + 1].Corner = new Short2(1, -1);
-                particles[i * 4 + 2].Corner = new Short2(1, 1);
-                particles[i * 4 + 3].Corner = new Short2(-1, 1);
+                particles[i * 4 + 0].Corner = new Vector2(-1, -1);
+                particles[i * 4 + 1].Corner = new Vector2(1, -1);
+                particles[i * 4 + 2].Corner = new Vector2(1, 1);
+                particles[i * 4 + 3].Corner = new Vector2(-1, 1);
             }
 
             base.Initialize();
@@ -159,7 +159,7 @@ namespace Water3D
         /// and use it to initalize their tweakable settings.
         /// </summary>
 
-        protected abstract void InitializeSettings(ParticleSettings settings);
+        protected abstract void InitializeSettings(ParticleSettings particleSettings);
 
         /// <summary>
         /// Loads graphics for the particle system.
@@ -173,15 +173,15 @@ namespace Water3D
         public override void initVertexBuffer()
         {
             // Create a dynamic vertex buffer.
-            vertexBuffer = new DynamicVertexBuffer(this.GraphicsDevice, ParticleVertex.VertexDeclaration, settings.MaxParticles * 4, BufferUsage.WriteOnly);
+            vertexBuffer = new DynamicVertexBuffer(this.GraphicsDevice, ParticleVertex.VertexDeclaration, particleSettings.MaxParticles * 4, BufferUsage.WriteOnly);
         }
 
         public override void initIndexBuffer()
         {
             // Create and populate the index buffer.
-            ushort[] indices = new ushort[settings.MaxParticles * 6];
+            ushort[] indices = new ushort[particleSettings.MaxParticles * 6];
 
-            for (int i = 0; i < settings.MaxParticles; i++)
+            for (int i = 0; i < particleSettings.MaxParticles; i++)
             {
                 indices[i * 6 + 0] = (ushort)(i * 4 + 0);
                 indices[i * 6 + 1] = (ushort)(i * 4 + 1);
@@ -226,7 +226,7 @@ namespace Water3D
                 // Move the particle from the active to the retired queue.
                 firstActiveParticle++;
 
-                if (firstActiveParticle >= settings.MaxParticles)
+                if (firstActiveParticle >= particleSettings.MaxParticles)
                     firstActiveParticle = 0;
             }
         }
@@ -254,7 +254,7 @@ namespace Water3D
                 // Move the particle from the retired to the free queue.
                 firstRetiredParticle++;
 
-                if (firstRetiredParticle >= settings.MaxParticles)
+                if (firstRetiredParticle >= particleSettings.MaxParticles)
                     firstRetiredParticle = 0;
             }
         }
@@ -294,7 +294,6 @@ namespace Water3D
         /// </summary>
         public override void Draw(GameTime time)
         {
-
             // Restore the vertex buffer contents if the graphics device was lost.
             if (vertexBuffer.IsContentLost)
             {
@@ -328,23 +327,20 @@ namespace Water3D
                         // If the active particles are all in one consecutive range,
                         // we can draw them all in a single call.
                         //game.GraphicsDevice.DrawPrimitives(PrimitiveType.LineList, firstActiveParticle, firstFreeParticle - firstActiveParticle);
-                        scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0,
-                                                     firstActiveParticle * 4, (firstFreeParticle - firstActiveParticle) * 4,
-                                                     firstActiveParticle * 6, (firstFreeParticle - firstActiveParticle) * 2);
+                        //scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0,firstActiveParticle * 4, (firstFreeParticle - firstActiveParticle) * 4,firstActiveParticle * 6, (firstFreeParticle - firstActiveParticle) * 2);
+                        scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0, firstActiveParticle * 6, (firstFreeParticle - firstActiveParticle) * 2);
                     }
                     else
                     {
                         // If the active particle range wraps past the end of the queue
                         // back to the start, we must split them over two draw calls.
                         //game.GraphicsDevice.DrawPrimitives(PrimitiveType.TriangleList, firstActiveParticle, particles.Length - firstActiveParticle);
-                        scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0,
-                                                     firstActiveParticle * 4, (settings.MaxParticles - firstActiveParticle) * 4,
-                                                     firstActiveParticle * 6, (settings.MaxParticles - firstActiveParticle) * 2);
+                        //scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0,firstActiveParticle * 4, (particleSettings.MaxParticles - firstActiveParticle) * 4,firstActiveParticle * 6, (particleSettings.MaxParticles - firstActiveParticle) * 2);
+                        scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0, firstActiveParticle * 6, (particleSettings.MaxParticles - firstActiveParticle) * 2);
                         if (firstFreeParticle > 0)
                         {
-                            scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0,
-                                                        0, firstFreeParticle * 4,
-                                                        0, firstFreeParticle * 2);
+                            //scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0,0, firstFreeParticle * 4, 0, firstFreeParticle * 2);
+                            scene.Game.GraphicsDevice.DrawIndexedPrimitives(PrimitiveType.TriangleList, 0, 0, firstFreeParticle * 2);
                         }
                     }
 
@@ -381,7 +377,7 @@ namespace Water3D
                 // back to the start, we must split them over two upload calls.
                 vertexBuffer.SetData(firstNewParticle * stride * 4, particles,
                                      firstNewParticle * 4,
-                                     (settings.MaxParticles - firstNewParticle) * 4,
+                                     (particleSettings.MaxParticles - firstNewParticle) * 4,
                                      stride, SetDataOptions.NoOverwrite);
 
                 if (firstFreeParticle > 0)
@@ -431,7 +427,7 @@ namespace Water3D
             // Figure out where in the circular queue to allocate the new particle.
             int nextFreeParticle = firstFreeParticle + 1;
 
-            if (nextFreeParticle >= settings.MaxParticles)
+            if (nextFreeParticle >= particleSettings.MaxParticles)
                 nextFreeParticle = 0;
 
             // If there are no free particles, we just have to give up.
@@ -440,11 +436,11 @@ namespace Water3D
 
             // Adjust the input velocity based on how much
             // this particle system wants to be affected by it.
-            velocity *= settings.EmitterVelocitySensitivity;
+            velocity *= particleSettings.EmitterVelocitySensitivity;
 
             // Add in some random amount of horizontal velocity.
-            float horizontalVelocity = MathHelper.Lerp(settings.MinHorizontalVelocity,
-                                                       settings.MaxHorizontalVelocity,
+            float horizontalVelocity = MathHelper.Lerp(particleSettings.MinHorizontalVelocity,
+                                                       particleSettings.MaxHorizontalVelocity,
                                                        (float)random.NextDouble());
 
             double horizontalAngle = random.NextDouble() * MathHelper.TwoPi;
@@ -453,8 +449,8 @@ namespace Water3D
             velocity.Z += horizontalVelocity * (float)Math.Sin(horizontalAngle);
 
             // Add in some random amount of vertical velocity.
-            velocity.Y += MathHelper.Lerp(settings.MinVerticalVelocity,
-                                          settings.MaxVerticalVelocity,
+            velocity.Y += MathHelper.Lerp(particleSettings.MinVerticalVelocity,
+                                          particleSettings.MaxVerticalVelocity,
                                           (float)random.NextDouble());
 
             // Choose four random control values. These will be used by the vertex

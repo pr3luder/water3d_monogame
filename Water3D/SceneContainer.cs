@@ -116,6 +116,14 @@ namespace Water3D
             }
         }
 
+        public override void Update(GameTime gameTime)
+        {
+            foreach (Object3D o in objectsList)
+            {
+                o.Update(gameTime);
+            }
+        }
+
         public override void Draw(GameTime gameTime)
         {
             renderReflections(gameTime);
@@ -130,6 +138,7 @@ namespace Water3D
             debugDraw.End();
             */
         }
+
 
 		public void initializeCamera()
 		{

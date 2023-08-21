@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/Content/Textures/fire.png</SourceFile>
-  <SourceTime>2020-06-02T16:32:57.3728902+02:00</SourceTime>
-  <DestFile>C:/Users/adm_a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Textures/fire.xnb</DestFile>
-  <DestTime>2020-09-03T12:19:54.301431+02:00</DestTime>
+  <SourceFile>C:/Users/a.zimmer/source/repos/water3d_monogame/Water3D/Content/Textures/fire.png</SourceFile>
+  <SourceTime>2021-08-17T17:15:39.4375295+02:00</SourceTime>
+  <DestFile>C:/Users/a.zimmer/source/repos/water3d_monogame/Water3D/bin/Debug/Content/Textures/fire.xnb</DestFile>
+  <DestTime>2021-08-18T17:56:02.4547409+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

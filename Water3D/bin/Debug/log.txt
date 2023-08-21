@@ -1,4 +1,4 @@
-[25.09.2020 14:33:58] Logging started.
+[21.08.2023 10:47:37] Logging started.
 Loading file Content\q3\maps\q3dm1.bsp
 Entities loaded: True
 Texture entries found: 94

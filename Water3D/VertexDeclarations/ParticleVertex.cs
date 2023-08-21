@@ -21,7 +21,7 @@ namespace Water3D.VertexDeclarations
     public struct ParticleVertex : IVertexType
     {
         // Stores which corner of the particle quad this vertex represents.
-        public Short2 Corner;
+        public Vector2 Corner;
         // Stores the starting position of the particle.
         public Vector3 Position;
         // Stores the starting velocity of the particle.
@@ -35,14 +35,14 @@ namespace Water3D.VertexDeclarations
         // Describe the layout of this vertex structure.
         public static readonly VertexDeclaration VertexDeclaration = new VertexDeclaration
         (
-            new VertexElement(0, VertexElementFormat.Short2, VertexElementUsage.Position, 0),
-            new VertexElement(4, VertexElementFormat.Vector3, VertexElementUsage.Position, 1),
-            new VertexElement(16, VertexElementFormat.Vector3, VertexElementUsage.Normal, 0),
-            new VertexElement(28, VertexElementFormat.Color, VertexElementUsage.Color, 0),
-            new VertexElement(32, VertexElementFormat.Single, VertexElementUsage.TextureCoordinate, 0)
+            new VertexElement(0, VertexElementFormat.Vector2, VertexElementUsage.Position, 0),
+            new VertexElement(8, VertexElementFormat.Vector3, VertexElementUsage.Position, 1),
+            new VertexElement(20, VertexElementFormat.Vector3, VertexElementUsage.Normal, 0),
+            new VertexElement(32, VertexElementFormat.Color, VertexElementUsage.Color, 0),
+            new VertexElement(36, VertexElementFormat.Single, VertexElementUsage.TextureCoordinate, 0)
         );
 
-        public ParticleVertex(Short2 c, Vector3 pos, Vector3 v, Color r, float t)
+        public ParticleVertex(Vector2 c, Vector3 pos, Vector3 v, Color r, float t)
         {
             Corner = c;
             Position = pos;
@@ -50,7 +50,7 @@ namespace Water3D.VertexDeclarations
             Random = r;
             Time = t;
         }
-        public static int SizeInBytes = 36;
+        public static int SizeInBytes = 40;
 
         VertexDeclaration IVertexType.VertexDeclaration
         {

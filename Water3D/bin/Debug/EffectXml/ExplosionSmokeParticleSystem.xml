@@ -3,7 +3,7 @@
   <EffectFile>Shaders/ParticleEffect</EffectFile>
   <Variables>
     <Uniform>
-      <Texture2D type="xna" name="Texture">Textures/smoke</Texture2D>
+      <Texture2D type="xna" name="tex0">Textures/smoke</Texture2D>
       <float name="Duration">2</float>
       <float name="DurationRandomness">0</float>
       <Vector3 name="Gravity">0;-20;0</Vector3>
