@@ -75,3 +75,13 @@ C:\Users\a.zimmer\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFuncti
 C:\Users\a.zimmer\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.dll
 C:\Users\a.zimmer\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.pdb
 C:\Users\a.zimmer\source\repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.csproj.AssemblyReference.cache
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\bin\Debug\Properties\AssemblyInfo.cs
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\bin\Debug\OwnFunctions.dll.config
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\bin\Debug\OwnFunctions.dll
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\bin\Debug\OwnFunctions.pdb
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.csproj.AssemblyReference.cache
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.Properties.Resources.resources
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.csproj.GenerateResource.cache
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.csproj.CoreCompileInputs.cache
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.dll
+C:\Users\ZIMMER\Source\Repos\water3d_monogame\OwnFunctions\obj\Debug\OwnFunctions.pdb
